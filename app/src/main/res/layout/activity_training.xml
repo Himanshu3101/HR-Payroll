@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorgrey"
+    android:alpha=".8"
+    android:orientation="vertical"
+    tools:context=".Request.LeaveRequest">
+    <RelativeLayout
+        android:id="@+id/rl_reqhomehead"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Training"
+            android:textSize="20dp"
+            android:textColor="@color/textcolor"/>
+        <ImageView
+            android:id="@+id/img_backtrainingrequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"/>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="@color/colorblack"
+                android:gravity="left"
+                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:id="@+id/tv_trainingreqdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="@color/colorgreydark"
+                android:gravity="left"
+                android:textSize="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/edity_textbackground"/>
+
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="@color/colorblack"
+                android:gravity="left"
+                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                android:id="@+id/edt_trainingreqtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title"
+                android:textColor="@color/colorgreydark"
+                android:textColorHint="@color/colorgreydark"
+                android:gravity="left"
+                android:textSize="15dp"
+                android:singleLine="true"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/edity_textbackground"/>
+
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service Type"
+                android:textColor="@color/colorblack"
+                android:gravity="left"
+                android:textSize="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:id="@+id/tv_trainingreqtype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service Type"
+                android:textColor="@color/colorgreydark"
+                android:textColorHint="@color/colorgreydark"
+                android:gravity="left"
+                android:textSize="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/edity_textbackground"/>
+
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service Provider"
+                android:textColor="@color/colorblack"
+                android:gravity="left"
+                android:textSize="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                android:id="@+id/edt_trainingprovider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Service Provider"
+                android:textColor="@color/colorgreydark"
+                android:textColorHint="@color/colorgreydark"
+                android:gravity="left"
+                android:textSize="15dp"
+                android:singleLine="true"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/edity_textbackground"/>
+
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Day's"
+                android:textColor="@color/colorblack"
+                android:gravity="left"
+                android:textSize="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                android:id="@+id/edt_trainingtotaldays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Total Day's"
+                android:textColor="@color/colorgreydark"
+                android:textColorHint="@color/colorgreydark"
+                android:gravity="left"
+                android:textSize="15dp"
+                android:singleLine="true"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/edity_textbackground"/>
+
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cost"
+                android:textColor="@color/colorblack"
+                android:gravity="left"
+                android:textSize="15dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                android:id="@+id/edt_trainingcost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cost"
+                android:textColor="@color/colorgreydark"
+                android:textColorHint="@color/colorgreydark"
+                android:gravity="left"
+                android:textSize="15dp"
+                android:singleLine="true"
+                android:paddingTop="7dp"
+                android:inputType="number"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/edity_textbackground"/>
+
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:id="@+id/tv_trainingreqsubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textColor="@color/textcolor"
+                android:gravity="center"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/textbackgroundsolid"
+                android:padding="10dp"
+                android:textSize="18dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="25dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

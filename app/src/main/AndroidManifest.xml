@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yoeki.kalpnay.hrporatal">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".IntroScreenFragment.IntroActivity" />
+        <activity android:name=".HomeMenu.HomeActivity" />
+        <activity android:name=".Myintro" />
+        <activity android:name=".TimeAttendance.Time.TimeEntry" />
+        <activity android:name=".TimeAttendance.Holidays.Holiday_activity" />
+        <activity android:name=".TimeAttendance.TimeAttendance_Menu"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+
+        <activity android:name=".Request.LeaveRequest" />
+        <activity android:name=".TimeAttendance.Approval_Request.Requests" />
+        <activity android:name=".TimeAttendance.Profile.Profile"/>
+        <activity android:name=".Request.ClaimActivity" />
+        <activity android:name=".Request.TrainingActivity" />
+        <activity android:name=".Request.GreveanceActivity" />
+        <activity android:name=".Request.ShiftChange" />
+        <activity android:name=".Request.AdvanceActivity"></activity>
+        <activity
+            android:name=".Request.RequestMenu"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+    </application>
+
+</manifest>

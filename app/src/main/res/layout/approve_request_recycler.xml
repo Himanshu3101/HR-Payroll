@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="6dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginBottom="5dp"
+    android:backgroundTint="#f7f7f7"
+    android:background="@drawable/popupbackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/popupbackground">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_weight=".1">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp">
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:id="@+id/req_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#096a75"
+                    android:layout_marginTop="10dp"/>
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="10dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@mipmap/user_icon"/>
+
+                    <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                        android:id="@+id/employe_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Employee Name"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#3e3e3e"
+                        android:textSize="15dp" />
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="10dp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@mipmap/request_type"/>
+
+                    <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                        android:id="@+id/request_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Service Type"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#3e3e3e"
+                        android:textSize="15dp" />
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            </FrameLayout>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d3d3d3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight=".1"
+                android:layout_marginTop="5dp">
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/right"/>
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="23dp"
+                    android:typeface="serif"
+                    android:layout_gravity="center"
+                    android:text="Approve"
+                    android:textColor="@color/colorPrimary" />
+
+                <!--<android.support.v7.widget.AppCompatTextView-->
+                    <!--android:id="@+id/Visit_number"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="17dp"-->
+                    <!--android:layout_marginLeft="30dp"-->
+                    <!--android:typeface="serif"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:visibility="invisible"-->
+                    <!--android:text="Call"-->
+                    <!--android:textColor="#3e3e3e" />-->
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/req_approve"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight=".1"
+                android:layout_marginTop="5dp">
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/cross"/>
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="23dp"
+                    android:typeface="serif"
+                    android:layout_gravity="center"
+                    android:text="Decline"
+                    android:textColor="@color/colorPrimary"  />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/req_decline"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"/>
+
+            </FrameLayout>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

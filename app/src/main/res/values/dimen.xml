@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="size12dp">12dp</string>
+    <string name="size14dp">14dp</string>
+    <string name="size15dp">15dp</string>
+    <string name="size16dp">16dp</string>
+</resources>

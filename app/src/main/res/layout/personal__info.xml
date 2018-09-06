@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    android:id="@+id/profile"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:background="@color/colorBackground">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button android:id="@+id/Pro_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"/>
+
+                <ImageView android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/home"
+                    android:layout_gravity="left|center"/>
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:text="Personal Profile"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:layout_marginTop="13dp" />
+
+            <FrameLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <Button android:id="@+id/Pro_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"/>
+
+                <ImageView android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/edit"
+                    android:layout_gravity="right|center"/>
+            </FrameLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight=".16">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/blur_bckg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/usr_logo"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/img_bck"
+                        android:layout_marginTop="05dp"
+                        android:layout_gravity="center" />
+
+                    <android.support.v7.widget.AppCompatImageButton
+                        android:id="@+id/chngepic"
+                        android:layout_marginTop="-70dp"
+                        android:layout_marginLeft="65dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@color/transparent"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/cam"/>
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight=".1">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="03dp"
+                            android:layout_weight=".1"
+                            android:text="Personal Number"
+                            android:textColor="@color/colorText"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="03dp"
+                            android:textAlignment="viewStart"
+                            android:layout_weight=".1"
+                            android:text="9910526484"
+                            android:textColor="@color/colorText"/>
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <View
+                        android:background="#d3d3d3"
+                        android:layout_height="0.7dp"
+                        android:layout_width="match_parent"/>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="03dp"
+                            android:layout_weight=".1"
+                            android:text="Co Code"
+                            android:textColor="@color/colorText"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="03dp"
+                            android:textAlignment="viewStart"
+                            android:layout_weight=".1"
+                            android:text="200 NA"
+                            android:textColor="@color/colorText"/>
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <View
+                        android:background="#d3d3d3"
+                        android:layout_height="0.7dp"
+                        android:layout_width="match_parent"/>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="03dp"
+                            android:layout_weight=".1"
+                            android:text="Position"
+                            android:textColor="@color/colorText"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="03dp"
+                            android:textAlignment="viewStart"
+                            android:layout_weight=".1"
+                            android:text="Marketing Manager"
+                            android:textColor="@color/colorText"/>
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <View
+                        android:background="#d3d3d3"
+                        android:layout_height="0.7dp"
+                        android:layout_width="match_parent"/>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="03dp"
+                            android:layout_weight=".1"
+                            android:text="Cost Center"
+                            android:textColor="@color/colorText"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="03dp"
+                            android:textAlignment="viewStart"
+                            android:layout_weight=".1"
+                            android:text="123456789"
+                            android:textColor="@color/colorText"/>
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <View
+                        android:background="#d3d3d3"
+                        android:layout_height="0.7dp"
+                        android:layout_width="match_parent"/>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="03dp"
+                            android:layout_weight=".1"
+                            android:text="Title"
+                            android:textColor="@color/colorText"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="03dp"
+                            android:textAlignment="viewStart"
+                            android:layout_weight=".1"
+                            android:text="Miss"
+                            android:textColor="@color/colorText"/>
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <View
+                        android:background="#d3d3d3"
+                        android:layout_height="0.7dp"
+                        android:layout_width="match_parent"/>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="03dp"
+                            android:layout_weight=".1"
+                            android:text="First Name"
+                            android:textColor="@color/colorText"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="03dp"
+                            android:textAlignment="viewStart"
+                            android:layout_weight=".1"
+                            android:text="Rashmi"
+                            android:textColor="@color/colorText"/>
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <View
+                        android:background="#d3d3d3"
+                        android:layout_height="0.7dp"
+                        android:layout_width="match_parent"/>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="03dp"
+                            android:layout_weight=".1"
+                            android:text="Last Name"
+                            android:textColor="@color/colorText"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="03dp"
+                            android:textAlignment="viewStart"
+                            android:layout_weight=".1"
+                            android:text="Sharma"
+                            android:textColor="@color/colorText"/>
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <View
+                        android:background="#d3d3d3"
+                        android:layout_height="0.7dp"
+                        android:layout_width="match_parent"/>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="03dp"
+                            android:layout_weight=".1"
+                            android:text="Gender"
+                            android:textColor="@color/colorText"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="03dp"
+                            android:textAlignment="viewStart"
+                            android:layout_weight=".1"
+                            android:text="Female"
+                            android:textColor="@color/colorText"/>
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <View
+                        android:background="#d3d3d3"
+                        android:layout_height="0.7dp"
+                        android:layout_width="match_parent"/>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="03dp"
+                            android:layout_weight=".1"
+                            android:text="Martial Status"
+                            android:textColor="@color/colorText"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="03dp"
+                            android:textAlignment="viewStart"
+                            android:layout_weight=".1"
+                            android:text="Unmarried"
+                            android:textColor="@color/colorText"/>
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <View
+                        android:background="#d3d3d3"
+                        android:layout_height="0.7dp"
+                        android:layout_width="match_parent"/>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="03dp"
+                            android:layout_weight=".1"
+                            android:text="Date Of Birth"
+                            android:textColor="@color/colorText"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="03dp"
+                            android:textAlignment="viewStart"
+                            android:layout_weight=".1"
+                            android:text="05-01-1998"
+                            android:textColor="@color/colorText"/>
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <View
+                        android:background="#d3d3d3"
+                        android:layout_height="0.7dp"
+                        android:layout_width="match_parent"/>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="03dp"
+                            android:layout_weight=".1"
+                            android:text="SSN"
+                            android:textColor="@color/colorText"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="03dp"
+                            android:textAlignment="viewStart"
+                            android:layout_weight=".1"
+                            android:text="00-99-8888"
+                            android:textColor="@color/colorText"/>
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </ScrollView>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

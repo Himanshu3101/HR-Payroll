@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+   android:background="@color/colorline">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimaryDark">
+
+        <FrameLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/timeEnter_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"/>
+
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/home2"
+                android:layout_gravity="left|center"/>
+        </FrameLayout>
+
+        <TextView
+            android:text="Time Entry"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="50dp"
+            android:textColor="#fff"
+            android:layout_marginTop="13dp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+   <android.support.v7.widget.LinearLayoutCompat
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:layout_weight=".1"
+       >
+
+       <com.applandeo.materialcalendarview.CalendarView
+           android:id="@+id/calendarView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:type="one_day_picker"
+           app:headerColor="#B8E1F3"
+           app:headerLabelColor="@color/colorPrimaryDark"
+           app:abbreviationsLabelsColor="@color/colorPrimaryDark"
+           app:pagesColor="#F5F0EC"/>
+
+   </android.support.v7.widget.LinearLayoutCompat>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_weight=".16"
+       android:layout_marginBottom="05dp">
+
+       <android.support.v7.widget.LinearLayoutCompat
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:layout_marginTop="5dp"
+           android:background="@color/colorbackground"
+           android:layout_marginBottom="10dp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_weight=".1">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:layout_weight=".1">
+
+                   <android.support.v7.widget.AppCompatTextView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:textStyle="bold"
+                       android:textColor="@color/colorText"
+                       android:gravity="center_vertical"
+                       android:editable="false"
+                       android:text="From Time"
+                       android:layout_marginLeft="20dp"
+                       android:textSize="13sp" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_weight=".1">
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <android.support.v7.widget.AppCompatEditText
+                           android:id="@+id/from_dte"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/popupbackground"
+                           android:layout_margin="05dp"
+                           android:textSize="13sp"
+                           android:textColor="#000"/>
+
+                       <ImageView
+                           android:id="@+id/calender"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="@mipmap/clock"
+                           android:layout_gravity="center"
+                           android:layout_margin="9dp"
+                           android:layout_alignRight="@+id/from_dte"
+                           android:layout_centerInParent="true" />
+
+                   </RelativeLayout>
+
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_weight=".1">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:layout_weight=".1">
+
+                   <android.support.v7.widget.AppCompatTextView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:textStyle="bold"
+                       android:textColor="@color/colorText"
+                       android:gravity="center_vertical"
+                       android:editable="false"
+                       android:text="To Time"
+                       android:textSize="13sp"
+                       android:layout_marginLeft="20dp"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_weight=".1">
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <android.support.v7.widget.AppCompatEditText
+                           android:id="@+id/to_dte"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/popupbackground"
+                           android:layout_margin="05dp"
+                           android:textSize="13sp"
+                           android:textColor="#000"/>
+
+                       <ImageView
+                           android:id="@+id/calender2"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:background="@mipmap/clock"
+                           android:layout_gravity="center"
+                           android:layout_margin="9dp"
+                           android:layout_alignRight="@+id/to_dte"
+                           android:layout_centerInParent="true" />
+
+                   </RelativeLayout>
+
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_weight=".1">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:layout_weight=".1">
+
+                   <android.support.v7.widget.AppCompatTextView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:textStyle="bold"
+                       android:textColor="@color/colorText"
+                       android:gravity="center_vertical"
+                       android:editable="false"
+                       android:layout_marginLeft="20dp"
+                       android:text="Description"
+                       android:textSize="13dp" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_weight=".1">
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <android.support.v7.widget.AppCompatEditText
+                           android:id="@+id/type"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/popupbackground"
+                           android:layout_margin="05dp"
+                           android:textSize="13dp"
+                           android:textColor="#000"/>
+
+                   </RelativeLayout>
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_weight=".1"
+               android:layout_marginBottom="02dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:layout_weight=".1">
+
+                   <android.support.v7.widget.AppCompatTextView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:textStyle="bold"
+                       android:textColor="@color/colorText"
+                       android:gravity="center_vertical"
+                       android:editable="false"
+                       android:text="Worked Time"
+                       android:layout_marginLeft="20dp"
+                       android:textSize="13dp" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_weight=".1">
+
+                       <android.support.v7.widget.AppCompatEditText
+                           android:id="@+id/hour"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/popupbackground"
+                           android:layout_margin="05dp"
+                           android:textSize="13dp"
+                           android:textColor="#000"/>
+
+               </LinearLayout>
+           </LinearLayout>
+
+       </android.support.v7.widget.LinearLayoutCompat>
+   </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/enter"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:text="Submit"
+            android:typeface="serif"
+            android:textSize="15sp"
+            android:textColor="#fff"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

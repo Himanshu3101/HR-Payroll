@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0188cc</color>
+    <color name="colorPrimaryDark">#0188cc</color>
+    <color name="colorAccent">#0188cc</color>
+    <color name="textcolor">#ffffff</color>
+    <color name="themcolor">#0188cc</color>
+    <color name="colorblack">#111111</color>
+    <color name="colorgrey">#eff0f1</color>
+    <color name="colorgreydark">#bdbdbd</color>
+    <color name="colorgreen">#398d94</color>
+    <color name="Approve_switch">#016ea5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_trans">#99FFFFFF</color>
+    <color name="colorBackground">#f3f5f8</color>
+
+
+    <color name="colorHeader">#c8e0e3</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorText">#3e3e3e</color>
+    <color name="colorbackground">#f7f7f7</color>
+    <color name="colorline">#d3d3d3</color>
+
+</resources>

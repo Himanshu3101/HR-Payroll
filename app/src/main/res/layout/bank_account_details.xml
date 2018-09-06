@@ -1,0 +1,415 @@
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="05dp"
+            android:layout_marginTop="08dp"
+            android:background="@mipmap/back" />
+
+        <TextView
+            android:text="Bank Account Details"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:paddingRight="50dp"
+            android:layout_marginTop="13dp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/hr_background"
+        android:orientation="vertical"
+        android:layout_weight=".2"
+        android:gravity="center">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundiconbankdetails"/>
+
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".1">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <!--<android.support.v7.widget.LinearLayoutCompat-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight=".1"-->
+            <!--android:orientation="vertical">-->
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:editable="false"
+                android:text="Bank Name" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/spinner_border_color"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/bankname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/colorText"
+                    android:background="@android:color/transparent"/>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:background="@mipmap/down_arrow"
+                    android:layout_gravity="end|center"
+                    android:layout_margin="10dp"/>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:id="@+id/bankselect"
+                    android:visibility="visible"/>
+
+            </FrameLayout>
+
+
+            <!--</android.support.v7.widget.LinearLayoutCompat>-->
+
+            <!--<android.support.v7.widget.LinearLayoutCompat-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight=".1">-->
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    android:editable="false"
+                    android:text="Account Number"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/spinner_border_color"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorText"
+                        android:background="@android:color/transparent"/>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@mipmap/edit_green3236"
+                        android:layout_gravity="end|center"
+                        android:layout_margin="10dp"/>
+
+                </FrameLayout>
+
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <!--</android.support.v7.widget.LinearLayoutCompat>-->
+
+            <!--<android.support.v7.widget.LinearLayoutCompat-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight=".1">-->
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    android:editable="false"
+                    android:text="Branch Name"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/spinner_border_color"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/branchname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorText"
+                        android:background="@android:color/transparent"/>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:background="@mipmap/down_arrow"
+                        android:layout_gravity="end|center"
+                        android:layout_margin="10dp"/>
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:id="@+id/branchselect"
+                        android:visibility="visible"/>
+
+                </FrameLayout>
+
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <!--</android.support.v7.widget.LinearLayoutCompat>-->
+
+            <!--<android.support.v7.widget.LinearLayoutCompat-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight=".1">-->
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    android:editable="false"
+                    android:text="Account Type"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/spinner_border_color"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/Accounttype"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorText"
+                        android:background="@android:color/transparent"/>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:background="@mipmap/down_arrow"
+                        android:layout_gravity="end|center"
+                        android:layout_margin="10dp"/>
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:id="@+id/Accounttypeselect"
+                        android:visibility="visible"/>
+
+                </FrameLayout>
+
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <!--</android.support.v7.widget.LinearLayoutCompat>-->
+            <!--<android.support.v7.widget.LinearLayoutCompat-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight=".1">-->
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    android:editable="false"
+                    android:text="IFSC/MICR Code"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/spinner_border_color"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorText"
+                        android:background="@android:color/transparent"/>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@mipmap/edit_green3236"
+                        android:layout_gravity="end|center"
+                        android:layout_margin="10dp"/>
+
+                </FrameLayout>
+
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <!--</android.support.v7.widget.LinearLayoutCompat>-->
+            <!--<android.support.v7.widget.LinearLayoutCompat-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight=".1">-->
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    android:editable="false"
+                    android:text="Branch Address"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/spinner_border_color"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorText"
+                        android:background="@android:color/transparent"/>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@mipmap/edit_green3236"
+                        android:layout_gravity="end|center"
+                        android:layout_margin="10dp"/>
+
+                </FrameLayout>
+
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <!--</android.support.v7.widget.LinearLayoutCompat>-->
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/submit"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:text="Submit"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:typeface="serif"
+                android:textSize="15sp"
+                android:textColor="#fff"/>
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+</android.support.v7.widget.LinearLayoutCompat>

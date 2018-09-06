@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialogbackground"
+    android:orientation="vertical"
+    android:alpha=".8">
+    <com.yoeki.kalpnay.hrporatal.setting.Textclass
+        android:id="@+id/claimtype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Claim Type"
+        android:textSize="18dp"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forgot"
+        android:gravity="left"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup_leavetype"
+            android:layout_margin="15dp"
+            android:gravity="left">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hotel"
+                android:id="@+id/radioButton_hotel"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:buttonTint="@color/colorblack"
+                android:textColor="@color/colorblack"
+                android:textSize="15dp" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Travel"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioButton_travel"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:textSize="15dp"
+                android:buttonTint="@color/colorblack"
+                android:textColor="@color/colorblack"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/colorblack"
+                android:id="@+id/radioButton_others"
+                android:layout_gravity="left"
+                android:checked="false"
+                android:textSize="15dp"
+                android:textColor="@color/colorblack"/>
+        </RadioGroup>
+
+        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:id="@+id/tv_claimtaypesubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textColor="@color/textcolor"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/textbackgroundsolid"
+            android:padding="10dp"
+            android:textSize="18dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="25dp" />
+    </LinearLayout>
+
+</LinearLayout>
