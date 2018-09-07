@@ -1,4 +1,4 @@
-package com.yoeki.kalpnay.hrporatal.TimeAttendance.Profile;
+package com.yoeki.kalpnay.hrporatal.Profile;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

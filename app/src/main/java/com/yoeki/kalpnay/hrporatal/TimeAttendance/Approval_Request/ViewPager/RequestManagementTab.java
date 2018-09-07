@@ -1,37 +1,48 @@
-package com.yoeki.kalpnay.hrporatal.TimeAttendance.Approval_Request;
+package com.yoeki.kalpnay.hrporatal.TimeAttendance.Approval_Request.ViewPager;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Spinner;
 
+//import com.yoeki.iace.societymanagment.Home_Page;
 import com.yoeki.kalpnay.hrporatal.R;
+import com.yoeki.kalpnay.hrporatal.TimeAttendance.Approval_Request.Requests;
 import com.yoeki.kalpnay.hrporatal.TimeAttendance.TimeAttendance_Menu;
 import com.yoeki.kalpnay.hrporatal.setting.Edittextclass;
 import com.yoeki.kalpnay.hrporatal.setting.Textclass;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
-/**
- * Created by IACE on 05-Sep-18.
- */
+public class RequestManagementTab extends AppCompatActivity {
 
-public class Requests extends AppCompatActivity {
-    RecyclerView requests_list;
-    AppCompatButton req_bck,request_filter;
+    private TabLayout RN_tabLayout;
+    private ViewPager RN_viewPager;
+    Button RN_bck;
+    Toolbar toolbar;
     int whichdate=0;
+    AppCompatButton request_filter;
     String Com_fromDate, Com_toDate;
     private int mYear, mMonth, mDay;
     Edittextclass req_filter_fromdate,req_filter_todate;
@@ -39,13 +50,23 @@ public class Requests extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.requests_all);
+        setContentView(R.layout.request_management_tab);
 
-        requests_list = (RecyclerView) findViewById(R.id.requests_list);
-        req_bck = (AppCompatButton)findViewById(R.id.req_back);
+        RN_bck = (Button) findViewById(R.id.req_back);
         request_filter = (AppCompatButton)findViewById(R.id.request_filter);
+        RN_viewPager = (ViewPager) findViewById(R.id.rn_pager);
 
-        req_bck.setOnClickListener(new View.OnClickListener() {
+        setupViewPager(RN_viewPager);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        RN_tabLayout = (TabLayout) findViewById(R.id.rn_tabLayout);
+//        RN_tabLayout.addTab(RN_tabLayout.newTab().setText("Request"));
+//        RN_tabLayout.addTab(RN_tabLayout.newTab().setText("Request Closed"));
+
+        RN_tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        RN_tabLayout.setupWithViewPager(RN_viewPager);
+
+        RN_bck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), TimeAttendance_Menu.class);
@@ -57,22 +78,51 @@ public class Requests extends AppCompatActivity {
         request_filter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             filterRequest();
+                filterRequest();
             }
         });
-
-        ArrayList<String> RequestList = new ArrayList<>();
-        RequestList.add("15/Aug/18~Ashish Kumar~Sick Request");
-        RequestList.add("25/Aug/18~Sachin Singh~Annual Request");
-        RequestList.add("10/Sep/18~Rahul Sharma~Emergency Request");
-        RequestList.add("15/Sep/18~Shahsank Tyagi~Medical Request");
-        RequestList.add("15/Oct/18~Manoj Tiwari~Sick Request");
-        RequestList.add("25/Nov/18~Rohit Yadav~Materanity Request");
-
-        requests_list.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        RequestRecyclerViewAdapter hadapter = new RequestRecyclerViewAdapter( getApplicationContext() ,RequestList);
-        requests_list.setAdapter(hadapter);
     }
+
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new AllRequest(), "All");
+        adapter.addFragment(new ApprovedRequest(), "Approved");
+        adapter.addFragment(new DeclineRequest(), "Decline");
+        adapter.addFragment(new PendingRequest(), "Pending");
+        viewPager.setAdapter(adapter);
+    }
+
+    class ViewPagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
+
+        public ViewPagerAdapter(FragmentManager manager) {
+            super(manager);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return mFragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragmentList.size();
+        }
+
+        public void addFragment(Fragment fragment, String title) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
+        }
+    }
+
+
+
 
     @Override
     public void onBackPressed() {
@@ -80,6 +130,13 @@ public class Requests extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), TimeAttendance_Menu.class);
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        return true;
     }
 
     public void filterRequest(){
@@ -90,7 +147,7 @@ public class Requests extends AppCompatActivity {
         ArrayAdapter<String> reqt_lst_Name;
 
 
-        final Dialog dialog = new Dialog(Requests.this);
+        final Dialog dialog = new Dialog(RequestManagementTab.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCancelable(false);
         dialog.setContentView(R.layout.request_filter);
@@ -120,9 +177,9 @@ public class Requests extends AppCompatActivity {
         saveFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              Intent intent = new Intent(getApplicationContext(),Requests.class);
-              startActivity(intent);
-              finish();
+                Intent intent = new Intent(getApplicationContext(),Requests.class);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -139,7 +196,7 @@ public class Requests extends AppCompatActivity {
         reqt_lst_Name = new ArrayAdapter<String>(getApplicationContext(), R.layout.spinner, RequestListArray);
         reqt_lst_Name.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         srch_req_by_type.setAdapter(reqt_lst_Name);
-        reqt_lst_Name.insert("--Search by Type--", 0);
+        reqt_lst_Name.insert("Search by Type", 0);
 
         srch_req_by_type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -207,15 +264,3 @@ public class Requests extends AppCompatActivity {
         datePickerDialog.show();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

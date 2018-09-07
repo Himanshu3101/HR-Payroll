@@ -93,19 +93,19 @@
                     android:textColor="@color/colorText"
                     android:background="@android:color/transparent"/>
 
-                <android.support.v7.widget.AppCompatImageView
-                    android:layout_width="17dp"
-                    android:layout_height="17dp"
-                    android:background="@mipmap/down_arrow"
-                    android:layout_gravity="end|center"
-                    android:layout_margin="10dp"/>
+                <!--<android.support.v7.widget.AppCompatImageView-->
+                    <!--android:layout_width="17dp"-->
+                    <!--android:layout_height="17dp"-->
+                    <!--android:background="@mipmap/down_arrow"-->
+                    <!--android:layout_gravity="end|center"-->
+                    <!--android:layout_margin="10dp"/>-->
 
-                <android.support.v7.widget.AppCompatButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/transparent"
-                    android:id="@+id/bankselect"
-                    android:visibility="visible"/>
+                <!--<android.support.v7.widget.AppCompatButton-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@color/transparent"-->
+                    <!--android:id="@+id/bankselect"-->
+                    <!--android:visibility="visible"/>-->
 
             </FrameLayout>
 
@@ -150,12 +150,12 @@
                         android:textColor="@color/colorText"
                         android:background="@android:color/transparent"/>
 
-                    <android.support.v7.widget.AppCompatImageView
-                        android:layout_width="19dp"
-                        android:layout_height="19dp"
-                        android:background="@mipmap/edit_green3236"
-                        android:layout_gravity="end|center"
-                        android:layout_margin="10dp"/>
+                    <!--<android.support.v7.widget.AppCompatImageView-->
+                        <!--android:layout_width="19dp"-->
+                        <!--android:layout_height="19dp"-->
+                        <!--android:background="@mipmap/edit_green3236"-->
+                        <!--android:layout_gravity="end|center"-->
+                        <!--android:layout_margin="10dp"/>-->
 
                 </FrameLayout>
 
@@ -203,19 +203,19 @@
                         android:textColor="@color/colorText"
                         android:background="@android:color/transparent"/>
 
-                    <android.support.v7.widget.AppCompatImageView
-                        android:layout_width="17dp"
-                        android:layout_height="17dp"
-                        android:background="@mipmap/down_arrow"
-                        android:layout_gravity="end|center"
-                        android:layout_margin="10dp"/>
+                    <!--<android.support.v7.widget.AppCompatImageView-->
+                        <!--android:layout_width="17dp"-->
+                        <!--android:layout_height="17dp"-->
+                        <!--android:background="@mipmap/down_arrow"-->
+                        <!--android:layout_gravity="end|center"-->
+                        <!--android:layout_margin="10dp"/>-->
 
-                    <android.support.v7.widget.AppCompatButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/transparent"
-                        android:id="@+id/branchselect"
-                        android:visibility="visible"/>
+                    <!--<android.support.v7.widget.AppCompatButton-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="@color/transparent"-->
+                        <!--android:id="@+id/branchselect"-->
+                        <!--android:visibility="visible"/>-->
 
                 </FrameLayout>
 
@@ -264,19 +264,19 @@
                         android:textColor="@color/colorText"
                         android:background="@android:color/transparent"/>
 
-                    <android.support.v7.widget.AppCompatImageView
-                        android:layout_width="17dp"
-                        android:layout_height="17dp"
-                        android:background="@mipmap/down_arrow"
-                        android:layout_gravity="end|center"
-                        android:layout_margin="10dp"/>
+                    <!--<android.support.v7.widget.AppCompatImageView-->
+                        <!--android:layout_width="17dp"-->
+                        <!--android:layout_height="17dp"-->
+                        <!--android:background="@mipmap/down_arrow"-->
+                        <!--android:layout_gravity="end|center"-->
+                        <!--android:layout_margin="10dp"/>-->
 
-                    <android.support.v7.widget.AppCompatButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/transparent"
-                        android:id="@+id/Accounttypeselect"
-                        android:visibility="visible"/>
+                    <!--<android.support.v7.widget.AppCompatButton-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="@color/transparent"-->
+                        <!--android:id="@+id/Accounttypeselect"-->
+                        <!--android:visibility="visible"/>-->
 
                 </FrameLayout>
 
@@ -323,12 +323,12 @@
                         android:textColor="@color/colorText"
                         android:background="@android:color/transparent"/>
 
-                    <android.support.v7.widget.AppCompatImageView
-                        android:layout_width="19dp"
-                        android:layout_height="19dp"
-                        android:background="@mipmap/edit_green3236"
-                        android:layout_gravity="end|center"
-                        android:layout_margin="10dp"/>
+                    <!--<android.support.v7.widget.AppCompatImageView-->
+                        <!--android:layout_width="19dp"-->
+                        <!--android:layout_height="19dp"-->
+                        <!--android:background="@mipmap/edit_green3236"-->
+                        <!--android:layout_gravity="end|center"-->
+                        <!--android:layout_margin="10dp"/>-->
 
                 </FrameLayout>
 
@@ -375,12 +375,12 @@
                         android:textColor="@color/colorText"
                         android:background="@android:color/transparent"/>
 
-                    <android.support.v7.widget.AppCompatImageView
-                        android:layout_width="19dp"
-                        android:layout_height="19dp"
-                        android:background="@mipmap/edit_green3236"
-                        android:layout_gravity="end|center"
-                        android:layout_margin="10dp"/>
+                    <!--<android.support.v7.widget.AppCompatImageView-->
+                        <!--android:layout_width="19dp"-->
+                        <!--android:layout_height="19dp"-->
+                        <!--android:background="@mipmap/edit_green3236"-->
+                        <!--android:layout_gravity="end|center"-->
+                        <!--android:layout_margin="10dp"/>-->
 
                 </FrameLayout>
 
@@ -389,18 +389,18 @@
 
             <!--</android.support.v7.widget.LinearLayoutCompat>-->
 
-            <android.support.v7.widget.AppCompatButton
-                android:id="@+id/submit"
-                android:layout_width="180dp"
-                android:layout_height="40dp"
-                android:background="@color/colorPrimaryDark"
-                android:textAlignment="center"
-                android:text="Submit"
-                android:layout_marginTop="20dp"
-                android:layout_gravity="center"
-                android:typeface="serif"
-                android:textSize="15sp"
-                android:textColor="#fff"/>
+            <!--<android.support.v7.widget.AppCompatButton-->
+                <!--android:id="@+id/submit"-->
+                <!--android:layout_width="180dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:background="@color/colorPrimaryDark"-->
+                <!--android:textAlignment="center"-->
+                <!--android:text="Submit"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:typeface="serif"-->
+                <!--android:textSize="15sp"-->
+                <!--android:textColor="#fff"/>-->
         </android.support.v7.widget.LinearLayoutCompat>
 
 

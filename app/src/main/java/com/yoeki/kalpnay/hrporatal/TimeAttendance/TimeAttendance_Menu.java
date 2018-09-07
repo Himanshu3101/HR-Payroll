@@ -10,7 +10,7 @@ import android.widget.CompoundButton;
 
 import com.yoeki.kalpnay.hrporatal.R;
 import com.yoeki.kalpnay.hrporatal.Request.LeaveRequest;
-import com.yoeki.kalpnay.hrporatal.TimeAttendance.Approval_Request.Requests;
+import com.yoeki.kalpnay.hrporatal.TimeAttendance.Approval_Request.ViewPager.RequestManagementTab;
 import com.yoeki.kalpnay.hrporatal.TimeAttendance.Holidays.Holiday_activity;
 import com.yoeki.kalpnay.hrporatal.TimeAttendance.Time.TimeEntry;
 
@@ -87,7 +87,8 @@ public class TimeAttendance_Menu extends AppCompatActivity {
 
                 String stat = String.valueOf(isChecked);
                 if(stat.equals("true")){
-                    Intent intent0=new Intent(getApplicationContext(),Requests.class);
+                    Intent intent0=new Intent(getApplicationContext(),RequestManagementTab.class);
+//                    Intent intent0=new Intent(getApplicationContext(),Requests.class);
                     startActivity(intent0);
                 }else{
                     switchCompat.setChecked(false);

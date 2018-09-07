@@ -86,7 +86,10 @@
                     card_view:cardCornerRadius="5dp"
                     card_view:cardElevation="10dp"
                     android:layout_weight=".5"
-                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="05dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_gravity="center">
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -122,7 +125,10 @@
                     card_view:cardCornerRadius="5dp"
                     card_view:cardElevation="10dp"
                     android:layout_weight=".5"
-                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="05dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_gravity="center">
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -161,7 +167,10 @@
                     card_view:cardCornerRadius="5dp"
                     card_view:cardElevation="10dp"
                     android:layout_weight=".5"
-                    android:layout_margin="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="05dp"
+                    android:layout_marginRight="05dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_gravity="center">
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -196,7 +205,10 @@
                     card_view:cardElevation="10dp"
                     android:layout_weight=".5"
                     android:layout_gravity="center"
-                    android:layout_margin="10dp">
+                    android:layout_marginTop="05dp"
+                    android:layout_marginLeft="05dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp">
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

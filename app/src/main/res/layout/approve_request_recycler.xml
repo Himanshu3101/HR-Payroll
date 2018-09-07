@@ -4,8 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginRight="6dp"
-    android:layout_marginLeft="6dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginLeft="3dp"
     android:layout_marginBottom="5dp"
     android:backgroundTint="#f7f7f7"
     android:background="@drawable/popupbackground">
@@ -123,8 +123,10 @@
         android:layout_marginRight="20dp"/>
 
         <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/all_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="visible"
             android:orientation="horizontal">
 
             <FrameLayout
@@ -201,6 +203,92 @@
 
                 <android.support.v7.widget.AppCompatButton
                     android:id="@+id/req_decline"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"/>
+
+            </FrameLayout>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/Approved_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight=".1"
+                android:layout_marginTop="5dp">
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/right"/>
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="23dp"
+                    android:typeface="serif"
+                    android:layout_gravity="center"
+                    android:text="Approved"
+                    android:textColor="@color/colorPrimary" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/req_approved"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"/>
+
+            </FrameLayout>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/decline_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight=".1"
+                android:layout_marginTop="5dp">
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/cross"/>
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="23dp"
+                    android:typeface="serif"
+                    android:layout_gravity="center"
+                    android:text="Declined"
+                    android:textColor="@color/colorPrimary" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/req_declined"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"/>

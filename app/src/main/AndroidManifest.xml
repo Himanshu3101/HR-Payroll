@@ -25,12 +25,18 @@
         <activity android:name=".Myintro" />
         <activity android:name=".TimeAttendance.Time.TimeEntry" />
         <activity android:name=".TimeAttendance.Holidays.Holiday_activity" />
+        <activity android:name=".TimeAttendance.Approval_Request.ViewPager.RequestManagementTab" />
         <activity android:name=".TimeAttendance.TimeAttendance_Menu"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <!--<activity-->
+            <!--android:name=".TimeAttendance.Approval_Request.filter_Request"-->
+            <!--android:theme="@style/FullDialogActivityTheme" />-->
+
+
 
         <activity android:name=".Request.LeaveRequest" />
         <activity android:name=".TimeAttendance.Approval_Request.Requests" />
-        <activity android:name=".TimeAttendance.Profile.Profile"/>
+        <activity android:name=".Profile.Profile"/>
         <activity android:name=".Request.ClaimActivity" />
         <activity android:name=".Request.TrainingActivity" />
         <activity android:name=".Request.GreveanceActivity" />
@@ -39,6 +45,8 @@
         <activity
             android:name=".Request.RequestMenu"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".HomeMenu.SearchEmployeActivity"></activity>
+
     </application>
 
 </manifest>

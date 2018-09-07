@@ -19,21 +19,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <FrameLayout android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+            <!--<FrameLayout android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
 
-                <Button android:id="@+id/Pro_back"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@color/transparent"/>
+                <!--<Button android:id="@+id/Pro_back"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@color/transparent"/>-->
 
-                <ImageView android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:scaleType="fitXY"
-                    android:background="@mipmap/home"
-                    android:layout_gravity="left|center"/>
+                <!--<ImageView android:layout_width="30dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:background="@mipmap/home"-->
+                    <!--android:layout_gravity="left|center"/>-->
 
-            </FrameLayout>
+            <!--</FrameLayout>-->
 
             <android.support.v7.widget.AppCompatTextView
                 android:text="Personal Profile"
@@ -45,22 +45,23 @@
                 android:textColor="#fff"
                 android:layout_marginTop="13dp" />
 
-            <FrameLayout android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true">
+            <!--<FrameLayout android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true">-->
 
-                <Button android:id="@+id/Pro_edit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@color/transparent"/>
+                <!--<Button android:id="@+id/Pro_edit"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@color/transparent"/>-->
 
-                <ImageView android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginRight="20dp"
-                    android:scaleType="fitXY"
-                    android:background="@mipmap/edit"
-                    android:layout_gravity="right|center"/>
-            </FrameLayout>
+                <!--<ImageView android:layout_width="30dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:background="@mipmap/edit"-->
+                    <!--android:layout_gravity="right|center"/>-->
+            <!--</FrameLayout>-->
+
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
