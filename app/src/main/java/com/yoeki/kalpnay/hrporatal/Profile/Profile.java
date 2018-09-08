@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+
+import com.yoeki.kalpnay.hrporatal.Profile.BankDetails.BankAccountDetails;
 import com.yoeki.kalpnay.hrporatal.R;
 
 public class Profile extends AppCompatActivity {

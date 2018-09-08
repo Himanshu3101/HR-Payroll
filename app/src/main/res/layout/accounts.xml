@@ -1,0 +1,114 @@
+<android.support.v7.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#f7f7f7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/popupbackground"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight=".1">
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:id="@+id/bank_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="5"
+                    android:layout_weight=".1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:textSize="17sp" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="A/C No.  "
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                        android:id="@+id/accountNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Wed"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:textSize="15dp" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight=".4">
+
+                <FrameLayout
+                    android:id="@+id/frame_accountNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:layout_gravity="center_vertical">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:background="@mipmap/right_arrow"
+                        android:layout_gravity="end|center"
+                        android:layout_margin="10dp"/>
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/particularAC_Details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:layout_gravity="end"
+                        android:visibility="visible"/>
+
+                </FrameLayout>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+    </LinearLayout>
+
+    <!--<View-->
+    <!--android:background="#d3d3d3"-->
+    <!--android:layout_height="0.5dp"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginRight="20dp"/>-->
+
+
+
+</android.support.v7.widget.LinearLayoutCompat>

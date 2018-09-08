@@ -10,6 +10,7 @@ import com.applandeo.materialcalendarview.EventDay;
 import com.applandeo.materialcalendarview.listeners.OnDayClickListener;
 import com.yoeki.kalpnay.hrporatal.R;
 import com.yoeki.kalpnay.hrporatal.TimeAttendance.TimeAttendance_Menu;
+import com.yoeki.kalpnay.hrporatal.setting.Edittextclass;
 
 import java.util.Calendar;
 
@@ -17,15 +18,21 @@ public class TimeEntry extends AppCompatActivity {
 
     private  static final String TAG = "CalendarActivity";
     private com.applandeo.materialcalendarview.CalendarView mCalendarView;
-    AppCompatButton timeEnter_home;
+    AppCompatButton timeEnter_home,time_from,time_to;
+    Edittextclass from_time_edittext,to_time_edittext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.time_entry);
 
-        timeEnter_home = (AppCompatButton)findViewById(R.id.timeEnter_home);
         mCalendarView = (com.applandeo.materialcalendarview.CalendarView) findViewById(R.id.calendarView);
+        timeEnter_home = (AppCompatButton)findViewById(R.id.timeEnter_home);
+        time_from = (AppCompatButton)findViewById(R.id.time_from);
+        time_to = (AppCompatButton)findViewById(R.id.time_to);
+        from_time_edittext = (Edittextclass)findViewById(R.id.from_time_edittext);
+        to_time_edittext = (Edittextclass)findViewById(R.id.to_time_edittext);
+
         mCalendarView.setOnDayClickListener(new OnDayClickListener() {
             @Override
             public void onDayClick(EventDay eventDay) {
@@ -42,6 +49,20 @@ public class TimeEntry extends AppCompatActivity {
                 finish();
             }
         });
+
+        time_from.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        time_to.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
@@ -51,5 +72,4 @@ public class TimeEntry extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-//#B8E1F3
 }
