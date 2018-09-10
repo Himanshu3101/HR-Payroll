@@ -28,9 +28,9 @@
                 android:layout_gravity="left|center"/>
         </FrameLayout>
 
-        <TextView
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
+            android:textSize="@dimen/textFrHeading"
             android:text="Time Entry"
-            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
@@ -63,21 +63,20 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:layout_weight=".16"
-       android:layout_marginBottom="05dp">
+       android:layout_marginBottom="02dp">
 
        <android.support.v7.widget.LinearLayoutCompat
            android:layout_width="match_parent"
-           android:layout_height="match_parent"
+           android:layout_height="wrap_content"
            android:orientation="vertical"
-           android:layout_marginTop="5dp"
            android:background="@color/colorbackground"
            android:layout_marginBottom="10dp">
 
            <LinearLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="40dp"
                android:orientation="horizontal"
-               android:layout_weight=".1">
+               android:layout_marginTop="02dp">
 
                <LinearLayout
                    android:layout_width="match_parent"
@@ -85,37 +84,40 @@
                    android:orientation="vertical"
                    android:layout_weight=".1">
 
-                   <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                   <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
-                       android:textStyle="bold"
                        android:textColor="@color/colorText"
                        android:gravity="center_vertical"
                        android:editable="false"
                        android:text="From Time"
                        android:layout_marginLeft="20dp"
-                       android:textSize="13sp" />
+                       />
 
                </LinearLayout>
 
-               <LinearLayout
+               <RelativeLayout
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
                    android:orientation="horizontal"
                    android:layout_weight=".1">
-
-                   <FrameLayout
-                       android:layout_width="match_parent"
-                       android:layout_height="wrap_content">
 
                        <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
                            android:id="@+id/from_time_edittext"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:background="@drawable/popupbackground"
-                           android:layout_margin="05dp"
-                           android:textSize="13sp"
+                           android:layout_marginLeft="05dp"
+                           android:layout_marginRight="05dp"
+                           android:layout_marginTop="05dp"
+                           android:hint="MM:HH"
+                           android:textColorHint="#cecece"
+                           android:textSize="@dimen/textNtHeader"
                            android:textColor="#000"/>
+
+                   <FrameLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
 
                        <ImageView
                            android:id="@+id/calender"
@@ -134,14 +136,13 @@
                            android:background="@color/transparent"/>
                    </FrameLayout>
 
-               </LinearLayout>
+               </RelativeLayout>
            </LinearLayout>
 
            <LinearLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="horizontal"
-               android:layout_weight=".1">
+               android:layout_height="40dp"
+               android:orientation="horizontal">
 
                <LinearLayout
                    android:layout_width="match_parent"
@@ -149,15 +150,13 @@
                    android:orientation="vertical"
                    android:layout_weight=".1">
 
-                   <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                   <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
-                       android:textStyle="bold"
                        android:textColor="@color/colorText"
                        android:gravity="center_vertical"
                        android:editable="false"
                        android:text="To Time"
-                       android:textSize="13sp"
                        android:layout_marginLeft="20dp"/>
 
                </LinearLayout>
@@ -177,8 +176,12 @@
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:background="@drawable/popupbackground"
-                           android:layout_margin="05dp"
-                           android:textSize="13sp"
+                           android:layout_marginLeft="05dp"
+                           android:layout_marginRight="05dp"
+                           android:layout_marginTop="05dp"
+                           android:hint="MM:HH"
+                           android:textColorHint="#cecece"
+                           android:textSize="@dimen/textNtHeader"
                            android:textColor="#000"/>
 
                        <ImageView
@@ -203,9 +206,8 @@
 
            <LinearLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="horizontal"
-               android:layout_weight=".1">
+               android:layout_height="40dp"
+               android:orientation="horizontal">
 
                <LinearLayout
                    android:layout_width="match_parent"
@@ -213,16 +215,14 @@
                    android:orientation="vertical"
                    android:layout_weight=".1">
 
-                   <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                   <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
-                       android:textStyle="bold"
                        android:textColor="@color/colorText"
                        android:gravity="center_vertical"
                        android:editable="false"
                        android:layout_marginLeft="20dp"
-                       android:text="Description"
-                       android:textSize="13dp" />
+                       android:text="Description" />
 
                </LinearLayout>
 
@@ -236,13 +236,15 @@
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content">
 
-                       <android.support.v7.widget.AppCompatEditText
+                       <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
                            android:id="@+id/type"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:background="@drawable/popupbackground"
-                           android:layout_margin="05dp"
-                           android:textSize="13dp"
+                           android:layout_marginLeft="05dp"
+                           android:layout_marginRight="05dp"
+                           android:layout_marginTop="05dp"
+                           android:textSize="@dimen/textNtHeader"
                            android:textColor="#000"/>
 
                    </RelativeLayout>
@@ -251,9 +253,8 @@
 
            <LinearLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="40dp"
                android:orientation="horizontal"
-               android:layout_weight=".1"
                android:layout_marginBottom="02dp">
 
                <LinearLayout
@@ -262,16 +263,15 @@
                    android:orientation="vertical"
                    android:layout_weight=".1">
 
-                   <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                   <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
-                       android:textStyle="bold"
                        android:textColor="@color/colorText"
                        android:gravity="center_vertical"
                        android:editable="false"
+
                        android:text="Worked Time"
-                       android:layout_marginLeft="20dp"
-                       android:textSize="13dp" />
+                       android:layout_marginLeft="20dp" />
 
                </LinearLayout>
 
@@ -281,13 +281,15 @@
                    android:orientation="horizontal"
                    android:layout_weight=".1">
 
-                       <android.support.v7.widget.AppCompatEditText
+                       <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
                            android:id="@+id/hour"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:background="@drawable/popupbackground"
-                           android:layout_margin="05dp"
-                           android:textSize="13dp"
+                           android:textSize="@dimen/textNtHeader"
+                           android:layout_marginLeft="05dp"
+                           android:layout_marginRight="05dp"
+                           android:layout_marginTop="05dp"
                            android:textColor="#000"/>
 
                </LinearLayout>

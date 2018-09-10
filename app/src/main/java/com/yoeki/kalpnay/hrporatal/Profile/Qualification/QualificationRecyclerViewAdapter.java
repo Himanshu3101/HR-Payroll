@@ -1,4 +1,4 @@
-package com.yoeki.kalpnay.hrporatal.Profile;
+package com.yoeki.kalpnay.hrporatal.Profile.Qualification;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

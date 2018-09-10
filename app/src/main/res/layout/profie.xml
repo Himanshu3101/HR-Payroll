@@ -8,14 +8,72 @@
     android:layout_height="match_parent"
     android:background="@color/colorAccent">
 
-    <FrameLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button android:id="@+id/Pro_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"/>
+
+                <ImageView android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/back"
+                    android:layout_gravity="left|center"/>
+
+            </FrameLayout>
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
+                android:id="@+id/profileHeader"
+                android:textSize="@dimen/textFrHeading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                 />
+
+            <!--<FrameLayout android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true">-->
+
+            <!--<Button android:id="@+id/Pro_edit"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/transparent"/>-->
+
+            <!--<ImageView android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:background="@mipmap/edit"-->
+            <!--android:layout_gravity="right|center"/>-->
+            <!--</FrameLayout>-->
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/toolbar"
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/navigation"
-        android:animateLayoutChanges="true">
+        >
 
-    </FrameLayout>
+    </android.support.v4.view.ViewPager>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"

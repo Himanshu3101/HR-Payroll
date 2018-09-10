@@ -29,7 +29,7 @@
                 android:orientation="vertical"
                 android:layout_weight=".1">
 
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                     android:id="@+id/bank_name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -37,29 +37,30 @@
                     android:layout_weight=".1"
                     android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold"
-                    android:textSize="17sp" />
+                    android:textSize="@dimen/textFrHeader"  />
 
                 <android.support.v7.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="A/C No.  "
+                        android:layout_marginTop="03dp"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textStyle="bold"
-                        android:textSize="17sp" />
+                        android:textSize="@dimen/textFrHeader" />
 
                     <com.yoeki.kalpnay.hrporatal.setting.Textclass
                         android:id="@+id/accountNo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Wed"
+                        android:layout_marginTop="03dp"
                         android:textColor="@color/colorPrimaryDark"
                         android:textStyle="bold"
-                        android:textSize="15dp" />
+                        android:textSize="@dimen/textNtHeader"/>
 
                 </android.support.v7.widget.LinearLayoutCompat>
 

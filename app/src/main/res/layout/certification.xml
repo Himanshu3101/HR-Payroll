@@ -5,6 +5,60 @@
      android:orientation="vertical"
     android:background="@color/colorBackground">
 
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="55dp"-->
+        <!--android:background="@color/colorPrimaryDark">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<FrameLayout android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<Button android:id="@+id/Pro_back"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@color/transparent"/>-->
+
+                <!--<ImageView android:layout_width="30dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:background="@mipmap/back"-->
+                    <!--android:layout_gravity="left|center"/>-->
+
+            <!--</FrameLayout>-->
+
+            <!--<android.support.v7.widget.AppCompatTextView-->
+                <!--android:text="Certification"-->
+                <!--android:textSize="20sp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="#fff"-->
+                <!--android:layout_marginTop="13dp" />-->
+
+            <!--&lt;!&ndash;<FrameLayout android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_alignParentRight="true">&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<Button android:id="@+id/Pro_edit"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:background="@color/transparent"/>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<ImageView android:layout_width="30dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="30dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginRight="20dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:scaleType="fitXY"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:background="@mipmap/edit"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_gravity="right|center"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;</FrameLayout>&ndash;&gt;-->
+
+        <!--</RelativeLayout>-->
+    <!--</android.support.v7.widget.Toolbar>-->
 
     <!--<android.support.v7.widget.LinearLayoutCompat-->
         <!--android:layout_width="match_parent"-->
@@ -204,7 +258,7 @@
 
         <android.support.v7.widget.RecyclerView
            android:layout_marginTop="5dp"
-           android:id="@+id/qualificationrecycler"
+           android:id="@+id/certificationRecycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="vertical"/>

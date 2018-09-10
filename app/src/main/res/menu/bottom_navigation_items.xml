@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/action_item1"
+        android:id="@+id/profile"
         android:icon="@mipmap/personal"
-        android:title="@string/item_1"/>
+        android:title="@string/profile" />
     <item
-        android:id="@+id/action_item2"
+        android:id="@+id/bank"
         android:icon="@mipmap/bank"
-        android:title="@string/item_2"/>
+        android:title="@string/bank" />
     <item
-        android:id="@+id/action_item3"
+        android:id="@+id/qualification"
         android:icon="@mipmap/qualification"
-        android:title="@string/item_3"/>
+        android:title="@string/qualification"/>
+    <item
+        android:id="@+id/certification"
+        android:icon="@mipmap/certification"
+        android:title="@string/certification" />
+    <item
+        android:id="@+id/dependent"
+        android:icon="@mipmap/dependent"
+        android:title="@string/dependent"/>
 </menu>

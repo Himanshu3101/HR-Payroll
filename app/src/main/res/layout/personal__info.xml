@@ -10,14 +10,14 @@
     android:visibility="visible"
     android:background="@color/colorBackground">
 
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@color/colorPrimaryDark">
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="55dp"-->
+        <!--android:background="@color/colorPrimaryDark">-->
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
 
             <!--<FrameLayout android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content">-->
@@ -30,40 +30,40 @@
                 <!--<ImageView android:layout_width="30dp"-->
                     <!--android:layout_height="30dp"-->
                     <!--android:scaleType="fitXY"-->
-                    <!--android:background="@mipmap/home"-->
+                    <!--android:background="@mipmap/back"-->
                     <!--android:layout_gravity="left|center"/>-->
 
             <!--</FrameLayout>-->
 
-            <android.support.v7.widget.AppCompatTextView
-                android:text="Personal Profile"
-                android:textSize="20sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textStyle="bold"
-                android:textColor="#fff"
-                android:layout_marginTop="13dp" />
-
-            <!--<FrameLayout android:layout_width="wrap_content"-->
+            <!--<android.support.v7.widget.AppCompatTextView-->
+                <!--android:text="Personal Profile"-->
+                <!--android:textSize="20sp"-->
+                <!--android:layout_width="match_parent"-->
                 <!--android:layout_height="wrap_content"-->
-                <!--android:layout_alignParentRight="true">-->
+                <!--android:textAlignment="center"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="#fff"-->
+                <!--android:layout_marginTop="13dp" />-->
 
-                <!--<Button android:id="@+id/Pro_edit"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:background="@color/transparent"/>-->
+            <!--&lt;!&ndash;<FrameLayout android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentRight="true">&ndash;&gt;-->
 
-                <!--<ImageView android:layout_width="30dp"-->
-                    <!--android:layout_height="30dp"-->
-                    <!--android:layout_marginRight="20dp"-->
-                    <!--android:scaleType="fitXY"-->
-                    <!--android:background="@mipmap/edit"-->
-                    <!--android:layout_gravity="right|center"/>-->
-            <!--</FrameLayout>-->
+                <!--&lt;!&ndash;<Button android:id="@+id/Pro_edit"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@color/transparent"/>&ndash;&gt;-->
 
-        </RelativeLayout>
-    </android.support.v7.widget.Toolbar>
+                <!--&lt;!&ndash;<ImageView android:layout_width="30dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="30dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginRight="20dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:scaleType="fitXY"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@mipmap/edit"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_gravity="right|center"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;</FrameLayout>&ndash;&gt;-->
+
+        <!--</RelativeLayout>-->
+    <!--</android.support.v7.widget.Toolbar>-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -141,7 +141,7 @@
                         android:orientation="horizontal"
                         android:layout_margin="10dp">
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginRight="03dp"
@@ -149,7 +149,7 @@
                             android:text="Personal Number"
                             android:textColor="@color/colorText"/>
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.Textclass
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -171,7 +171,7 @@
                         android:orientation="horizontal"
                         android:layout_margin="10dp">
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginRight="03dp"
@@ -179,7 +179,7 @@
                             android:text="Co Code"
                             android:textColor="@color/colorText"/>
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.Textclass
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -201,7 +201,7 @@
                         android:orientation="horizontal"
                         android:layout_margin="10dp">
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginRight="03dp"
@@ -209,7 +209,7 @@
                             android:text="Position"
                             android:textColor="@color/colorText"/>
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.Textclass
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -231,7 +231,7 @@
                         android:orientation="horizontal"
                         android:layout_margin="10dp">
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginRight="03dp"
@@ -239,7 +239,7 @@
                             android:text="Cost Center"
                             android:textColor="@color/colorText"/>
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.Textclass
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -261,7 +261,7 @@
                         android:orientation="horizontal"
                         android:layout_margin="10dp">
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginRight="03dp"
@@ -269,7 +269,7 @@
                             android:text="Title"
                             android:textColor="@color/colorText"/>
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.Textclass
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -291,7 +291,7 @@
                         android:orientation="horizontal"
                         android:layout_margin="10dp">
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginRight="03dp"
@@ -299,7 +299,7 @@
                             android:text="First Name"
                             android:textColor="@color/colorText"/>
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.Textclass
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -321,7 +321,7 @@
                         android:orientation="horizontal"
                         android:layout_margin="10dp">
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginRight="03dp"
@@ -329,7 +329,7 @@
                             android:text="Last Name"
                             android:textColor="@color/colorText"/>
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.Textclass
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -351,7 +351,7 @@
                         android:orientation="horizontal"
                         android:layout_margin="10dp">
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginRight="03dp"
@@ -359,7 +359,7 @@
                             android:text="Gender"
                             android:textColor="@color/colorText"/>
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.Textclass
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -381,7 +381,7 @@
                         android:orientation="horizontal"
                         android:layout_margin="10dp">
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginRight="03dp"
@@ -389,7 +389,7 @@
                             android:text="Martial Status"
                             android:textColor="@color/colorText"/>
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.Textclass
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -411,7 +411,7 @@
                         android:orientation="horizontal"
                         android:layout_margin="10dp">
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginRight="03dp"
@@ -419,7 +419,7 @@
                             android:text="Date Of Birth"
                             android:textColor="@color/colorText"/>
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.Textclass
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -441,7 +441,7 @@
                         android:orientation="horizontal"
                         android:layout_margin="10dp">
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginRight="03dp"
@@ -449,7 +449,7 @@
                             android:text="SSN"
                             android:textColor="@color/colorText"/>
 
-                        <android.support.v7.widget.AppCompatTextView
+                        <com.yoeki.kalpnay.hrporatal.setting.Textclass
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"

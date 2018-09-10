@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.yoeki.kalpnay.hrporatal.R;
 import com.yoeki.kalpnay.hrporatal.setting.Textclass;
+import com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading;
 
 import java.util.List;
 
@@ -66,7 +67,8 @@ public class BankNameAccountNo_RecyclerViewAdapter extends RecyclerView.Adapter<
 
     // stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder {
-        Textclass bank_name,accountNo;
+        TextclassfrHeading bank_name;
+        Textclass accountNo;
         AppCompatButton particularAC_Details;
         LinearLayoutCompat selectBank;
 

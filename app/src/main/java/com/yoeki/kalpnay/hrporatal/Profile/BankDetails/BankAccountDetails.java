@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -19,6 +18,7 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 
 import com.yoeki.kalpnay.hrporatal.R;
+import com.yoeki.kalpnay.hrporatal.setting.Edittextclass;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ import java.util.List;
 public class BankAccountDetails  extends Fragment {
 
     private static BankAccountDetails instance;
-    AppCompatTextView bankname,branchname,Accounttype;
+    Edittextclass bankname,branchname,Accounttype;
     AppCompatButton bankselect,branchselect,Accounttypeselect;
     String Total_Bank_Account="4" +
             "" +
@@ -48,9 +48,9 @@ public class BankAccountDetails  extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
 
-        bankname=(AppCompatTextView) getView().findViewById(R.id.bankname);
-        branchname=(AppCompatTextView)getView().findViewById(R.id.branchname);
-        Accounttype=(AppCompatTextView)getView().findViewById(R.id.Accounttype);
+        bankname=(Edittextclass) getView().findViewById(R.id.bankname);
+        branchname=(Edittextclass)getView().findViewById(R.id.branchname);
+        Accounttype=(Edittextclass)getView().findViewById(R.id.Accounttype);
 
         bankselect=(AppCompatButton)getView().findViewById(R.id.bankselect);
         branchselect=(AppCompatButton)getView().findViewById(R.id.branchselect);
