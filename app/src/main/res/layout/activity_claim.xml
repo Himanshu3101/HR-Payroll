@@ -5,29 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorgrey"
-    android:alpha=".8"
     android:orientation="vertical">
+
     <RelativeLayout
         android:id="@+id/rl_reqhomehead"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/colorPrimary">
-        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:text="Claim Request"
-            android:textSize="20dp"
+            android:textSize="@dimen/textFrHeading"
             android:textColor="@color/textcolor"/>
-        <ImageView
-            android:id="@+id/img_backrequestclaim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back"
-            android:layout_centerInParent="true"
-            android:layout_alignParentLeft="true"
-            android:padding="10dp"/>
+
+        <FrameLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="05dp">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/img_backrequestclaim"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"/>
+
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="04dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/back"
+                android:layout_gravity="left|center"/>
+
+        </FrameLayout>
     </RelativeLayout>
     <ScrollView
         android:layout_width="match_parent"
@@ -36,25 +48,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Date"
                 android:textColor="@color/colorblack"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp" />
 
             <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:textSize="@dimen/textNtHeader"
+                android:hint="Date"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
                 android:id="@+id/tv_claimreqfromdate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Date"
-                android:textColor="@color/colorgreydark"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
@@ -63,25 +77,26 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
 
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Time"
                 android:textColor="@color/colorblack"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp" />
 
             <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:textSize="@dimen/textNtHeader"
+                android:hint="Time"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
                 android:id="@+id/tv_claimreqtime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Time"
-                android:textColor="@color/colorgreydark"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
@@ -90,13 +105,13 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
 
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Claim Type"
                 android:textColor="@color/colorblack"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
@@ -105,13 +120,14 @@
                 android:layout_marginLeft="15dp" />
 
             <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:textSize="@dimen/textNtHeader"
+                android:hint="Claim Type"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
                 android:id="@+id/tv_claimreqtype"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Claim Type"
-                android:textColor="@color/colorgreydark"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
@@ -126,13 +142,14 @@
                 android:layout_height="wrap_content"
                 android:visibility="gone"
                 android:orientation="vertical">
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+
+                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                    android:textSize="@dimen/textFrHeader"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Hotel Name"
                     android:textColor="@color/colorblack"
                     android:gravity="left"
-                    android:textSize="15dp"
                     android:paddingTop="7dp"
                     android:paddingBottom="7dp"
                     android:paddingLeft="5dp"
@@ -140,15 +157,15 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp" />
 
-                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:textSize="@dimen/textNtHeader"
+                    android:hint="Hotel Name"
+                    android:textColorHint="@color/colorgreydark"
+                    android:textColor="@color/colorText"
                     android:id="@+id/tv_claimtypehotelname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Hotel Name"
-                    android:textColor="@color/colorgreydark"
                     android:gravity="left"
-                    android:textColorHint="@color/colorgreydark"
-                    android:textSize="15dp"
                     android:paddingTop="7dp"
                     android:paddingBottom="7dp"
                     android:paddingLeft="5dp"
@@ -158,13 +175,13 @@
                     android:layout_marginLeft="15dp"
                     android:background="@drawable/edity_textbackground"/>
 
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                    android:textSize="@dimen/textFrHeader"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Hotel Location"
                     android:textColor="@color/colorblack"
                     android:gravity="left"
-                    android:textSize="15dp"
                     android:paddingTop="7dp"
                     android:paddingBottom="7dp"
                     android:paddingLeft="5dp"
@@ -172,15 +189,15 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp" />
 
-                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:textSize="@dimen/textNtHeader"
+                    android:textColor="@color/colorText"
                     android:id="@+id/tv_claimtypehotellocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Hotel Location"
-                    android:textColor="@color/colorgreydark"
                     android:gravity="left"
                     android:textColorHint="@color/colorgreydark"
-                    android:textSize="15dp"
                     android:paddingTop="7dp"
                     android:paddingBottom="7dp"
                     android:paddingLeft="5dp"
@@ -197,115 +214,116 @@
                 android:visibility="gone"
                 android:orientation="vertical">
 
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Mode of travel"
-                    android:textColor="@color/colorblack"
-                    android:gravity="left"
-                    android:textSize="15dp"
-                    android:paddingTop="7dp"
-                    android:paddingBottom="7dp"
-                    android:paddingLeft="5dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp" />
+                   <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                       android:textSize="@dimen/textFrHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mode of travel"
+                        android:textColor="@color/colorblack"
+                        android:gravity="left"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp" />
 
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
-                    android:id="@+id/tv_claimtypetravelmode"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Mode of travel"
-                    android:textColor="@color/colorgreydark"
-                    android:gravity="left"
-                    android:textColorHint="@color/colorgreydark"
-                    android:textSize="15dp"
-                    android:paddingTop="7dp"
-                    android:paddingBottom="7dp"
-                    android:paddingLeft="5dp"
-                    android:singleLine="true"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:background="@drawable/edity_textbackground"/>
+                   <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                       android:textSize="@dimen/textNtHeader"
+                       android:textColorHint="@color/colorgreydark"
+                       android:textColor="@color/colorText"
+                        android:id="@+id/tv_claimtypetravelmode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mode of travel"
+                        android:gravity="left"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/edity_textbackground"/>
 
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Departure from"
-                    android:textColor="@color/colorblack"
-                    android:gravity="left"
-                    android:textSize="15dp"
-                    android:paddingTop="7dp"
-                    android:paddingBottom="7dp"
-                    android:paddingLeft="5dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp" />
+                   <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                       android:textSize="@dimen/textFrHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Departure from"
+                        android:textColor="@color/colorblack"
+                        android:gravity="left"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp" />
 
-                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
-                    android:id="@+id/tv_claimtypetraveldeparturefrom"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Departure From"
-                    android:textColor="@color/colorgreydark"
-                    android:gravity="left"
-                    android:textColorHint="@color/colorgreydark"
-                    android:textSize="15dp"
-                    android:paddingTop="7dp"
-                    android:paddingBottom="7dp"
-                    android:paddingLeft="5dp"
-                    android:singleLine="true"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:background="@drawable/edity_textbackground"/>
+                   <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                       android:textSize="@dimen/textNtHeader"
+                       android:textColorHint="@color/colorgreydark"
+                       android:textColor="@color/colorText"
+                        android:id="@+id/tv_claimtypetraveldeparturefrom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Departure From"
+                        android:gravity="left"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/edity_textbackground"/>
 
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Arrival to"
-                    android:textColor="@color/colorblack"
-                    android:gravity="left"
-                    android:textSize="15dp"
-                    android:paddingTop="7dp"
-                    android:paddingBottom="7dp"
-                    android:paddingLeft="5dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"/>
+                   <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                       android:textSize="@dimen/textFrHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Arrival to"
+                        android:textColor="@color/colorblack"
+                        android:gravity="left"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"/>
 
-                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
-                    android:id="@+id/tv_claimtypetravelarivalto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Arrival to"
-                    android:textColor="@color/colorgreydark"
-                    android:gravity="left"
-                    android:textColorHint="@color/colorgreydark"
-                    android:textSize="15dp"
-                    android:paddingTop="7dp"
-                    android:paddingBottom="7dp"
-                    android:paddingLeft="5dp"
-                    android:singleLine="true"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:background="@drawable/edity_textbackground"/>
+                   <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                       android:textSize="@dimen/textNtHeader"
+                       android:textColorHint="@color/colorgreydark"
+                       android:textColor="@color/colorText"
+                        android:id="@+id/tv_claimtypetravelarivalto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Arrival to"
+                       android:gravity="left"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/edity_textbackground"/>
             </LinearLayout>
 
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Amount"
                 android:textColor="@color/colorblack"
-                android:textSize="15dp"
                 android:gravity="left"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp" />
 
-            <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:textSize="@dimen/textNtHeader"
                 android:id="@+id/edt_claimreqamount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -313,7 +331,6 @@
                 android:textColorHint="@color/colorgreydark"
                 android:textColor="@color/colorblack"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:inputType="number"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
@@ -323,12 +340,12 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
 
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Attachment"
                 android:textColor="@color/colorblack"
-                android:textSize="15dp"
                 android:gravity="left"
                 android:layout_marginTop="7dp"
                 android:layout_marginRight="15dp"
@@ -349,12 +366,13 @@
                 android:background="@drawable/edity_textbackground">
 
                 <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:textSize="@dimen/textNtHeader"
+                    android:hint="Attachment"
+                    android:textColorHint="@color/colorgreydark"
+                    android:textColor="@color/colorText"
                     android:id="@+id/tv_claimreqattachment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Attachment"
-                    android:textColor="@color/colorgreydark"
-                    android:textSize="15dp"
                     android:gravity="left"
                     android:paddingBottom="6dp"
                     android:paddingTop="6dp"
@@ -376,27 +394,27 @@
                 android:layout_height="wrap_content"
                 android:visibility="visible"
                 android:orientation="vertical">
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                    android:textSize="@dimen/textFrHeader"
                     android:id="@+id/tv_leavereqdescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Description"
                     android:textColor="@color/colorblack"
-                    android:textSize="15dp"
                     android:gravity="left"
                     android:layout_marginTop="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp" />
 
-                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:textSize="@dimen/textNtHeader"
+                    android:hint="Attachment"
+                    android:textColorHint="@color/colorgreydark"
+                    android:textColor="@color/colorText"
                     android:id="@+id/edt_claimreqdescription"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:hint="Description"
-                    android:textColorHint="@color/colorgreydark"
-                    android:textColor="@color/colorblack"
                     android:gravity="left"
-                    android:textSize="15dp"
                     android:paddingTop="7dp"
                     android:paddingBottom="7dp"
                     android:paddingLeft="5dp"

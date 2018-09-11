@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/request">
+    android:background="@color/colorAccent">
 
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"

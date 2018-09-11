@@ -37,7 +37,7 @@
                   android:layout_weight=".1"
                   android:textColor="@color/colorPrimaryDark"
                   android:textStyle="bold"
-                  android:textSize="25dp" />
+                  android:textSize="@dimen/textFrHeader" />
               <!--android:textColor="#096a75"-->
               <com.yoeki.kalpnay.hrporatal.setting.Textclass
                   android:id="@+id/dateMonth"
@@ -47,13 +47,13 @@
                   android:layout_weight=".1"
                   android:textColor="@color/colorPrimaryDark"
                   android:textStyle="bold"
-                  android:textSize="17dp" />
+                  android:textSize="@dimen/textFrHeader" />
 
           </android.support.v7.widget.LinearLayoutCompat>
 
           <android.support.v7.widget.LinearLayoutCompat
               android:layout_width="match_parent"
-              android:layout_height="wrap_content"
+              android:layout_height="match_parent"
               android:orientation="vertical"
               android:layout_weight=".1">
 
@@ -66,7 +66,8 @@
                   android:layout_marginTop="02dp"
                   android:textColor="@color/colorPrimaryDark"
                   android:textStyle="bold"
-                  android:textSize="20dp" />
+                  android:gravity="center"
+                  android:textSize="@dimen/textFrHeader" />
 
           </android.support.v7.widget.LinearLayoutCompat>
 

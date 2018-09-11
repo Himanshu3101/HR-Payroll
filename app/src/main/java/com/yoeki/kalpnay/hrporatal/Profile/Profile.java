@@ -1,6 +1,7 @@
 package com.yoeki.kalpnay.hrporatal.Profile;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
@@ -10,7 +11,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
+import com.yoeki.kalpnay.hrporatal.HomeMenu.HomeActivity;
 import com.yoeki.kalpnay.hrporatal.Profile.BankDetails.BankAccountDetails;
 import com.yoeki.kalpnay.hrporatal.Profile.Certification.Certification;
 import com.yoeki.kalpnay.hrporatal.Profile.Dependent.Dependent;
@@ -24,6 +28,7 @@ public class Profile extends AppCompatActivity {
     ViewPager viewPager;
     private BottomNavigationView bottomNavigationView;
     TextclassTextFrHeader headerName;
+    Button Pro_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,7 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.profie);
         bottomNavigationView = (BottomNavigationView)findViewById(R.id.navigation);
         headerName = (TextclassTextFrHeader) findViewById(R.id.profileHeader);
+        Pro_back = (Button)findViewById(R.id.Pro_back);
         headerName.setText("Profile");
         setViewPager();
         disableShiftMode(bottomNavigationView);
@@ -66,7 +72,24 @@ public class Profile extends AppCompatActivity {
                     }
                 });
 
+        Pro_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     private void setViewPager() {

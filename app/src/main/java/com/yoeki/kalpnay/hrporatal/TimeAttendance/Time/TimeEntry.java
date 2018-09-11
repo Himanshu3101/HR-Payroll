@@ -1,16 +1,16 @@
 package com.yoeki.kalpnay.hrporatal.TimeAttendance.Time;
 
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.TimePicker;
 
-import com.applandeo.materialcalendarview.EventDay;
-import com.applandeo.materialcalendarview.listeners.OnDayClickListener;
 import com.yoeki.kalpnay.hrporatal.R;
 import com.yoeki.kalpnay.hrporatal.TimeAttendance.TimeAttendance_Menu;
 import com.yoeki.kalpnay.hrporatal.setting.Edittextclass;
@@ -20,10 +20,10 @@ import java.util.Calendar;
 public class TimeEntry extends AppCompatActivity {
 
     private  static final String TAG = "CalendarActivity";
-    private com.applandeo.materialcalendarview.CalendarView mCalendarView;
-    AppCompatButton timeEnter_home,time_from,time_to;
-    Edittextclass from_time_edittext,to_time_edittext;
-    private int mHour, mMinute, whichtime=0;
+//    private com.applandeo.materialcalendarview.CalendarView mCalendarView;
+    AppCompatButton timeEnter_home,time_from,time_to,HolidayFrom_date;
+    Edittextclass from_time_edittext,to_time_edittext,Stat_fromdate;
+    private int mHour, mMinute, whichtime=0, mYear, mMonth, mDay;
     String Com_fromTime, Com_toTime, Meridiem;
 
     @Override
@@ -31,18 +31,27 @@ public class TimeEntry extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.time_entry);
 
-        mCalendarView = (com.applandeo.materialcalendarview.CalendarView) findViewById(R.id.calendarView);
+//        mCalendarView = (com.applandeo.materialcalendarview.CalendarView) findViewById(R.id.calendarView);
         timeEnter_home = (AppCompatButton)findViewById(R.id.timeEnter_home);
+        HolidayFrom_date = (AppCompatButton)findViewById(R.id.HolidayFrom_date);
         time_from = (AppCompatButton)findViewById(R.id.time_from);
         time_to = (AppCompatButton)findViewById(R.id.time_to);
         from_time_edittext = (Edittextclass)findViewById(R.id.from_time_edittext);
         to_time_edittext = (Edittextclass)findViewById(R.id.to_time_edittext);
+        Stat_fromdate = (Edittextclass)findViewById(R.id.Stat_fromdate);
 
-        mCalendarView.setOnDayClickListener(new OnDayClickListener() {
+//        mCalendarView.setOnDayClickListener(new OnDayClickListener() {
+//            @Override
+//            public void onDayClick(EventDay eventDay) {
+////                Calendar clickedDayCalendar = eventDay.getCalendar();
+//                Calendar selectedDate = mCalendarView.getFirstSelectedDate();
+//            }
+//        });
+
+        HolidayFrom_date.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDayClick(EventDay eventDay) {
-//                Calendar clickedDayCalendar = eventDay.getCalendar();
-                Calendar selectedDate = mCalendarView.getFirstSelectedDate();
+            public void onClick(View v) {
+                datePicker();
             }
         });
 
@@ -107,5 +116,24 @@ public class TimeEntry extends AppCompatActivity {
                     }
                 }, mHour, mMinute, false);
         timePickerDialog.show();
+    }
+
+    private void datePicker(){
+        // Get Current Date
+        final Calendar c = Calendar.getInstance();
+        mYear = c.get(Calendar.YEAR);
+        mMonth = c.get(Calendar.MONTH);
+        mDay = c.get(Calendar.DAY_OF_MONTH);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, AlertDialog.THEME_DEVICE_DEFAULT_LIGHT,
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                        String date_time = (monthOfYear + 1) + "/" + dayOfMonth + "/" + year;
+                        //*************Call Time Picker Here ********************
+                        Stat_fromdate.setText(date_time);
+                    }
+                }, mYear, mMonth, mDay);
+        datePickerDialog.show();
     }
 }

@@ -3,15 +3,15 @@ package com.yoeki.kalpnay.hrporatal.Request;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.yoeki.kalpnay.hrporatal.R;
 
 public class RequestMenu extends AppCompatActivity implements View.OnClickListener{
 
-    private ImageView img_backrequest;
+    private AppCompatButton img_backrequest;
     private LinearLayout ly_leaverequest,ly_claimreq,ly_trainningrequest,ly_greveance,ly_shiftchange,ly_advance;
 
     @Override
@@ -39,6 +39,7 @@ public class RequestMenu extends AppCompatActivity implements View.OnClickListen
 
             case R.id.ly_leaverequest:
                 Intent intent=new Intent(RequestMenu.this,LeaveRequest.class);
+                intent.putExtra("whereCome","fromRequest");
                 startActivity(intent);
                 break;
             case R.id.ly_claimreq:

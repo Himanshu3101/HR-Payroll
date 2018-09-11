@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -19,8 +20,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -29,6 +28,7 @@ import android.widget.Toast;
 
 import com.yoeki.kalpnay.hrporatal.HomeMenu.Menuitemmodel;
 import com.yoeki.kalpnay.hrporatal.R;
+import com.yoeki.kalpnay.hrporatal.setting.Textclass;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -42,10 +42,10 @@ public class ClaimActivity extends AppCompatActivity implements View.OnClickList
 
     private LinearLayout ly_claimtypehotelview,ly_claimtypeother,ly_claimtypetravelview,ly_leavereqattachment,ly_attachmentclaim;
     private TextView tv_claimreqfromdate,tv_claimreqtime,tv_claimreqtype,tv_claimtypetravelmode,tv_claimreqattachment;
-    private EditText tv_claimtypehotelname,tv_claimtypehotellocation,edt_claimreqdescription,tv_claimtypetraveldeparturefrom,tv_claimtypetravelarivalto;
+    private Textclass tv_claimtypehotelname,edt_claimreqdescription,tv_claimtypehotellocation,tv_claimtypetravelarivalto,tv_claimtypetraveldeparturefrom;
     private int mYear, mMonth, mDay,mHour,mMinute;
     String str="temp";
-    ImageView img_backrequestclaim;
+    AppCompatButton img_backrequestclaim;
     ArrayList<Menuitemmodel> arrayreqattachlist;
     RecyclerView rec_leavereqattachment;
 

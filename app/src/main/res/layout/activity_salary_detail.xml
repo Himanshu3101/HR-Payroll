@@ -3,30 +3,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/request"
+    android:background="@color/colorAccent"
     android:orientation="vertical">
     <RelativeLayout
         android:id="@+id/rl_reqhomehead"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/colorPrimary">
+
+        <FrameLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/img_salarydetailback"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"/>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/back"
+                android:layout_gravity="left|center"/>
+        </FrameLayout>
+
         <com.yoeki.kalpnay.hrporatal.setting.Textclass
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:text="Salary Detail"
-            android:textSize="20dp"
+            android:textSize="@dimen/textFrHeading"
             android:textColor="@color/textcolor"/>
 
-        <ImageView
-            android:id="@+id/img_salarydetailback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back"
-            android:layout_centerInParent="true"
-            android:layout_alignParentLeft="true"
-            android:padding="10dp"/>
     </RelativeLayout>
 
         <android.support.design.widget.TabLayout

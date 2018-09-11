@@ -11,10 +11,10 @@
         android:centerColor="#f7f7f7"
         android:endColor="#f7f7f7"/>
 
-    <padding android:left="10dp"
-        android:top="10dp"
-        android:right="10dp"
-        android:bottom="10dp"/>
+    <!--<padding android:left="10dp"-->
+        <!--android:top="10dp"-->
+        <!--android:right="10dp"-->
+        <!--android:bottom="10dp"/>-->
     <corners android:bottomRightRadius="4dp"
         android:bottomLeftRadius="4dp"
         android:topLeftRadius="4dp"

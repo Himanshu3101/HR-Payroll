@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,7 +21,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -43,7 +43,7 @@ public class LeaveRequest extends AppCompatActivity implements View.OnClickListe
 
     private TextView tv_leavereqfromdate,tv_leavereqtodate,tv_leavereqtype,tv_leavereqattachment;
     private int mYear, mMonth, mDay;
-    private ImageView img_backrequest;
+    private AppCompatButton img_backrequest;
     private LinearLayout ly_leavereqattachment,ly_leaveattachment;
     private RecyclerView rec_leavereqattachment;
     ArrayList<Menuitemmodel> arrayreqattachlist;

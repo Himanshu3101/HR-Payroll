@@ -10,6 +10,7 @@
     <dimen name="design_bottom_navigation_active_text_size" tools:override="true">10sp</dimen>
 
     <dimen name="textNtHeader">15sp</dimen>
+    <dimen name="textfrContentMenu">14sp</dimen>
     <dimen name="textFrHeader">15sp</dimen>
     <dimen name="textFrHeading">20sp</dimen>
 </resources>

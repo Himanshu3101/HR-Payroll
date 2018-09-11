@@ -3,30 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorgreydark"
-    android:orientation="vertical"
-    android:alpha=".7">
-
-    <RelativeLayout
-        android:id="@+id/rl_reqhomehead"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@color/colorPrimary">
-
-        <com.yoeki.kalpnay.hrporatal.setting.Textclass
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Event"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:layout_margin="7dp"
-            android:gravity="center"
-            android:textSize="20dp"
-            android:layout_centerInParent="true"
-            android:textColor="@color/textcolor" />
-
-    </RelativeLayout>
+    android:background="@color/textcolor"
+    android:orientation="vertical">
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabs_events"

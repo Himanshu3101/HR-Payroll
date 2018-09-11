@@ -4,11 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/textcolor"
-    android:alpha=".9">
+    android:background="@color/colorAccent">
       <ScrollView
          android:layout_width="match_parent"
-         android:layout_height="match_parent">
+         android:layout_height="wrap_content"
+          android:layout_margin="10dp"
+          android:background="@color/textcolor">
           <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -116,6 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
+
                 android:orientation="horizontal">
                 <com.yoeki.kalpnay.hrporatal.setting.Textclass
                     android:layout_width="match_parent"
