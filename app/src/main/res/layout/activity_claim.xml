@@ -126,8 +126,6 @@
                 android:layout_height="wrap_content"
                 android:visibility="gone"
                 android:orientation="vertical">
-
-
                 <com.yoeki.kalpnay.hrporatal.setting.Textclass
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -192,42 +190,7 @@
                     android:layout_marginLeft="15dp"
                     android:background="@drawable/edity_textbackground"/>
             </LinearLayout>
-    <LinearLayout
-        android:id="@+id/ly_claimtypeother"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-         android:orientation="vertical">
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
-                android:id="@+id/tv_leavereqdescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Description"
-                android:textColor="@color/colorblack"
-                android:textSize="15dp"
-                android:gravity="left"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp" />
-
-            <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
-                android:id="@+id/edt_claimreqdescription"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:hint="Description"
-                android:textColorHint="@color/colorgreydark"
-                android:textColor="@color/colorblack"
-                android:gravity="left"
-                android:textSize="15dp"
-                android:paddingTop="7dp"
-                android:paddingBottom="7dp"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/edity_textbackground"/>
-               </LinearLayout>
-            <LinearLayout
+               <LinearLayout
                 android:id="@+id/ly_claimtypetravelview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -334,6 +297,35 @@
             <com.yoeki.kalpnay.hrporatal.setting.Textclass
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Amount"
+                android:textColor="@color/colorblack"
+                android:textSize="15dp"
+                android:gravity="left"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                android:id="@+id/edt_claimreqamount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Amount"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorblack"
+                android:gravity="left"
+                android:textSize="15dp"
+                android:inputType="number"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/edity_textbackground"/>
+
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Attachment"
                 android:textColor="@color/colorblack"
                 android:textSize="15dp"
@@ -377,6 +369,43 @@
                     android:src="@drawable/timesheet_icon"
                     android:layout_weight=".5"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_claimtypeother"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="vertical">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:id="@+id/tv_leavereqdescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="@color/colorblack"
+                    android:textSize="15dp"
+                    android:gravity="left"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp" />
+
+                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                    android:id="@+id/edt_claimreqdescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:hint="Description"
+                    android:textColorHint="@color/colorgreydark"
+                    android:textColor="@color/colorblack"
+                    android:gravity="left"
+                    android:textSize="15dp"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/edity_textbackground"/>
+            </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/ly_leavereqattachment"
                 android:layout_width="match_parent"

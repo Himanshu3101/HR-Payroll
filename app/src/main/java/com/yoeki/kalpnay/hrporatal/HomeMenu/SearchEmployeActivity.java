@@ -59,7 +59,6 @@ public class SearchEmployeActivity extends AppCompatActivity {
         data7.setEmployeemail("hsjdjasj@gmail.com");
         data7.setEmployedesignation("Dot net Developer");
         employelist.add(data7);
-
         Searchmodel data8=new Searchmodel();
         data8.setEmployename("Mahindra singh");
         data8.setEmployeemail("mmmmm@gmail.com");

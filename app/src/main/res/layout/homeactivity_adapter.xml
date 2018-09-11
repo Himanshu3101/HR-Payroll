@@ -9,6 +9,7 @@
             android:gravity="center"
             android:orientation="vertical"
             android:padding="4dp"
+            android:layout_margin="1dp"
             android:background="@color/textcolor">
        <de.hdodenhof.circleimageview.CircleImageView
          android:id="@+id/img_mainmenuitemimage"

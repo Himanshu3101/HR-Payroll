@@ -12,9 +12,6 @@ import com.yoeki.kalpnay.hrporatal.R;
 import java.util.ArrayList;
 
 public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-    private static final int TYPE_HEADER = 0;
-    private static final int TYPE_FOOTER = 1;
     private static final int TYPE_ITEM = 2;
 
     private ArrayList<Searchmodel> stringArrayList;

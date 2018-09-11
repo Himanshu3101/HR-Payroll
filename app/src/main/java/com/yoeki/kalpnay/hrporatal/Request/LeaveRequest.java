@@ -15,7 +15,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Base64;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -50,6 +49,7 @@ public class LeaveRequest extends AppCompatActivity implements View.OnClickListe
     ArrayList<Menuitemmodel> arrayreqattachlist;
     LinearLayoutManager linearlayoutmanager;
     String str="temp",whereCome;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +101,7 @@ public class LeaveRequest extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+
     @Override
     public void onClick(View view) {
       switch (view.getId()){
@@ -110,14 +111,11 @@ public class LeaveRequest extends AppCompatActivity implements View.OnClickListe
               break;
 
           case R.id.tv_leavereqtodate:
-
               todate();
               break;
 
           case R.id.tv_leavereqtype:
-
               leavetypedialog();
-
               break;
           case R.id.img_backrequest:
 
@@ -264,9 +262,10 @@ public class LeaveRequest extends AppCompatActivity implements View.OnClickListe
 
         dialog.show();
     }
+
     public void uploadattachmentdialog(){
 
-        final CharSequence[] options = {"Choose from Gallery", "Cancel"};
+        final CharSequence[] options = {"Choose from Gallery","Choose from file", "Cancel"};
 
         android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(LeaveRequest.this);
         builder.setTitle("upload file");
@@ -281,6 +280,12 @@ public class LeaveRequest extends AppCompatActivity implements View.OnClickListe
 
                     Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     (LeaveRequest.this).startActivityForResult(intent, 2);
+                }else if (options[item].equals("Choose from file")){
+
+                    Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                    intent.setType("file/*");
+                    startActivityForResult(intent, 3);
+
                 }
                 else if (options[item].equals("Cancel"))
                 {
@@ -294,7 +299,7 @@ public class LeaveRequest extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK) {
+        if (resultCode == RESULT_OK&&requestCode==2) {
             Uri selectedImage = data.getData();
             String[] filePathColumn = {MediaStore.Images.Media.DATA};
             final InputStream imageStream;
@@ -306,6 +311,7 @@ public class LeaveRequest extends AppCompatActivity implements View.OnClickListe
                 arrayreqattachlist.add(dataitem);
 
                 if (arrayreqattachlist.size()>0){
+
                     ly_leaveattachment.setVisibility(View.GONE);
                     ly_leavereqattachment.setVisibility(View.VISIBLE);
 
@@ -324,11 +330,11 @@ public class LeaveRequest extends AppCompatActivity implements View.OnClickListe
                     ly_leaveattachment.setVisibility(View.VISIBLE);
                 }
 
-                Image = getResizedBitmap(Image, 400);
+   //                Image = getResizedBitmap(Image, 400);
                 ByteArrayOutputStream baoss = new ByteArrayOutputStream();
-                Image.compress(Bitmap.CompressFormat.PNG, 100, baoss); //bm is the bitmap object
-                byte[] bb = baoss.toByteArray();
-                String final_path = Base64.encodeToString(bb, Base64.DEFAULT);
+              //  Image.compress(Bitmap.CompressFormat.PNG, 100, baoss); //bm is the bitmap object
+                //byte[] bb = baoss.toByteArray();
+               // String final_path = Base64.encodeToString(bb, Base64.DEFAULT);
                 // Get the cursor
                 Cursor cursor = LeaveRequest.this.getContentResolver().query(selectedImage,
                         filePathColumn, null, null, null);

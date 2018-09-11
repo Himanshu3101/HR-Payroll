@@ -14,7 +14,7 @@
     <color name="white_trans">#99FFFFFF</color>
     <color name="colorBackground">#f3f5f8</color>
 
-
+    <color name="colorlightblack">#696969</color>
     <color name="colorHeader">#c8e0e3</color>
     <color name="transparent">#00000000</color>
     <color name="colorText">#3e3e3e</color>

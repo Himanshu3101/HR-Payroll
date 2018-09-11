@@ -19,6 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity android:name=".LoginActivity" />
         <activity android:name=".IntroScreenFragment.IntroActivity" />
         <activity android:name=".HomeMenu.HomeActivity" />
@@ -32,20 +34,19 @@
             <!--android:name=".TimeAttendance.Approval_Request.filter_Request"-->
             <!--android:theme="@style/FullDialogActivityTheme" />-->
 
-
-
         <activity android:name=".Request.LeaveRequest" />
+        <activity android:name=".Request.RequestMenu" />
         <activity android:name=".TimeAttendance.Approval_Request.Requests" />
         <activity android:name=".Profile.Profile"/>
+        <activity android:name=".HomeMenu.SearchEmployeActivity" />
+        <activity android:name=".Payroll.PayrollHomeActivity" />
+        <activity android:name=".Payroll.SalaryDetailActivity" />
+        <activity android:name=".Notification.NotificationHomeActivity"></activity>
         <activity android:name=".Request.ClaimActivity" />
         <activity android:name=".Request.TrainingActivity" />
         <activity android:name=".Request.GreveanceActivity" />
         <activity android:name=".Request.ShiftChange" />
-        <activity android:name=".Request.AdvanceActivity"></activity>
-        <activity
-            android:name=".Request.RequestMenu"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".HomeMenu.SearchEmployeActivity"></activity>
+        <activity android:name=".Request.AdvanceActivity" />
 
     </application>
 

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/textcolor"
+    android:alpha=".9">
+      <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/textcolor"
+         android:alpha=".9">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="left|center"
+             android:background="@color/colorgrey">
+         <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mohit kumar"
+            android:textColor="@color/colorblack"
+            android:textSize="17dp"
+             android:padding="3dp"
+            android:layout_margin="10dp"/>
+         </LinearLayout>
+
+        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Period"
+            android:textColor="@color/colorblack"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"/>
+        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jan 2017-Feb 2,2018"
+            android:textColor="@color/colorlightblack"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"/>
+        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay Date"
+            android:textColor="@color/colorblack"
+            android:textSize="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"/>
+
+        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friday,Feb 2,2018"
+            android:textColor="@color/colorlightblack"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"/>
+        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total New Pay"
+            android:textColor="@color/colorblack"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+         <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$1772000"
+            android:textColor="@color/colorlightblack"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="8dp"/>
+
+         </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal"
+                android:gravity="left|center"
+                android:background="@color/colorgrey">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gross Pay"
+                    android:textSize="17dp"
+                    android:padding="3dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$177700"
+                    android:textSize="14dp"
+                    android:padding="3dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorblack"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Salary"
+                    android:textSize="14dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$177700"
+                    android:textSize="14dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorlightblack"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="4dp"
+                android:orientation="horizontal"
+                android:gravity="left|center"
+                android:background="@color/colorgrey">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Taxes Withheld"
+                    android:textSize="17dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:padding="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$177.54"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:padding="4dp"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorblack"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fedral Incom Tex"
+                    android:textSize="14dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$174"
+                    android:textSize="14dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorlightblack"/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Social Security"
+                android:textSize="14dp"
+                android:layout_weight=".5"
+                android:gravity="left"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorblack"/>
+
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$17421"
+                android:textSize="14dp"
+                android:layout_weight=".5"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorlightblack"/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Medicare"
+                    android:textSize="14dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$17"
+                    android:textSize="14dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorlightblack"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CA Incomtax"
+                    android:textSize="14dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$17"
+                    android:textSize="14dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorlightblack"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CA State Disability Ins"
+                    android:textSize="14dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$17.56"
+                    android:textSize="14dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorlightblack"/>
+            </LinearLayout>
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                 android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deductions"
+                    android:textSize="17dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$750.50"
+                    android:textSize="14dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorlightblack"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

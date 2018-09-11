@@ -39,7 +39,6 @@ public class RequestMenu extends AppCompatActivity implements View.OnClickListen
 
             case R.id.ly_leaverequest:
                 Intent intent=new Intent(RequestMenu.this,LeaveRequest.class);
-                intent.putExtra("whereCome","fromRequest");
                 startActivity(intent);
                 break;
             case R.id.ly_claimreq:

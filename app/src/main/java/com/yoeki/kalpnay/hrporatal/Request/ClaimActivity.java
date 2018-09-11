@@ -119,15 +119,15 @@ public class ClaimActivity extends AppCompatActivity implements View.OnClickList
                 } else{
                     if (str.equals("Hotel")){
                         ly_claimtypehotelview.setVisibility(View.VISIBLE);
-                        ly_claimtypeother.setVisibility(View.GONE);
+                       // ly_claimtypeother.setVisibility(View.GONE);
                         ly_claimtypetravelview.setVisibility(View.GONE);
                     }else if (str.equals("Travel")){
                         ly_claimtypehotelview.setVisibility(View.GONE);
-                        ly_claimtypeother.setVisibility(View.GONE);
+                      //  ly_claimtypeother.setVisibility(View.GONE);
                         ly_claimtypetravelview.setVisibility(View.VISIBLE);
                     }else if (str.equals("Others")){
                         ly_claimtypehotelview.setVisibility(View.GONE);
-                        ly_claimtypeother.setVisibility(View.VISIBLE);
+                     //   ly_claimtypeother.setVisibility(View.VISIBLE);
                         ly_claimtypetravelview.setVisibility(View.GONE);
                     }
                     dialog.dismiss();

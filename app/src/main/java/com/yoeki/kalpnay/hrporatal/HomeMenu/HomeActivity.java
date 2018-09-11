@@ -24,6 +24,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
 
+import com.yoeki.kalpnay.hrporatal.Notification.NotificationHomeActivity;
+import com.yoeki.kalpnay.hrporatal.Payroll.SalaryDetailActivity;
 import com.yoeki.kalpnay.hrporatal.Profile.Profile;
 import com.yoeki.kalpnay.hrporatal.R;
 import com.yoeki.kalpnay.hrporatal.Request.RequestMenu;
@@ -43,7 +45,7 @@ public class HomeActivity extends AppCompatActivity
        ArrayList<Menuitemmodel> menuarraylist;
 
        RecyclerView recyclearview;
-       private LinearLayout ly_homerequest,ly_profile,ly_timeAttendance;
+       private LinearLayout ly_homerequest,ly_profile,ly_timeAttendance,ly_payroll,ly_notification;
       private static final int MY_PERMISSIONS_REQUEST_CODE = 123;
 
     @Override
@@ -63,6 +65,8 @@ public class HomeActivity extends AppCompatActivity
         ly_homerequest.setOnClickListener(this);
         ly_profile.setOnClickListener(this);
         ly_timeAttendance.setOnClickListener(this);
+        ly_payroll.setOnClickListener(this);
+        ly_notification.setOnClickListener(this);
 
         menuarraylist=new ArrayList<>();
         linearlayoutmanager=new LinearLayoutManager(this);
@@ -172,6 +176,8 @@ public class HomeActivity extends AppCompatActivity
         ly_homerequest=findViewById(R.id.ly_homerequest);
         ly_profile=findViewById(R.id.ly_profile);
         ly_timeAttendance=findViewById(R.id.ly_timeAttendance);
+        ly_payroll=findViewById(R.id.ly_payroll);
+        ly_notification=findViewById(R.id.ly_notification);
     }
 
     @Override
@@ -189,6 +195,15 @@ public class HomeActivity extends AppCompatActivity
             case R.id.ly_timeAttendance:
                 Intent intent0=new Intent(HomeActivity.this, TimeAttendance_Menu.class);
                 startActivity(intent0);
+                break;
+            case R.id.ly_payroll:
+                Intent intentpayroll=new Intent(HomeActivity.this, SalaryDetailActivity.class);
+                startActivity(intentpayroll);
+                break;
+
+            case  R.id.ly_notification:
+                Intent inten=new Intent(HomeActivity.this, NotificationHomeActivity.class);
+                startActivity(inten);
                 break;
         }
     }

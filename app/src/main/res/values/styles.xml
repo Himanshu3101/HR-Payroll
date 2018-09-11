@@ -48,4 +48,8 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
+    <style name="tabtext" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">true</item>
+    </style>
+
 </resources>

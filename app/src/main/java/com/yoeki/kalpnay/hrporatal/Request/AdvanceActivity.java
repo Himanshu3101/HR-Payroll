@@ -223,17 +223,17 @@ public class AdvanceActivity extends AppCompatActivity implements View.OnClickLi
                         if (str.equals("Hotel")){
                             ly_advanceforhotelviewview.setVisibility(View.VISIBLE);
                             ly_advancefortravelview.setVisibility(View.GONE);
-                            ly_advancetypeother.setVisibility(View.GONE);
-                            ly_advanceamount.setVisibility(View.VISIBLE);
+                          //  ly_advancetypeother.setVisibility(View.GONE);
+                           // ly_advanceamount.setVisibility(View.VISIBLE);
                         }else if (str.equals("Travel")){
-                            ly_advanceamount.setVisibility(View.VISIBLE);
+                          //  ly_advanceamount.setVisibility(View.VISIBLE);
                             ly_advanceforhotelviewview.setVisibility(View.GONE);
-                            ly_advancetypeother.setVisibility(View.GONE);
+                          //  ly_advancetypeother.setVisibility(View.GONE);
                             ly_advancefortravelview.setVisibility(View.VISIBLE);
                         }else if (str.equals("Others")){
-                            ly_advanceamount.setVisibility(View.VISIBLE);
+                          //  ly_advanceamount.setVisibility(View.VISIBLE);
                             ly_advancefortravelview.setVisibility(View.GONE);
-                            ly_advancetypeother.setVisibility(View.VISIBLE);
+                           // ly_advancetypeother.setVisibility(View.VISIBLE);
                             ly_advanceforhotelviewview.setVisibility(View.GONE);
                         }
                         dialog.dismiss();
