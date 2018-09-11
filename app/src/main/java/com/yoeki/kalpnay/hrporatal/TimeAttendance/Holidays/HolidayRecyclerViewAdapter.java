@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.yoeki.kalpnay.hrporatal.R;
 import com.yoeki.kalpnay.hrporatal.setting.Textclass;
+import com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -80,7 +81,8 @@ public class HolidayRecyclerViewAdapter extends RecyclerView.Adapter<HolidayRecy
 
     // stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder {
-        Textclass date,dateMonth,Event;
+        Textclass date,dateMonth;
+        TextclassfrHeading Event;
         ViewHolder(View itemView) {
             super(itemView);
             date = itemView.findViewById(R.id.date);

@@ -14,24 +14,25 @@
         android:background="@color/colorPrimaryDark">
 
         <FrameLayout android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/holid_home"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/transparent"/>
 
             <android.support.v7.widget.AppCompatImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
+                android:scaleType="fitXY"
                 android:background="@mipmap/home2"
                 android:layout_gravity="left|center"/>
         </FrameLayout>
 
-        <android.support.v7.widget.AppCompatTextView
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
+            android:textSize="@dimen/textFrHeading"
             android:text="Holidays"
-            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
@@ -42,196 +43,195 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/dateRange"
-        android:layout_below="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
-        android:editable="false"
-        android:textSize="17dp"
-        android:text="Select Date Range"/>
+    <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading-->
+        <!--android:id="@+id/dateRange"-->
+        <!--android:layout_below="@+id/toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:textColor="@color/colorPrimaryDark"-->
+        <!--android:editable="false"-->
+        <!--android:textSize="17dp"-->
+        <!--android:text="Select Date Range"/>-->
 
-    <android.support.v7.widget.LinearLayoutCompat
-        android:id="@+id/fromTo"
-        android:layout_below="@+id/dateRange"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <!--<android.support.v7.widget.LinearLayoutCompat-->
+        <!--android:id="@+id/fromTo"-->
+        <!--android:layout_below="@+id/dateRange"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
 
-        <android.support.v7.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal"
-            android:layout_marginLeft="22dp"
+        <!--<android.support.v7.widget.LinearLayoutCompat-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_marginLeft="22dp"-->
 
-            android:layout_marginRight="22dp">
+            <!--android:layout_marginRight="22dp">-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight=".1">
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight=".1">-->
 
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingTop="08dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textAlignment="viewStart"
-                    android:editable="false"
-                    android:textSize="17dp"
-                    android:text="From"/>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight=".12">
-
-                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
-                    android:id="@+id/Stat_fromdate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorblack"
-                    android:textAlignment="viewStart"
-                    android:hint="mm/dd/yyyy"
-                    android:editable="false"
-                    android:textColorHint="#757575"
-                    android:backgroundTint="@color/transparent"/>
-
-                <FrameLayout android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="05dp">
-
-                    <android.support.v7.widget.AppCompatButton
-                        android:id="@+id/HolidayFrom_date"
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/transparent"/>
-
-                    <android.support.v7.widget.AppCompatImageView
-                        android:layout_width="27dp"
-                        android:layout_height="30dp"
-                        android:scaleType="fitXY"
-                        android:background="@mipmap/calender"
-                        android:layout_gravity="center"/>
-                </FrameLayout>
-
-            </LinearLayout>
-
-        </android.support.v7.widget.LinearLayoutCompat>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:visibility="visible"
-            android:background="#D3D3D3" />
-
-        <android.support.v7.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal"
-            android:layout_marginLeft="22dp"
-            android:layout_marginTop="08dp"
-            android:layout_marginRight="22dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight=".1">
-
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingTop="08dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textAlignment="viewStart"
-                    android:editable="false"
-                    android:text="To"
-                    android:textSize="17dp"/>
+                <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:paddingTop="08dp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textColor="@color/colorPrimaryDark"-->
+                    <!--android:textAlignment="viewStart"-->
+                    <!--android:editable="false"-->
+                    <!--android:textSize="17dp"-->
+                    <!--android:text="From"/>-->
 
 
-            </LinearLayout>
+            <!--</LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight=".12">
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_weight=".12">-->
 
-                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
-                    android:id="@+id/Stat_todate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorblack"
-                    android:textAlignment="viewStart"
-                    android:hint="mm/dd/yyyy"
-                    android:textColorHint="#757575"
-                    android:editable="false"
-                    android:backgroundTint="@color/transparent"/>
+                <!--<com.yoeki.kalpnay.hrporatal.setting.Edittextclass-->
+                    <!--android:id="@+id/Stat_fromdate"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/colorblack"-->
+                    <!--android:textAlignment="viewStart"-->
+                    <!--android:hint="mm/dd/yyyy"-->
+                    <!--android:editable="false"-->
+                    <!--android:textColorHint="#757575"-->
+                    <!--android:backgroundTint="@color/transparent"/>-->
 
-                <FrameLayout android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="05dp">
+                <!--<FrameLayout android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="05dp">-->
 
-                    <android.support.v7.widget.AppCompatButton
-                        android:id="@+id/HolidayTo_date"
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/transparent"/>
+                    <!--<android.support.v7.widget.AppCompatButton-->
+                        <!--android:id="@+id/HolidayFrom_date"-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="@color/transparent"/>-->
 
-                    <android.support.v7.widget.AppCompatImageView android:layout_width="27dp"
-                        android:layout_height="30dp"
-                        android:scaleType="fitXY"
-                        android:background="@mipmap/calender"
-                        android:layout_gravity="center"/>
-                </FrameLayout>
+                    <!--<android.support.v7.widget.AppCompatImageView-->
+                        <!--android:layout_width="27dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:background="@mipmap/calender"-->
+                        <!--android:layout_gravity="center"/>-->
+                <!--</FrameLayout>-->
 
-            </LinearLayout>
+            <!--</LinearLayout>-->
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        <!--</android.support.v7.widget.LinearLayoutCompat>-->
 
-    </android.support.v7.widget.LinearLayoutCompat>
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:visibility="visible"-->
+            <!--android:background="#D3D3D3" />-->
+
+        <!--<android.support.v7.widget.LinearLayoutCompat-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_marginLeft="22dp"-->
+            <!--android:layout_marginTop="08dp"-->
+            <!--android:layout_marginRight="22dp">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight=".1">-->
+
+                <!--<com.yoeki.kalpnay.hrporatal.setting.Textclass-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:paddingTop="08dp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textColor="@color/colorPrimaryDark"-->
+                    <!--android:textAlignment="viewStart"-->
+                    <!--android:editable="false"-->
+                    <!--android:text="To"-->
+                    <!--android:textSize="17dp"/>-->
+
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_weight=".12">-->
+
+                <!--<com.yoeki.kalpnay.hrporatal.setting.Edittextclass-->
+                    <!--android:id="@+id/Stat_todate"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/colorblack"-->
+                    <!--android:textAlignment="viewStart"-->
+                    <!--android:hint="mm/dd/yyyy"-->
+                    <!--android:textColorHint="#757575"-->
+                    <!--android:editable="false"-->
+                    <!--android:backgroundTint="@color/transparent"/>-->
+
+                <!--<FrameLayout android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="05dp">-->
+
+                    <!--<android.support.v7.widget.AppCompatButton-->
+                        <!--android:id="@+id/HolidayTo_date"-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="@color/transparent"/>-->
+
+                    <!--<android.support.v7.widget.AppCompatImageView android:layout_width="27dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:background="@mipmap/calender"-->
+                        <!--android:layout_gravity="center"/>-->
+                <!--</FrameLayout>-->
+
+            <!--</LinearLayout>-->
+
+        <!--</android.support.v7.widget.LinearLayoutCompat>-->
+
+    <!--</android.support.v7.widget.LinearLayoutCompat>-->
 
     <android.support.v7.widget.RecyclerView
-        android:layout_below="@+id/fromTo"
+        android:layout_below="@+id/toolbar"
         android:layout_marginTop="5dp"
         android:id="@+id/eventsList"
         android:layout_marginLeft="10dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"/>
 
-    <RelativeLayout
-        android:id="@+id/footer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/footer"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true">-->
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/holidayDateSubmit"
-            android:layout_width="match_parent"
-            android:layout_height="46dp"
-            android:background="@color/colorPrimaryDark"
-            android:textAlignment="center"
-            android:text="View Events"
-            android:typeface="serif"
-            android:textSize="15sp"
-            android:textColor="#fff"/>
+        <!--<android.support.v7.widget.AppCompatButton-->
+            <!--android:id="@+id/holidayDateSubmit"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="46dp"-->
+            <!--android:background="@color/colorPrimaryDark"-->
+            <!--android:textAlignment="center"-->
+            <!--android:text="View Events"-->
+            <!--android:typeface="serif"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textColor="#fff"/>-->
 
-    </RelativeLayout>
+    <!--</RelativeLayout>-->
 
 </RelativeLayout>

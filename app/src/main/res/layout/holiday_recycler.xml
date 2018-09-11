@@ -57,7 +57,7 @@
               android:orientation="vertical"
               android:layout_weight=".1">
 
-              <com.yoeki.kalpnay.hrporatal.setting.Textclass
+              <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                   android:id="@+id/Event"
                   android:layout_width="match_parent"
                   android:layout_height="match_parent"
