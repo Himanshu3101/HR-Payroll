@@ -67,6 +67,7 @@ public class CircularFragment extends Fragment {
         dat5.setNotificationMsg("Today is Holiday");
         dat5.setNotificationDate("22-08-2018");
         arraycircularlist.add(dat5);
+        
 
         NotificationModel data6=new NotificationModel();
         data6.setNotificationName("Himanshu Kumar");
