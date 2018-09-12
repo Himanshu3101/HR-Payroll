@@ -140,7 +140,7 @@
                 android:id="@+id/ly_claimtypehotelview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:orientation="vertical">
 
                 <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
@@ -157,7 +157,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp" />
 
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
                     android:textSize="@dimen/textNtHeader"
                     android:hint="Hotel Name"
                     android:textColorHint="@color/colorgreydark"
@@ -189,7 +189,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp" />
 
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
                     android:textSize="@dimen/textNtHeader"
                     android:textColor="@color/colorText"
                     android:id="@+id/tv_claimtypehotellocation"
@@ -207,6 +207,7 @@
                     android:layout_marginLeft="15dp"
                     android:background="@drawable/edity_textbackground"/>
             </LinearLayout>
+
                <LinearLayout
                 android:id="@+id/ly_claimtypetravelview"
                 android:layout_width="match_parent"
@@ -228,7 +229,7 @@
                         android:layout_marginRight="15dp"
                         android:layout_marginLeft="15dp" />
 
-                   <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                   <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
                        android:textSize="@dimen/textNtHeader"
                        android:textColorHint="@color/colorgreydark"
                        android:textColor="@color/colorText"
@@ -260,7 +261,7 @@
                         android:layout_marginRight="15dp"
                         android:layout_marginLeft="15dp" />
 
-                   <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                   <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
                        android:textSize="@dimen/textNtHeader"
                        android:textColorHint="@color/colorgreydark"
                        android:textColor="@color/colorText"
@@ -292,7 +293,7 @@
                         android:layout_marginRight="15dp"
                         android:layout_marginLeft="15dp"/>
 
-                   <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                   <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
                        android:textSize="@dimen/textNtHeader"
                        android:textColorHint="@color/colorgreydark"
                        android:textColor="@color/colorText"
@@ -365,7 +366,7 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground">
 
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                     android:textSize="@dimen/textNtHeader"
                     android:hint="Attachment"
                     android:textColorHint="@color/colorgreydark"
@@ -406,9 +407,9 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp" />
 
-                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
                     android:textSize="@dimen/textNtHeader"
-                    android:hint="Attachment"
+                    android:hint="Description"
                     android:textColorHint="@color/colorgreydark"
                     android:textColor="@color/colorText"
                     android:id="@+id/edt_claimreqdescription"

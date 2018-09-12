@@ -5,57 +5,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorgrey"
-    android:alpha=".8"
     android:orientation="vertical"
     tools:context=".Request.LeaveRequest">
+
     <RelativeLayout
         android:id="@+id/rl_reqhomehead"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/colorPrimary">
-        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:text="Shift  Change"
-            android:textSize="20dp"
+            android:textSize="@dimen/textFrHeading"
             android:textColor="@color/textcolor"/>
-        <ImageView
-            android:id="@+id/img_backreqshiftchange"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back"
-            android:layout_centerInParent="true"
-            android:layout_alignParentLeft="true"
-            android:padding="10dp"/>
+
+        <FrameLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="05dp">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/img_backreqshiftchange"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"/>
+
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="04dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/back"
+                android:layout_gravity="left|center"/>
+
+        </FrameLayout>
     </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Date"
                 android:textColor="@color/colorblack"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp" />
 
             <com.yoeki.kalpnay.hrporatal.setting.Textclass
                 android:id="@+id/tv_shiftchangedate"
+                android:textSize="@dimen/textNtHeader"
+                android:hint="Date"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Date"
-                android:textColor="@color/colorgreydark"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
@@ -64,27 +80,26 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
 
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
-                android:id="@+id/tv_shiftchangecurrentshift"
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Current Shift"
                 android:textColor="@color/colorblack"
-                android:textSize="15dp"
                 android:gravity="left"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp" />
 
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
                 android:id="@+id/edt_shiftchangecurrentshift"
+                android:textSize="@dimen/textNtHeader"
+                android:hint="Current Shift"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Current Shift"
-                android:textColor="@color/colorgreydark"
-                android:textSize="15dp"
                 android:gravity="left"
-                android:singleLine="true"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
@@ -93,13 +108,12 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
 
-             <com.yoeki.kalpnay.hrporatal.setting.Textclass
-                android:id="@+id/tv_shiftchangeto"
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Change To"
                 android:textColor="@color/colorblack"
-                android:textSize="15dp"
                 android:gravity="left"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -107,28 +121,28 @@
 
             <com.yoeki.kalpnay.hrporatal.setting.Textclass
                 android:id="@+id/tv_shiftchangetodep"
+                android:textSize="@dimen/textNtHeader"
+                android:hint="Change To"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Change To"
-                android:textColor="@color/colorgreydark"
-                android:textSize="15dp"
                 android:gravity="left"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
-                android:singleLine="true"
                 android:layout_marginTop="7dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
 
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                 android:id="@+id/tv_shiftchangereasone"
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Reason"
                 android:textColor="@color/colorblack"
-                android:textSize="15dp"
                 android:gravity="left"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
@@ -152,6 +166,7 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
 
+
             <com.yoeki.kalpnay.hrporatal.setting.Textclass
                 android:id="@+id/tv_shiftchangesubmit"
                 android:layout_width="match_parent"
@@ -166,6 +181,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="25dp" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

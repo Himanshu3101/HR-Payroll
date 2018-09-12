@@ -28,7 +28,7 @@ import android.widget.Toast;
 
 import com.yoeki.kalpnay.hrporatal.HomeMenu.Menuitemmodel;
 import com.yoeki.kalpnay.hrporatal.R;
-import com.yoeki.kalpnay.hrporatal.setting.Textclass;
+import com.yoeki.kalpnay.hrporatal.setting.Edittextclass;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -42,7 +42,7 @@ public class ClaimActivity extends AppCompatActivity implements View.OnClickList
 
     private LinearLayout ly_claimtypehotelview,ly_claimtypeother,ly_claimtypetravelview,ly_leavereqattachment,ly_attachmentclaim;
     private TextView tv_claimreqfromdate,tv_claimreqtime,tv_claimreqtype,tv_claimtypetravelmode,tv_claimreqattachment;
-    private Textclass tv_claimtypehotelname,edt_claimreqdescription,tv_claimtypehotellocation,tv_claimtypetravelarivalto,tv_claimtypetraveldeparturefrom;
+    private Edittextclass edt_claimreqdescription,tv_claimtypetravelarivalto,tv_claimtypetraveldeparturefrom,tv_claimtypehotelname,tv_claimtypehotellocation;
     private int mYear, mMonth, mDay,mHour,mMinute;
     String str="temp";
     AppCompatButton img_backrequestclaim;

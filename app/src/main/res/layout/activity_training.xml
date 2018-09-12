@@ -5,57 +5,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorgrey"
-    android:alpha=".8"
     android:orientation="vertical"
     tools:context=".Request.LeaveRequest">
+
     <RelativeLayout
         android:id="@+id/rl_reqhomehead"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/colorPrimary">
-        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:text="Training"
-            android:textSize="20dp"
+            android:textSize="@dimen/textFrHeading"
             android:textColor="@color/textcolor"/>
-        <ImageView
-            android:id="@+id/img_backtrainingrequest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back"
-            android:layout_centerInParent="true"
-            android:layout_alignParentLeft="true"
-            android:padding="10dp"/>
+
+        <FrameLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="05dp">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/img_backtrainingrequest"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"/>
+
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="04dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/back"
+                android:layout_gravity="left|center"/>
+
+        </FrameLayout>
     </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Date"
                 android:textColor="@color/colorblack"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp" />
 
             <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:textSize="@dimen/textNtHeader"
+                android:hint="Date"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
                 android:id="@+id/tv_trainingreqdate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Date"
-                android:textColor="@color/colorgreydark"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
@@ -64,26 +80,26 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
 
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Title"
                 android:textColor="@color/colorblack"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp" />
 
             <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                android:textSize="@dimen/textNtHeader"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
                 android:id="@+id/edt_trainingreqtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Title"
-                android:textColor="@color/colorgreydark"
-                android:textColorHint="@color/colorgreydark"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:singleLine="true"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
@@ -93,13 +109,13 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
 
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Service Type"
                 android:textColor="@color/colorblack"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
@@ -108,14 +124,14 @@
                 android:layout_marginLeft="15dp" />
 
             <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:textSize="@dimen/textNtHeader"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
+                android:hint="Service Type"
                 android:id="@+id/tv_trainingreqtype"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Service Type"
-                android:textColor="@color/colorgreydark"
-                android:textColorHint="@color/colorgreydark"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
@@ -124,13 +140,13 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
 
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Service Provider"
                 android:textColor="@color/colorblack"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
@@ -139,14 +155,14 @@
                 android:layout_marginLeft="15dp" />
 
             <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                android:textSize="@dimen/textNtHeader"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
                 android:id="@+id/edt_trainingprovider"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Service Provider"
-                android:textColor="@color/colorgreydark"
-                android:textColorHint="@color/colorgreydark"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:singleLine="true"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
@@ -156,13 +172,13 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
 
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Total Day's"
                 android:textColor="@color/colorblack"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
@@ -171,14 +187,14 @@
                 android:layout_marginLeft="15dp" />
 
             <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                android:textSize="@dimen/textNtHeader"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
                 android:id="@+id/edt_trainingtotaldays"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Total Day's"
-                android:textColor="@color/colorgreydark"
-                android:textColorHint="@color/colorgreydark"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:singleLine="true"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
@@ -188,13 +204,13 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
 
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cost"
                 android:textColor="@color/colorblack"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:paddingLeft="5dp"
@@ -203,14 +219,14 @@
                 android:layout_marginLeft="15dp" />
 
             <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                android:textSize="@dimen/textNtHeader"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
                 android:id="@+id/edt_trainingcost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Cost"
-                android:textColor="@color/colorgreydark"
-                android:textColorHint="@color/colorgreydark"
                 android:gravity="left"
-                android:textSize="15dp"
                 android:singleLine="true"
                 android:paddingTop="7dp"
                 android:inputType="number"

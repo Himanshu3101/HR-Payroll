@@ -4,11 +4,11 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -26,7 +26,7 @@ public class AdvanceActivity extends AppCompatActivity implements View.OnClickLi
     private LinearLayout ly_advancefortravelview,ly_advancetypeother,ly_advanceforhotelviewview,ly_advanceamount;
     private TextView tv_advancereqdate,tv_advancereqforadvance,tv_advancetravelfromdate,tv_advancefortraveltodate,tv_advancetraveltrancporttype,tv_advancehotelfromdate
             ,tv_advancehotelviewtodate,tv_advancereqsubmit;
-    private ImageView img_backrequestadvance;
+    private AppCompatButton img_backrequestadvance;
     private int mYear, mMonth, mDay,mHour,mMinute;
     String str="temp";
     String strtravel="temp";

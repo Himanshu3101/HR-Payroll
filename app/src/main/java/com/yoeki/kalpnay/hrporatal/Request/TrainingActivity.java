@@ -4,17 +4,17 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yoeki.kalpnay.hrporatal.R;
+import com.yoeki.kalpnay.hrporatal.setting.Edittextclass;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -24,9 +24,9 @@ import java.util.Date;
 public class TrainingActivity extends AppCompatActivity implements View.OnClickListener {
 
     String str="temp";
-    ImageView img_backtrainingrequest;
+    AppCompatButton img_backtrainingrequest;
     TextView tv_trainingreqdate,tv_trainingreqtype;
-    EditText edt_trainingreqtitle;
+    Edittextclass edt_trainingreqtitle;
     private int mYear, mMonth, mDay;
 
     @Override

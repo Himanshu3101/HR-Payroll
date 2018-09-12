@@ -4,11 +4,11 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.DatePicker;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -22,7 +22,7 @@ import java.util.Date;
 
 public class GreveanceActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView img_backrequestgreveance;
+    private AppCompatButton img_backrequestgreveance;
     private TextView tv_greveancedate,edt_greveancepersonname;
     private int mYear, mMonth, mDay;
 

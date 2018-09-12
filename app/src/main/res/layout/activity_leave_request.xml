@@ -149,7 +149,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginLeft="15dp" />
 
-        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+        <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
             android:textSize="@dimen/textNtHeader"
             android:id="@+id/edt_leavereqdescription"
             android:layout_width="match_parent"
@@ -164,6 +164,7 @@
             android:layout_marginTop="7dp"
             android:layout_marginRight="15dp"
             android:layout_marginLeft="15dp"
+            android:editable="true"
             android:background="@drawable/edity_textbackground"/>
 
         <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading

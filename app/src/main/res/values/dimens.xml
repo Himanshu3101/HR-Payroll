@@ -13,4 +13,5 @@
     <dimen name="textfrContentMenu">14sp</dimen>
     <dimen name="textFrHeader">15sp</dimen>
     <dimen name="textFrHeading">20sp</dimen>
+    <dimen name="textFrSubmitButton">15sp</dimen>
 </resources>
