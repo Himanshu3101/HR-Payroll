@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorgrey">
+
+    <RelativeLayout
+        android:id="@+id/rl_reqhomehead"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Critical / Illness"
+            android:textSize="@dimen/textFrHeading"
+            android:textColor="@color/textcolor"/>
+
+        <FrameLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="05dp">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/benefits_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"/>
+
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="04dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/back"
+                android:layout_gravity="left|center"/>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popupbackground"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:id="@+id/critical_Emergency_Medical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@mipmap/emergency"
+            android:gravity="left|center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:drawableRight="@mipmap/right_arrow_blck_white"
+            android:text="Travel / Emergency Medical"
+            android:textColor="#000"
+            android:textSize="@dimen/textFrHeader"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#d3d3d3" />
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:id="@+id/critical_Insurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@mipmap/insurance"
+            android:drawableRight="@mipmap/right_arrow_blck_white"
+            android:gravity="left|center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:text="Life Insurance (Group)"
+            android:textColor="#000"
+            android:textSize="@dimen/textFrHeader"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#d3d3d3" />
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:id="@+id/criticalDismemberment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@mipmap/dissmemberment"
+            android:drawableRight="@mipmap/right_arrow_blck_white"
+            android:gravity="left|center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:text="Accidental Death or Dismemberment"
+            android:textColor="#000"
+            android:textSize="@dimen/textFrHeader"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#d3d3d3" />
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:id="@+id/criticalDisability_Insurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@mipmap/longterm_disability"
+            android:drawableRight="@mipmap/right_arrow_blck_white"
+            android:gravity="left|center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:text="Long-term Disability Insurance"
+            android:textColor="#000"
+            android:textSize="@dimen/textFrHeader"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

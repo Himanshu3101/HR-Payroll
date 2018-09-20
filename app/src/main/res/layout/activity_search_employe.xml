@@ -3,14 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/request"
-    android:alpha=".8"
+    android:background="@color/colorgrey"
     android:orientation="vertical">
     <RelativeLayout
         android:id="@+id/rl_reqhomehead"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/img_searchback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"/>
+
         <com.yoeki.kalpnay.hrporatal.setting.Textclass
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,7 +37,6 @@
     <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Search Employee"
         android:hint="Search Employee"
         android:paddingTop="5dp"
         android:textColorHint="@color/colorPrimary"
@@ -46,4 +54,5 @@
         android:layout_height="match_parent"
         android:alpha=".8">
     </android.support.v7.widget.RecyclerView>
+
 </LinearLayout>

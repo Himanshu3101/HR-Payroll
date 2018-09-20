@@ -1,6 +1,8 @@
 package com.yoeki.kalpnay.hrporatal.Notification;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +39,14 @@ public class CircularAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         itemViewHolder.tv_circularname.setText(stringArrayList.get(position).getNotificationName());
         itemViewHolder.tv_circularmsg.setText(stringArrayList.get(position).getNotificationMsg());
         itemViewHolder.tv_circulardate.setText(stringArrayList.get(position).getNotificationDate());
+        itemViewHolder.card_notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(activity,EventDetails.class);
+                activity.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -52,12 +62,14 @@ public class CircularAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     private class ItemViewHolder extends RecyclerView.ViewHolder {
         TextView tv_circularname, tv_circularmsg, tv_circulardate;
+        CardView card_notification;
 
         public ItemViewHolder(View itemView) {
             super(itemView);
             tv_circularname = itemView.findViewById(R.id.tv_circularname);
             tv_circularmsg = itemView.findViewById(R.id.tv_circularmsg);
             tv_circulardate = itemView.findViewById(R.id.tv_circulardate);
+            card_notification=itemView.findViewById(R.id.card_notification);
         }
     }
 }

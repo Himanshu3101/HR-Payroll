@@ -5,7 +5,6 @@
     android:orientation="vertical"
     android:layout_marginLeft="15dp"
     android:layout_marginRight="15dp">
-    <!--android:background="@color/colorBackground"-->
         <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +20,7 @@
             android:layout_height="match_parent"
             android:layout_marginRight="03dp"
             android:layout_weight=".1"
-            android:text="Degree"
+            android:text="Level Of Eduction"
             android:textStyle="bold"
             android:textColor="@color/colorText"/>
 
@@ -50,7 +49,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="03dp"
                 android:layout_weight=".1"
-                android:text="Session"
+                android:text="Instution"
                 android:textStyle="bold"
                 android:textColor="@color/colorText" />
 
@@ -61,7 +60,7 @@
                 android:layout_marginLeft="03dp"
                 android:textAlignment="viewStart"
                 android:layout_weight=".1"
-                android:text="2009"
+                android:text="Ingram Institute"
                 android:textColor="@color/colorText"/>
 
         </android.support.v7.widget.LinearLayoutCompat>
@@ -79,7 +78,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="03dp"
                 android:layout_weight=".1"
-                android:text="Percentage/Grade"
+                android:text="Degree Name"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"/>
 
@@ -90,7 +89,7 @@
                 android:layout_marginLeft="03dp"
                 android:textAlignment="viewStart"
                 android:layout_weight=".1"
-                android:text="A Grade"
+                android:text="Higher Secondary"
                 android:textColor="@color/colorText"/>
 
         </android.support.v7.widget.LinearLayoutCompat>
@@ -108,7 +107,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="03dp"
                 android:layout_weight=".1"
-                android:text="University/Board"
+                android:text="Duration"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"/>
 
@@ -119,10 +118,72 @@
                 android:layout_marginLeft="03dp"
                 android:textAlignment="viewStart"
                 android:layout_weight=".1"
-                android:text="CBSE"
+                android:text="4 Year"
                 android:textColor="@color/colorText"/>
 
         </android.support.v7.widget.LinearLayoutCompat>
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:textSize="@dimen/textFrHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="03dp"
+            android:layout_weight=".1"
+            android:text="Start Date"
+            android:textStyle="bold"
+            android:textColor="@color/colorText"/>
+
+        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:textSize="@dimen/textNtHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="03dp"
+            android:textAlignment="viewStart"
+            android:layout_weight=".1"
+            android:text="2009"
+            android:textColor="@color/colorText"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:textSize="@dimen/textFrHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="03dp"
+            android:layout_weight=".1"
+            android:text="End Date"
+            android:textStyle="bold"
+            android:textColor="@color/colorText"/>
+
+        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:textSize="@dimen/textNtHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="03dp"
+            android:textAlignment="viewStart"
+            android:layout_weight=".1"
+            android:text="2011"
+            android:textColor="@color/colorText"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
 
     <View
         android:layout_width="match_parent"

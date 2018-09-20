@@ -7,36 +7,6 @@
     android:layout_marginRight="15dp">
 
     <android.support.v7.widget.LinearLayoutCompat
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="3dp">
-
-    <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
-        android:textSize="@dimen/textFrHeader"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginRight="03dp"
-        android:layout_weight=".1"
-        android:text="Name of Certificate"
-        android:textColor="@color/colorText"
-        />
-
-        <com.yoeki.kalpnay.hrporatal.setting.Textclass
-            android:textSize="@dimen/textNtHeader"
-            android:id="@+id/CEName"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="03dp"
-            android:textAlignment="viewStart"
-            android:layout_weight=".1"
-            android:text="Higher Secondary"
-            android:textColor="@color/colorText"/>
-
-</android.support.v7.widget.LinearLayoutCompat>
-    <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -61,10 +31,43 @@
             android:layout_marginLeft="03dp"
             android:textAlignment="viewStart"
             android:layout_weight=".1"
-            android:text="2009"
+            android:text="Regular"
             android:textColor="@color/colorText"/>
 
     </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp">
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:textSize="@dimen/textFrHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="03dp"
+            android:layout_weight=".1"
+            android:text="Name of Certificate"
+            android:textColor="@color/colorText"
+            />
+
+        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:textSize="@dimen/textNtHeader"
+            android:id="@+id/CEName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="03dp"
+            android:textAlignment="viewStart"
+            android:layout_weight=".1"
+            android:text="Higher Secondary"
+            android:textColor="@color/colorText"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -78,7 +81,7 @@
             android:layout_height="match_parent"
             android:layout_marginRight="03dp"
             android:layout_weight=".1"
-            android:text="Certificate Provider"
+            android:text="Start Date"
             android:textSize="@dimen/textFrHeader"
             android:textColor="@color/colorText"/>
 
@@ -90,7 +93,7 @@
             android:layout_marginLeft="03dp"
             android:textAlignment="viewStart"
             android:layout_weight=".1"
-            android:text="A Grade"
+            android:text="3/Aug/2011"
             android:textColor="@color/colorText"/>
 
     </android.support.v7.widget.LinearLayoutCompat>
@@ -107,7 +110,7 @@
             android:layout_height="match_parent"
             android:layout_marginRight="03dp"
             android:layout_weight=".1"
-            android:text="Expired"
+            android:text="End Date"
             android:textSize="@dimen/textFrHeader"
             android:textColor="@color/colorText"/>
 
@@ -119,7 +122,7 @@
             android:layout_marginLeft="03dp"
             android:textAlignment="viewStart"
             android:layout_weight=".1"
-            android:text="CBSE"
+            android:text="10/Sep/2014"
             android:textColor="@color/colorText"/>
 
     </android.support.v7.widget.LinearLayoutCompat>

@@ -55,7 +55,7 @@ public class Profile extends AppCompatActivity {
                                 viewPager.setCurrentItem(1);
                                 break;
                             case R.id.qualification:
-                                headerName.setText("Qualification");
+                                headerName.setText("Education");
                                 viewPager.setCurrentItem(2);
                                 break;
                             case R.id.certification:

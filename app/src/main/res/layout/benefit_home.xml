@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorgrey">
+
+    <RelativeLayout
+        android:id="@+id/rl_reqhomehead"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Benefits"
+            android:textSize="@dimen/textFrHeading"
+            android:textColor="@color/textcolor"/>
+
+        <FrameLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="05dp">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/benefits_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"/>
+
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="04dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/back"
+                android:layout_gravity="left|center"/>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="05dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="5dp"
+            android:id="@+id/Benefits_List"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="05dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorgrey"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_reqhomehead"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Survey"
+            android:textSize="@dimen/textFrHeading"
+            android:textColor="@color/textcolor"/>
+        <ImageView
+            android:id="@+id/img_backsurvay"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="04dp"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="6dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/back"
+            android:layout_gravity="left|center"/>
+    </RelativeLayout>
+
+      <RelativeLayout
+          android:layout_below="@+id/rl_reqhomehead"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/colorlightblack">
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How was your work today ?"
+            android:textColor="@color/textcolor"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:textSize="23dp"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="110dp"
+        android:orientation="horizontal"
+        android:background="@color/textcolor"
+        android:layout_marginLeft="20dp"
+        android:weightSum="4"
+        android:gravity="center"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/verysad_icon"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/sad_icon"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/happy_icon"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/laugh_icon"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_servayquestion"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="170dp">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec_question1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec_questionlistsecond"
+        android:layout_width="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/ly_servayquestion"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>

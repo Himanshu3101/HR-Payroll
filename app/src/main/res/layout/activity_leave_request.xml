@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -43,13 +44,17 @@
     </RelativeLayout>
 
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="52dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+
         <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
             android:textSize="@dimen/textFrHeader"
             android:layout_width="match_parent"
@@ -207,42 +212,52 @@
 
             <ImageView
                 android:id="@+id/img_attachment"
-                android:layout_width="35dp"
+                android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
                 android:padding="5dp"
                 android:src="@drawable/timesheet_icon"
                 android:layout_weight=".5"/>
         </LinearLayout>
-  <LinearLayout
-    android:id="@+id/ly_leavereqattachment"
-    android:layout_width="match_parent"
-    android:layout_height="80dp"
-    android:visibility="gone"
-    android:orientation="vertical"
-    android:layout_margin="10dp">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rec_leavereqattachment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.RecyclerView>
+          <LinearLayout
+            android:id="@+id/ly_leavereqattachment"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
-</LinearLayout>
-    <com.yoeki.kalpnay.hrporatal.setting.Textclass
-        android:id="@+id/tv_leavereqsubmit"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rec_leavereqattachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </LinearLayout>
+        </ScrollView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        android:textColor="@color/textcolor"
-        android:gravity="center"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/textbackgroundsolid"
-        android:padding="10dp"
-        android:textSize="18dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="25dp" />
-    </LinearLayout>
-</ScrollView>
-</LinearLayout>
+        android:layout_marginTop="-46dp"
+        android:layout_alignParentBottom="true">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/time_entrySubmit"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:text="Submit"
+            android:typeface="serif"
+            android:textSize="@dimen/textFrSubmitButton"
+            android:textColor="#fff"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

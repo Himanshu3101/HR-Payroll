@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.CompoundButton;
 
 import com.yoeki.kalpnay.hrporatal.HomeMenu.HomeActivity;
+import com.yoeki.kalpnay.hrporatal.Question_surevey;
 import com.yoeki.kalpnay.hrporatal.R;
 import com.yoeki.kalpnay.hrporatal.Request.LeaveRequest;
 import com.yoeki.kalpnay.hrporatal.TimeAttendance.Approval_Request.ViewPager.RequestManagementTab;
@@ -78,9 +79,9 @@ public class TimeAttendance_Menu extends AppCompatActivity {
         leave_balance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(TimeAttendance_Menu.this,TimeEntry.class);
-//                startActivity(intent);
-//                finish();
+                Intent intent = new Intent(TimeAttendance_Menu.this,Question_surevey.class);
+                startActivity(intent);
+                finish();
             }
         });
 

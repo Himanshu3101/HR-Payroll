@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorgrey">
+
+    <RelativeLayout
+        android:id="@+id/rl_reqhomehead"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Office Ergonomics"
+            android:textSize="@dimen/textFrHeading"
+            android:textColor="@color/textcolor"/>
+
+        <FrameLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="05dp">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/benefits_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"/>
+
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="04dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/back"
+                android:layout_gravity="left|center"/>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/popupbackground"
+            android:orientation="vertical">
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:id="@+id/office_porfit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@mipmap/profit_sharing"
+            android:gravity="left|center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:drawableRight="@mipmap/right_arrow_blck_white"
+            android:text="Profit sharing"
+            android:textColor="#000"
+            android:textSize="@dimen/textFrHeader"/>
+
+            <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_bonuses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/bonus"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Bonuses"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_meal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/free_meal"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Free meals"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_car"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/company_car"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Company car use"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_stock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/stock"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Stock options"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_childcare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/childcare"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Childcare"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_gratuity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/gratuity"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Gratuity"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_commission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/commissioln"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Commission"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_housing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/house"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Paid housing"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_holidays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/holiday"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Company-specific holidays"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/product_disscount"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Product discounts"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_loan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/student_loan_repayment"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Student loan repayment assistance"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_transportation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/transportation_reimbursemen"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Transportation reimbursement"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_social"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/corporate_icon"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Corporate social events"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/office_referralBonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@mipmap/referal"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Employee referral bonus"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#d3d3d3" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:id="@+id/flexible_promotion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:drawableLeft="@mipmap/promotional_panel"
+                android:drawableRight="@mipmap/right_arrow_blck_white"
+                android:gravity="left|center"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:text="Promotion panels"
+                android:textColor="#000"
+                android:textSize="@dimen/textFrHeader"/>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</android.support.v7.widget.LinearLayoutCompat>

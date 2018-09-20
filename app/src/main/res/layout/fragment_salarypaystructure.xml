@@ -35,36 +35,36 @@
             android:layout_margin="10dp"/>
          </LinearLayout>
 
-        <com.yoeki.kalpnay.hrporatal.setting.Textclass
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Period"
-            android:textColor="@color/colorblack"
-            android:textSize="14dp"
-            android:layout_marginLeft="10dp"/>
-        <com.yoeki.kalpnay.hrporatal.setting.Textclass
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jan 2017-Feb 2,2018"
-            android:textColor="@color/colorlightblack"
-            android:textSize="14dp"
-            android:layout_marginLeft="10dp"/>
-        <com.yoeki.kalpnay.hrporatal.setting.Textclass
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pay Date"
-            android:textColor="@color/colorblack"
-            android:textSize="14dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="10dp"/>
+        <!--<com.yoeki.kalpnay.hrporatal.setting.Textclass-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Period"-->
+            <!--android:textColor="@color/colorblack"-->
+            <!--android:textSize="14dp"-->
+            <!--android:layout_marginLeft="10dp"/>-->
+        <!--<com.yoeki.kalpnay.hrporatal.setting.Textclass-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Jan 2017-Feb 2,2018"-->
+            <!--android:textColor="@color/colorlightblack"-->
+            <!--android:textSize="14dp"-->
+            <!--android:layout_marginLeft="10dp"/>-->
+        <!--<com.yoeki.kalpnay.hrporatal.setting.Textclass-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Pay Date"-->
+            <!--android:textColor="@color/colorblack"-->
+            <!--android:textSize="14dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginLeft="10dp"/>-->
+        <!--<com.yoeki.kalpnay.hrporatal.setting.Textclass-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Friday,Feb 2,2018"-->
+            <!--android:textColor="@color/colorlightblack"-->
+            <!--android:textSize="14dp"-->
+            <!--android:layout_marginLeft="10dp"/>-->
 
-        <com.yoeki.kalpnay.hrporatal.setting.Textclass
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Friday,Feb 2,2018"
-            android:textColor="@color/colorlightblack"
-            android:textSize="14dp"
-            android:layout_marginLeft="10dp"/>
         <com.yoeki.kalpnay.hrporatal.setting.Textclass
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -150,7 +150,7 @@
                 <com.yoeki.kalpnay.hrporatal.setting.Textclass
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Taxes Withheld"
+                    android:text="Taxes"
                     android:textSize="17dp"
                     android:layout_weight=".5"
                     android:gravity="left"

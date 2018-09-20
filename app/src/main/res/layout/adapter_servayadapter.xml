@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+      <android.support.v7.widget.CardView
+        android:id="@+id/card_serveyevent"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@color/textcolor"
+        card_view:cardCornerRadius="1dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        card_view:cardElevation="5dp">
+          <android.support.v7.widget.LinearLayoutCompat
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+          <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+              android:id="@+id/tv_servayquestion"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="question"
+              android:padding="7dp"
+              android:textSize="18dp"
+              android:textColor="@color/colorblack"/>
+
+          <RadioGroup
+              android:id="@+id/rgb_servayans"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:layout_marginTop="5dp">
+          </RadioGroup>
+          </android.support.v7.widget.LinearLayoutCompat>
+      </android.support.v7.widget.CardView>
+   </android.support.constraint.ConstraintLayout>

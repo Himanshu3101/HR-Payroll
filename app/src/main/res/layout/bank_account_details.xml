@@ -348,67 +348,75 @@
             <!--android:layout_height="match_parent"-->
             <!--android:layout_weight=".1">-->
 
-            <android.support.v7.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight=".1"
-                android:orientation="vertical">
-
-                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
-                    android:textSize="@dimen/textFrHeader"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:editable="false"
-                    android:text="Branch Address"/>
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="36dp"
-                    android:background="@drawable/spinner_border_color"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp">
-
-                    <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textColorHint="@color/colorPrimaryDark"
-                        android:textSize="14sp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="@color/colorText"
-                        android:background="@android:color/transparent"/>
-
-                    <FrameLayout
-                        android:id="@+id/frame_branchAddress"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:visibility="visible">
-
-                        <android.support.v7.widget.AppCompatImageView
-                            android:layout_width="19dp"
-                            android:layout_height="19dp"
-                            android:background="@mipmap/edit_green3236"
-                            android:layout_gravity="end|center"
-                            android:layout_margin="10dp"/>
-
-                        <android.support.v7.widget.AppCompatButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="@color/transparent"
-                            android:id="@+id/Branch_address"
-                            android:layout_gravity="end"
-                            android:visibility="visible"/>
-
-                    </FrameLayout>
-
-                </FrameLayout>
 
 
-            </android.support.v7.widget.LinearLayoutCompat>
+
+
+            <!--<android.support.v7.widget.LinearLayoutCompat-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight=".1"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading-->
+                    <!--android:textSize="@dimen/textFrHeader"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:textColor="@color/colorPrimaryDark"-->
+                    <!--android:editable="false"-->
+                    <!--android:text="Branch Address"/>-->
+
+                <!--<FrameLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="36dp"-->
+                    <!--android:background="@drawable/spinner_border_color"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:layout_marginTop="10dp">-->
+
+                    <!--<com.yoeki.kalpnay.hrporatal.setting.Edittextclass-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:textColorHint="@color/colorPrimaryDark"-->
+                        <!--android:textSize="14sp"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:textColor="@color/colorText"-->
+                        <!--android:background="@android:color/transparent"/>-->
+
+                    <!--<FrameLayout-->
+                        <!--android:id="@+id/frame_branchAddress"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:visibility="visible">-->
+
+                        <!--<android.support.v7.widget.AppCompatImageView-->
+                            <!--android:layout_width="19dp"-->
+                            <!--android:layout_height="19dp"-->
+                            <!--android:background="@mipmap/edit_green3236"-->
+                            <!--android:layout_gravity="end|center"-->
+                            <!--android:layout_margin="10dp"/>-->
+
+                        <!--<android.support.v7.widget.AppCompatButton-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:background="@color/transparent"-->
+                            <!--android:id="@+id/Branch_address"-->
+                            <!--android:layout_gravity="end"-->
+                            <!--android:visibility="visible"/>-->
+
+                    <!--</FrameLayout>-->
+
+                <!--</FrameLayout>-->
+
+
+            <!--</android.support.v7.widget.LinearLayoutCompat>-->
+
+
+
+
 
             <!--</android.support.v7.widget.LinearLayoutCompat>-->
 

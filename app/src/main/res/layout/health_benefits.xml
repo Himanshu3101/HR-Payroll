@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorgrey">
+
+    <RelativeLayout
+        android:id="@+id/rl_reqhomehead"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Health Care"
+            android:textSize="@dimen/textFrHeading"
+            android:textColor="@color/textcolor"/>
+
+        <FrameLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="05dp">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/benefits_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"/>
+
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="04dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/back"
+                android:layout_gravity="left|center"/>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:gravity="center"-->
+    <!--android:text="Good Morning"-->
+    <!--android:padding="10dp"-->
+    <!--android:textSize="@dimen/textFrHeading"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:textColor="@color/textcolor"/>-->
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popupbackground"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:id="@+id/health_insurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@mipmap/health_insurance"
+            android:gravity="left|center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:drawableRight="@mipmap/right_arrow_blck_white"
+            android:text="Health Insurance"
+            android:textColor="#000"
+            android:textSize="@dimen/textFrHeader"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#d3d3d3" />
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:id="@+id/health_wellness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@mipmap/wellness_icon"
+            android:drawableRight="@mipmap/right_arrow_blck_white"
+            android:gravity="left|center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:text="Wellness Spending Acount"
+            android:textColor="#000"
+            android:textSize="@dimen/textFrHeader"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#d3d3d3" />
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:id="@+id/health_gym"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@mipmap/gym_icon"
+            android:drawableRight="@mipmap/right_arrow_blck_white"
+            android:gravity="left|center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:text="Gym's Membership"
+            android:textColor="#000"
+            android:textSize="@dimen/textFrHeader"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#d3d3d3" />
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:id="@+id/health_nutrition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@mipmap/nutrition"
+            android:drawableRight="@mipmap/right_arrow_blck_white"
+            android:gravity="left|center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:text="Nutrition"
+            android:textColor="#000"
+            android:textSize="@dimen/textFrHeader"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#d3d3d3" />
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:id="@+id/health_athletic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@mipmap/atheletic"
+            android:drawableRight="@mipmap/right_arrow_blck_white"
+            android:gravity="left|center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:text="Athletic Attire"
+            android:textColor="#000"
+            android:textSize="@dimen/textFrHeader"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#d3d3d3" />
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:id="@+id/health_yoga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@mipmap/yoga"
+            android:drawableRight="@mipmap/right_arrow_blck_white"
+            android:gravity="left|center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:text="Yoga"
+            android:textColor="#000"
+            android:textSize="@dimen/textFrHeader"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

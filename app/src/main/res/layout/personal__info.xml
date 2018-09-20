@@ -206,7 +206,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginRight="03dp"
                             android:layout_weight=".1"
-                            android:text="Position"
+                            android:text="Designation"
                             android:textColor="@color/colorText"/>
 
                         <com.yoeki.kalpnay.hrporatal.setting.Textclass
@@ -225,35 +225,35 @@
                         android:layout_height="0.7dp"
                         android:layout_width="match_parent"/>
 
-                    <android.support.v7.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_margin="10dp">
+                    <!--<android.support.v7.widget.LinearLayoutCompat-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:layout_margin="10dp">-->
 
-                        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginRight="03dp"
-                            android:layout_weight=".1"
-                            android:text="Cost Center"
-                            android:textColor="@color/colorText"/>
+                        <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_marginRight="03dp"-->
+                            <!--android:layout_weight=".1"-->
+                            <!--android:text="Cost Center"-->
+                            <!--android:textColor="@color/colorText"/>-->
 
-                        <com.yoeki.kalpnay.hrporatal.setting.Textclass
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="03dp"
-                            android:textAlignment="viewStart"
-                            android:layout_weight=".1"
-                            android:text="123456789"
-                            android:textColor="@color/colorText"/>
+                        <!--<com.yoeki.kalpnay.hrporatal.setting.Textclass-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_marginLeft="03dp"-->
+                            <!--android:textAlignment="viewStart"-->
+                            <!--android:layout_weight=".1"-->
+                            <!--android:text="123456789"-->
+                            <!--android:textColor="@color/colorText"/>-->
 
-                    </android.support.v7.widget.LinearLayoutCompat>
+                    <!--</android.support.v7.widget.LinearLayoutCompat>-->
 
-                    <View
-                        android:background="#d3d3d3"
-                        android:layout_height="0.7dp"
-                        android:layout_width="match_parent"/>
+                    <!--<View-->
+                        <!--android:background="#d3d3d3"-->
+                        <!--android:layout_height="0.7dp"-->
+                        <!--android:layout_width="match_parent"/>-->
 
                     <android.support.v7.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -296,7 +296,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginRight="03dp"
                             android:layout_weight=".1"
-                            android:text="First Name"
+                            android:text="Name"
                             android:textColor="@color/colorText"/>
 
                         <com.yoeki.kalpnay.hrporatal.setting.Textclass
@@ -310,35 +310,35 @@
 
                     </android.support.v7.widget.LinearLayoutCompat>
 
-                    <View
-                        android:background="#d3d3d3"
-                        android:layout_height="0.7dp"
-                        android:layout_width="match_parent"/>
+                    <!--<View-->
+                        <!--android:background="#d3d3d3"-->
+                        <!--android:layout_height="0.7dp"-->
+                        <!--android:layout_width="match_parent"/>-->
 
-                    <android.support.v7.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_margin="10dp">
+                    <!--<android.support.v7.widget.LinearLayoutCompat-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:layout_margin="10dp">-->
 
-                        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginRight="03dp"
-                            android:layout_weight=".1"
-                            android:text="Last Name"
-                            android:textColor="@color/colorText"/>
+                        <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_marginRight="03dp"-->
+                            <!--android:layout_weight=".1"-->
+                            <!--android:text="Last Name"-->
+                            <!--android:textColor="@color/colorText"/>-->
 
-                        <com.yoeki.kalpnay.hrporatal.setting.Textclass
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="03dp"
-                            android:textAlignment="viewStart"
-                            android:layout_weight=".1"
-                            android:text="Sharma"
-                            android:textColor="@color/colorText"/>
+                        <!--<com.yoeki.kalpnay.hrporatal.setting.Textclass-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_marginLeft="03dp"-->
+                            <!--android:textAlignment="viewStart"-->
+                            <!--android:layout_weight=".1"-->
+                            <!--android:text="Sharma"-->
+                            <!--android:textColor="@color/colorText"/>-->
 
-                    </android.support.v7.widget.LinearLayoutCompat>
+                    <!--</android.support.v7.widget.LinearLayoutCompat>-->
 
                     <View
                         android:background="#d3d3d3"

@@ -24,11 +24,14 @@ import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
 
+import com.yoeki.kalpnay.hrporatal.Benefits.Home;
 import com.yoeki.kalpnay.hrporatal.Notification.NotificationHomeActivity;
 import com.yoeki.kalpnay.hrporatal.Payroll.SalaryDetailActivity;
 import com.yoeki.kalpnay.hrporatal.Profile.Profile;
 import com.yoeki.kalpnay.hrporatal.R;
 import com.yoeki.kalpnay.hrporatal.Request.RequestMenu;
+import com.yoeki.kalpnay.hrporatal.Servay.ServayHomeActivity;
+import com.yoeki.kalpnay.hrporatal.Task_Monitoring.taskMonitoring;
 import com.yoeki.kalpnay.hrporatal.TimeAttendance.TimeAttendance_Menu;
 
 import java.util.ArrayList;
@@ -45,7 +48,7 @@ public class HomeActivity extends AppCompatActivity
        ArrayList<Menuitemmodel> menuarraylist;
 
        RecyclerView recyclearview;
-       private LinearLayout ly_homerequest,ly_profile,ly_timeAttendance,ly_payroll,ly_notification;
+       private LinearLayout ly_homerequest,ly_profile,ly_timeAttendance,ly_payroll,ly_notification,benefits,ly_task,ly_survey;
       private static final int MY_PERMISSIONS_REQUEST_CODE = 123;
 
     @Override
@@ -67,6 +70,9 @@ public class HomeActivity extends AppCompatActivity
         ly_timeAttendance.setOnClickListener(this);
         ly_payroll.setOnClickListener(this);
         ly_notification.setOnClickListener(this);
+        benefits.setOnClickListener(this);
+        ly_task.setOnClickListener(this);
+        ly_survey.setOnClickListener(this);
 
         menuarraylist=new ArrayList<>();
         linearlayoutmanager=new LinearLayoutManager(this);
@@ -178,6 +184,9 @@ public class HomeActivity extends AppCompatActivity
         ly_timeAttendance=findViewById(R.id.ly_timeAttendance);
         ly_payroll=findViewById(R.id.ly_payroll);
         ly_notification=findViewById(R.id.ly_notification);
+        benefits=findViewById(R.id.benefits);
+        ly_task=findViewById(R.id.ly_task);
+        ly_survey=findViewById(R.id.survey);
     }
 
     @Override
@@ -200,10 +209,21 @@ public class HomeActivity extends AppCompatActivity
                 Intent intentpayroll=new Intent(HomeActivity.this, SalaryDetailActivity.class);
                 startActivity(intentpayroll);
                 break;
-
             case  R.id.ly_notification:
                 Intent inten=new Intent(HomeActivity.this, NotificationHomeActivity.class);
                 startActivity(inten);
+                break;
+            case  R.id.benefits:
+                Intent Binten=new Intent(HomeActivity.this, Home.class);
+                startActivity(Binten);
+                break;
+            case  R.id.ly_task:
+                Intent nten=new Intent(HomeActivity.this, taskMonitoring.class);
+                startActivity(nten);
+                break;
+            case  R.id.survey:
+                Intent ntn=new Intent(HomeActivity.this, ServayHomeActivity.class);
+                startActivity(ntn);
                 break;
         }
     }

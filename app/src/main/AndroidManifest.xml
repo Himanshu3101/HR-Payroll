@@ -30,10 +30,6 @@
         <activity android:name=".TimeAttendance.Approval_Request.ViewPager.RequestManagementTab" />
         <activity android:name=".TimeAttendance.TimeAttendance_Menu"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-        <!--<activity-->
-            <!--android:name=".TimeAttendance.Approval_Request.filter_Request"-->
-            <!--android:theme="@style/FullDialogActivityTheme" />-->
-
         <activity android:name=".Request.LeaveRequest" />
         <activity android:name=".Request.RequestMenu" />
         <activity android:name=".TimeAttendance.Approval_Request.Requests" />
@@ -47,6 +43,19 @@
         <activity android:name=".Request.GreveanceActivity" />
         <activity android:name=".Request.ShiftChange" />
         <activity android:name=".Request.AdvanceActivity" />
+        <activity android:name=".Benefits.Home" />
+        <activity android:name=".Task_Monitoring.taskMonitoring" />
+        <activity android:name=".Benefits.HealthCare.homeHealth" />
+        <activity android:name=".Benefits.Critical.homeCritical" />
+        <activity android:name=".Benefits.PersonalBenefits.home_personalBenmefits" />
+        <activity android:name=".Benefits.RetirementBenefits.home_Retirement" />
+        <activity android:name=".Benefits.FlexibleBenefits.home_flexible" />
+        <activity android:name=".Benefits.OfficeErgonomics.HomeOfficeErgonomics" />
+        <activity android:name=".Question_surevey" />
+        <activity android:name=".Notification.EventDetails" />
+        <activity android:name=".Servay.ServayHomeActivity" />
+        <activity android:name=".Servay.ServayQuestionActivity" />
+        <activity android:name=".Servay.EventActivity"></activity>
 
     </application>
 

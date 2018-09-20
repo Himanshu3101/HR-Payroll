@@ -5,20 +5,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.yoeki.kalpnay.hrporatal.R;
-
 import java.util.ArrayList;
 
-public class SearchEmployeActivity extends AppCompatActivity {
+public class SearchEmployeActivity extends AppCompatActivity implements View.OnClickListener{
+
     private RecyclerView ryc_search;
     ArrayList<Searchmodel> employelist;
+    private ImageView img_searchback;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_employe);
 
         initialize();
+
+        img_searchback.setOnClickListener(this);
         employelist=new ArrayList<>();
         Searchmodel data=new Searchmodel();
         data.setEmployename("Mohit kumar");
@@ -54,11 +60,13 @@ public class SearchEmployeActivity extends AppCompatActivity {
         data6.setEmployeemail("ccccccc@gmail.com");
         data6.setEmployedesignation("Android Developer");
         employelist.add(data6);
+
         Searchmodel data7=new Searchmodel();
         data7.setEmployename("Mahindra");
         data7.setEmployeemail("hsjdjasj@gmail.com");
         data7.setEmployedesignation("Dot net Developer");
         employelist.add(data7);
+
         Searchmodel data8=new Searchmodel();
         data8.setEmployename("Mahindra singh");
         data8.setEmployeemail("mmmmm@gmail.com");
@@ -84,11 +92,19 @@ public class SearchEmployeActivity extends AppCompatActivity {
 
         SearchAdapter adapter=new SearchAdapter(SearchEmployeActivity.this,employelist);
         ryc_search.setAdapter(adapter);
-
     }
 
     public void initialize(){
-
         ryc_search=findViewById(R.id.ryc_search);
+        img_searchback=findViewById(R.id.img_searchback);
+    }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+
+            case R.id.img_searchback:
+                finish();
+                break;
+        }
     }
 }

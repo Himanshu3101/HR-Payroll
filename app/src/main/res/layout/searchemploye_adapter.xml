@@ -51,7 +51,7 @@
                 android:paddingLeft="5dp"
                 android:layout_marginLeft="7dp"
                 android:paddingBottom="7dp"
-                android:textColor="@color/colorgreydark"
+                android:textColor="@color/colorlightblack"
                 android:textSize="13dp"/>
 
           <com.yoeki.kalpnay.hrporatal.setting.Textclass
@@ -62,7 +62,7 @@
             android:paddingLeft="5dp"
             android:layout_marginLeft="7dp"
             android:paddingBottom="7dp"
-            android:textColor="@color/colorgreydark"
+            android:textColor="@color/colorlightblack"
             android:textSize="13dp"/>
         </LinearLayout>
      </LinearLayout>

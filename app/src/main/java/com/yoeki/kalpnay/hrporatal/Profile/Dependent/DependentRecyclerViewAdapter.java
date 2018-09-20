@@ -55,15 +55,15 @@ public class DependentRecyclerViewAdapter extends RecyclerView.Adapter<Dependent
         }
 
         if(Break[2].equalsIgnoreCase("null") || Break[2].equalsIgnoreCase("") || Break[2].equalsIgnoreCase(" ")){
-            holder.mail.setText("N/A");
+            holder.primary.setText("N/A");
         }else {
-            holder.mail.setText(Break[2]);
+            holder.primary.setText(Break[2]);
         }
 
         if(Break[3].equalsIgnoreCase("null") || Break[2].equalsIgnoreCase("") || Break[2].equalsIgnoreCase(" ")){
-            holder.number.setText("N/A");
+            holder.cntctInformation.setText("N/A");
         }else {
-            holder.number.setText(Break[3]);
+            holder.cntctInformation.setText(Break[3]);
         }
 
     }
@@ -77,15 +77,15 @@ public class DependentRecyclerViewAdapter extends RecyclerView.Adapter<Dependent
 
     // stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder {
-        Textclass name,relation,mail,number;
+        Textclass name,relation,primary,cntctInformation;
 
 
         ViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.name);
             relation = itemView.findViewById(R.id.relation);
-            mail = itemView.findViewById(R.id.mail);
-            number = itemView.findViewById(R.id.number);
+            primary = itemView.findViewById(R.id.primary);
+            cntctInformation = itemView.findViewById(R.id.cntctInformation);
 
         }
     }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textcolor"
+    tools:context=".Notification.EventDetails">
+      <android.support.v7.widget.LinearLayoutCompat
+          android:id="@+id/ly_detailimage"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:orientation="vertical">
+
+            <RelativeLayout
+              android:id="@+id/notifiy_header"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:background="@color/colorPrimary">
+
+              <android.support.v7.widget.AppCompatImageView
+                  android:id="@+id/img_detailsback"
+                  android:layout_width="25dp"
+                  android:layout_height="25dp"
+                  android:scaleType="fitXY"
+                  android:layout_centerInParent="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginLeft="10dp"
+                  android:background="@mipmap/back"
+                  android:layout_gravity="left|center"/>
+              <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Details"
+                  android:textSize="20dp"
+                  android:layout_centerInParent="true"/>
+          </RelativeLayout>
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/hr_background"/>
+
+      </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ly_detailimage"
+        android:orientation="vertical">
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mohit Kumar"
+            android:textSize="15dp"
+            android:textColor="@color/colorblack"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12-09-2018"
+            android:textSize="15dp"
+            android:textColor="@color/colorlightblack"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp" />
+
+
+        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detailstext"
+            android:textSize="12dp"
+            android:textColor="@color/colorblack"
+            android:layout_marginTop="8dp"
+            android:scrollbars="vertical"
+            android:layout_marginLeft="10dp" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.constraint.ConstraintLayout>
