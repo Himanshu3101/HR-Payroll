@@ -20,7 +20,6 @@ public class BankNameAccountNo_RecyclerViewAdapter extends RecyclerView.Adapter<
     private LayoutInflater mInflater;
     private static Context context;
 
-
     public BankNameAccountNo_RecyclerViewAdapter(Context context, List<String> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;

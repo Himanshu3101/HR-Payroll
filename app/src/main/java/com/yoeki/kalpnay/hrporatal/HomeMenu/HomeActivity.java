@@ -3,6 +3,7 @@ package com.yoeki.kalpnay.hrporatal.HomeMenu;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -10,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -22,34 +24,45 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.yoeki.kalpnay.hrporatal.Benefits.Home;
+import com.yoeki.kalpnay.hrporatal.Login.Api;
+import com.yoeki.kalpnay.hrporatal.Login.ApiInterface;
+import com.yoeki.kalpnay.hrporatal.Login.LoginActivity;
 import com.yoeki.kalpnay.hrporatal.Notification.NotificationHomeActivity;
 import com.yoeki.kalpnay.hrporatal.Payroll.SalaryDetailActivity;
+import com.yoeki.kalpnay.hrporatal.Plane.PlanHomeActivity;
 import com.yoeki.kalpnay.hrporatal.Profile.Profile;
 import com.yoeki.kalpnay.hrporatal.R;
 import com.yoeki.kalpnay.hrporatal.Request.RequestMenu;
 import com.yoeki.kalpnay.hrporatal.Servay.ServayHomeActivity;
 import com.yoeki.kalpnay.hrporatal.Task_Monitoring.taskMonitoring;
 import com.yoeki.kalpnay.hrporatal.TimeAttendance.TimeAttendance_Menu;
+import com.yoeki.kalpnay.hrporatal.setting.preferance;
 
 import java.util.ArrayList;
 
-public class HomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
+import cn.pedant.SweetAlert.SweetAlertDialog;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
-         LinearLayoutManager linearlayoutmanager;
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
 
-        static String[] nameArray = {"Profile","Time Sheet","Requst","Payroll","Notification","Task Monitering"};
+    private FragmentManager fragmentManager;
+    ApiInterface apiInterface;
 
-        static Integer[] iconArray = {R.drawable.profile, R.drawable.timesheet_icon, R.drawable.request_icon, R.drawable.payroll_icon, R.drawable.notification_icon, R.drawable.task_manager_icon};
-
-       ArrayList<Menuitemmodel> menuarraylist;
-
-       RecyclerView recyclearview;
-       private LinearLayout ly_homerequest,ly_profile,ly_timeAttendance,ly_payroll,ly_notification,benefits,ly_task,ly_survey;
-      private static final int MY_PERMISSIONS_REQUEST_CODE = 123;
+    LinearLayoutManager linearlayoutmanager;
+    static String[] nameArray = {"Profile","Time Sheet","Requst","Payroll","Notification","Task Monitering"};
+    static Integer[] iconArray = {R.drawable.profile, R.drawable.timesheet_icon, R.drawable.request_icon, R.drawable.payroll_icon, R.drawable.notification_icon, R.drawable.task_manager_icon};
+    ArrayList<Menuitemmodel> menuarraylist;
+    RecyclerView recyclearview;
+    private LinearLayout ly_homerequest,ly_profile,ly_timeAttendance,ly_payroll,ly_notification,benefits,ly_task,ly_survey;
+    private static final int MY_PERMISSIONS_REQUEST_CODE = 123;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +73,10 @@ public class HomeActivity extends AppCompatActivity
 
         initialize();
 
+        fragmentManager=getSupportFragmentManager();
+        //  DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //  final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view)
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-
             checkPermission();
         }
 
@@ -76,32 +91,6 @@ public class HomeActivity extends AppCompatActivity
 
         menuarraylist=new ArrayList<>();
         linearlayoutmanager=new LinearLayoutManager(this);
-      //  recyclearview=findViewById(R.id.reyc_mainmenuicon);
-
-       // recyclearview.setHasFixedSize(true);
-
-       // linearlayoutmanager = new LinearLayoutManager(this);
-       // recyclearview.setLayoutManager(new GridLayoutManager(this, 2));
-       // recyclearview.setItemAnimator(new DefaultItemAnimator());
-        ;
-       /* for (int i=0;i<nameArray.length;i++){
-
-            menuarraylist.add(new Menuitemmodel(
-                    iconArray[i],
-                    nameArray[i]
-            ));
-        }*/
-/*
-        Mainmenuadapter adapter=new Mainmenuadapter(HomeActivity.this,menuarraylist);
-        recyclearview.setAdapter(adapter);*/
-       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
@@ -112,6 +101,11 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        TextView textHeadername=navigationView.getHeaderView(0).findViewById(R.id.tv_heardename);
+
+        String  username= preferance.getInstance(getApplicationContext()).getUserName();
+        textHeadername.setText(username);
     }
     @Override
     public void onBackPressed() {
@@ -140,6 +134,10 @@ public class HomeActivity extends AppCompatActivity
             Intent intent=new Intent(HomeActivity.this,SearchEmployeActivity.class);
             startActivity(intent);
             return true;
+        }else if (id == R.id.action_notification){
+            Intent intent=new Intent(HomeActivity.this,NotificationHomeActivity.class);
+            startActivity(intent);
+            return true;
         }
         return super.onOptionsItemSelected(item);
 
@@ -160,25 +158,81 @@ public class HomeActivity extends AppCompatActivity
 
         }*/else if (id == R.id.nav_logout) {
 
+            logout();
+
         } /*else if (id == R.id.nav_send) {
-
         }*/
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
     public void changepassworddialog() {
         final Dialog dialog = new Dialog(HomeActivity.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCancelable(true);
         dialog.setContentView(R.layout.changepassword_dialog);
 
+        final EditText edt_oldpass=dialog.findViewById(R.id.edt_oldpass);
+        final EditText edt_newpassword=dialog.findViewById(R.id.edt_newpassword);
+        final EditText edt_confirmpassword=dialog.findViewById(R.id.edt_confirmpassword);
+        TextView tv_submitchange=dialog.findViewById(R.id.tv_submitchange);
+
+        tv_submitchange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String  user_id=null,oldpass,newpass,confirmpass;
+                user_id = preferance.getInstance(getApplicationContext()).getUserId();
+
+                oldpass=edt_oldpass.getText().toString();
+                newpass=edt_newpassword.getText().toString();
+                confirmpass=edt_confirmpassword.getText().toString();
+
+                if (oldpass.equals("")){
+                    edt_oldpass.setError("Fill Required field");
+                }else if (newpass.equals("")){
+                    edt_newpassword.setError("Fill Required field");
+                }else if (!newpass.equals(confirmpass)){
+                    Toast.makeText(HomeActivity.this, "Password Do not match", Toast.LENGTH_SHORT).show();
+                }else{
+                    final ProgressDialog progressDialog = new ProgressDialog(HomeActivity.this);
+                    progressDialog.setCancelable(false); // set cancelable to false
+                    progressDialog.setMessage("Please Wait"); // set message
+                    progressDialog.show(); // show progress dialog
+
+                    apiInterface= Api.getClient().create(ApiInterface.class);
+                    Changepassresponce user = new Changepassresponce(user_id,oldpass,newpass);
+
+                    Call<Changepassresponce> call1 = apiInterface.changepass(user);
+                    call1.enqueue(new Callback<Changepassresponce>() {
+                        @Override
+                        public void onResponse(Call<Changepassresponce> call, Response<Changepassresponce> response) {
+                            Changepassresponce user1 = response.body();
+                            progressDialog.dismiss();
+                            String str=user1.getMessage();
+
+                            String status=user1.getStatus();
+                            if (status.equals("Success")){
+                                Toast.makeText(getApplicationContext(),str, Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                            }else{
+                                //(LoginActivity).faillerdiaolog(str);
+                                Toast.makeText(getApplicationContext(),str, Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        @Override
+                        public void onFailure(Call<Changepassresponce> call, Throwable t) {
+                            call.cancel();
+                            progressDialog.dismiss();
+                        }
+                    });
+                }
+            }
+        });
         dialog.show();
     }
 
     public  void initialize(){
+
         ly_homerequest=findViewById(R.id.ly_homerequest);
         ly_profile=findViewById(R.id.ly_profile);
         ly_timeAttendance=findViewById(R.id.ly_timeAttendance);
@@ -187,20 +241,23 @@ public class HomeActivity extends AppCompatActivity
         benefits=findViewById(R.id.benefits);
         ly_task=findViewById(R.id.ly_task);
         ly_survey=findViewById(R.id.survey);
+
     }
 
     @Override
     public void onClick(View view) {
-
         switch (view.getId()){
             case R.id.ly_homerequest:
+
                 Intent intent=new Intent(HomeActivity.this, RequestMenu.class);
                 startActivity(intent);
+
                 break;
             case R.id.ly_profile:
                 Intent intent1=new Intent(HomeActivity.this, Profile.class);
                 startActivity(intent1);
                 break;
+
             case R.id.ly_timeAttendance:
                 Intent intent0=new Intent(HomeActivity.this, TimeAttendance_Menu.class);
                 startActivity(intent0);
@@ -210,7 +267,7 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(intentpayroll);
                 break;
             case  R.id.ly_notification:
-                Intent inten=new Intent(HomeActivity.this, NotificationHomeActivity.class);
+                Intent inten=new Intent(HomeActivity.this, PlanHomeActivity.class);
                 startActivity(inten);
                 break;
             case  R.id.benefits:
@@ -301,5 +358,29 @@ public class HomeActivity extends AppCompatActivity
             }
         }
     }
+    public  void logout(){
+        new SweetAlertDialog(HomeActivity.this, SweetAlertDialog.WARNING_TYPE)
+                .setTitleText("Are you sure?")
+                .setContentText("Won't be Logout!")
+                .setConfirmText("Yes")
+                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
+                        sDialog.dismissWithAnimation();
+                        preferance.getInstance(getApplicationContext()).clearuserSession();
 
+                        Intent intent=new Intent(HomeActivity.this,LoginActivity.class);
+                        startActivity(intent);
+
+                        finish();
+                    }
+                })
+                .setCancelButton("Cancel", new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
+                        sDialog.dismissWithAnimation();
+                    }
+                })
+                .show();
+    }
 }

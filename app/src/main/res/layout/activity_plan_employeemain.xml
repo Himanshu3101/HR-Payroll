@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textcolor"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/notifiy_header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+            <ImageView
+                android:id="@+id/img_backemployeerequest"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/back"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"/>
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
+            android:id="@+id/notifi_header"
+            android:textSize="@dimen/textFrHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:text="Employee"
+            android:layout_centerInParent="true"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs_requestplanemployee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:tabIndicatorColor="@color/textcolor"
+        app:tabIndicatorHeight="2dp"
+        app:tabTextAppearance="@style/tabtext"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_requstplanemployee"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+</LinearLayout>

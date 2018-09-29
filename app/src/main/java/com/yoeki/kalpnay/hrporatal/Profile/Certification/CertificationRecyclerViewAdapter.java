@@ -60,7 +60,7 @@ public class CertificationRecyclerViewAdapter extends RecyclerView.Adapter<Certi
             holder.CEProvider.setText(Break[2]);
         }
 
-        if(Break[3].equalsIgnoreCase("null") || Break[2].equalsIgnoreCase("") || Break[2].equalsIgnoreCase(" ")){
+        if(Break[3].equalsIgnoreCase("null") || Break[3].equalsIgnoreCase("") || Break[3].equalsIgnoreCase(" ")){
             holder.expired.setText("N/A");
         }else {
             holder.expired.setText(Break[3]);

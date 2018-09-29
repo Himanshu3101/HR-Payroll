@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    tools:context=".Request.LeaveRequest">
+
+    <RelativeLayout
+        android:id="@+id/rl_reqhomehead"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Request Form"
+            android:textSize="@dimen/textFrHeading"
+            android:textColor="@color/textcolor"/>
+
+        <ImageView
+            android:id="@+id/img_backformemployee"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="04dp"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="7dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/back"
+            android:layout_gravity="left|center"/>
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="52dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="@color/colorblack"
+                android:gravity="left"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:textSize="@dimen/textNtHeader"
+                android:id="@+id/tv_employeeformdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
+                android:gravity="left"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/edity_textbackground"/>
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Where"
+                android:textColor="@color/colorblack"
+                android:gravity="left"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" />
+
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:textSize="@dimen/textNtHeader"
+                android:id="@+id/tv_wherelocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Where"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
+                android:gravity="left"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/edity_textbackground"/>
+
+            <LinearLayout
+                android:id="@+id/ly_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                    android:textSize="@dimen/textFrHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textColor="@color/colorblack"
+                    android:gravity="left"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp" />
+
+                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                    android:textSize="@dimen/textFrHeader"
+                    android:id="@+id/tv_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textColor="@color/colorlightblack"
+                    android:gravity="left"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/edity_textbackground"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly_locationgeneral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                    android:textSize="@dimen/textFrHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textColor="@color/colorblack"
+                    android:gravity="left"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp" />
+                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                    android:textSize="@dimen/textNtHeader"
+                    android:id="@+id/tv_locationgeneral"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:hint="Location"
+                    android:textColorHint="@color/colorgreydark"
+                    android:textColor="@color/colorText"
+                    android:gravity="left"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/edity_textbackground"/>
+            </LinearLayout>
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
+                android:id="@+id/tv_leavereqdescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Purpose"
+                android:textColor="@color/colorblack"
+                android:gravity="left"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" />
+
+
+            <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                android:textSize="@dimen/textNtHeader"
+                android:id="@+id/edt_leavereqdescription"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Purpose"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
+                android:gravity="left"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:editable="true"
+                android:background="@drawable/edity_textbackground"/>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-46dp"
+        android:layout_alignParentBottom="true">
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/time_planformsubmit"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:text="Submit"
+            android:typeface="serif"
+            android:textSize="@dimen/textFrSubmitButton"
+            android:textColor="#fff"/>
+    </RelativeLayout>
+</android.support.v7.widget.LinearLayoutCompat>

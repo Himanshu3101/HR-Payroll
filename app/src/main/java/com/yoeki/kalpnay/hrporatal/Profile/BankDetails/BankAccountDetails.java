@@ -2,7 +2,6 @@ package com.yoeki.kalpnay.hrporatal.Profile.BankDetails;
 
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,31 +13,30 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.ScrollView;
 
+import com.yoeki.kalpnay.hrporatal.Profile.Model.user_info.User;
+import com.yoeki.kalpnay.hrporatal.Profile.Model.user_info.UserBankDetail;
 import com.yoeki.kalpnay.hrporatal.R;
 import com.yoeki.kalpnay.hrporatal.setting.Edittextclass;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class BankAccountDetails  extends Fragment {
 
     private static BankAccountDetails instance;
-    Edittextclass bankname,branchname,Accounttype;
-    AppCompatButton bankselect,branchselect,Accounttypeselect;
-    String Total_Bank_Account="4" +
-            "" +
-            "";
-    String [] bank_name = {"Punjab National Bank", "OBC Bank", "HDFC Bank", "ICICI Bank"};
-    String [] branch_name = {"Ghaziabad", "Noida", "Delhi", "Sikhrod"};
-    String [] account_type = {"Current", "Saving", "Credit" };
+    static Edittextclass bankname,account_no, branchname, Accounttype, ifsc;
+    AppCompatButton bankselect,branchselect,Accounttypeselect,submit;
+    static ArrayList<String> Total_Bank_Account;
+    ArrayList<String> bank_name;
+    ArrayList<String> branch_name;
+    ArrayList<String> account_type;
     static LinearLayoutCompat selectBank;
     RecyclerView Account_selection_recycler;
     static ScrollView after_selectBank;
-    Context context;
-    List<String> BankName_AccountNo;
+    ArrayList<User> mlist;
 
     public static BankAccountDetails newInstance() {
         BankAccountDetails fragment = new BankAccountDetails();
@@ -47,39 +45,64 @@ public class BankAccountDetails  extends Fragment {
 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
-
         bankname=(Edittextclass) getView().findViewById(R.id.bankname);
+        account_no=(Edittextclass) getView().findViewById(R.id.account_no);
+        ifsc=(Edittextclass) getView().findViewById(R.id.ifsc);
+
         branchname=(Edittextclass)getView().findViewById(R.id.branchname);
         Accounttype=(Edittextclass)getView().findViewById(R.id.Accounttype);
 
         bankselect=(AppCompatButton)getView().findViewById(R.id.bankselect);
         branchselect=(AppCompatButton)getView().findViewById(R.id.branchselect);
         Accounttypeselect=(AppCompatButton)getView().findViewById(R.id.Accounttypeselect);
+        submit=(AppCompatButton)getView().findViewById(R.id.submit);
 
         selectBank = (LinearLayoutCompat)getView().findViewById(R.id.selectBank);
         Account_selection_recycler = (RecyclerView)getView().findViewById(R.id.Account_selection_recycler);
         after_selectBank = (ScrollView)getView().findViewById(R.id.after_selectBank);
 
+        Total_Bank_Account = new ArrayList<String>();
+        bank_name= new ArrayList<String>();
+        branch_name= new ArrayList<String>();
+        account_type= new ArrayList<String>();
 
-        if(Total_Bank_Account.equals("4")){
+        for (final User list : mlist) {
+            for(UserBankDetail bankDetails : list.userBankDetail) {
+
+                String bankDetailsArray = bankDetails.getBankName()+"~"+bankDetails.getAccountNo()+"~"+bankDetails.getAccountType()
+                        +"~"+bankDetails.getBranchName()+"~"+bankDetails.getIFSCCode()+"~"+bankDetails.getBranchAddress();
+
+                try {
+                    bank_name.add(bankDetails.getBankName());
+                    branch_name.add(bankDetails.getBranchName());
+                    account_type.add(bankDetails.getAccountType());
+                    Total_Bank_Account.add(bankDetailsArray);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }
+
+
+        if(Total_Bank_Account.size()==0){
+            selectBank.setVisibility(View.GONE);
+            after_selectBank.setVisibility(View.VISIBLE);
+        }else if(Total_Bank_Account.size()==1){
+            selectBank.setVisibility(View.GONE);
+            after_selectBank.setVisibility(View.VISIBLE);
+        }else{
             selectBank.setVisibility(View.VISIBLE);
             after_selectBank.setVisibility(View.GONE);
             recyclerForTwoOrMoreAccount(view);
-        }else if(Total_Bank_Account.equals("0")){
-            selectBank.setVisibility(View.GONE);
-            after_selectBank.setVisibility(View.VISIBLE);
-        }else if(Total_Bank_Account.equals("1")){
-            selectBank.setVisibility(View.GONE);
-            after_selectBank.setVisibility(View.VISIBLE);
         }
 
-        bankselect.setOnClickListener(new View.OnClickListener() {
+            bankselect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
                     new AlertDialog.Builder(getContext(), AlertDialog.THEME_DEVICE_DEFAULT_DARK)
                             .setTitle("Select Bank Name")
-                            .setSingleChoiceItems(bank_name, 0, null)
+                            .setSingleChoiceItems((ListAdapter) bank_name, 0, null)
                             .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int whichButton) {
                                     dialog.dismiss();
@@ -102,7 +125,7 @@ public class BankAccountDetails  extends Fragment {
                 try {
                     new AlertDialog.Builder(getContext(), AlertDialog.THEME_DEVICE_DEFAULT_DARK)
                             .setTitle("Select Branch Name")
-                            .setSingleChoiceItems(branch_name, 0, null)
+                            .setSingleChoiceItems((ListAdapter) branch_name, 0, null)
                             .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int whichButton) {
                                     dialog.dismiss();
@@ -125,7 +148,7 @@ public class BankAccountDetails  extends Fragment {
                 try {
                     new AlertDialog.Builder(getContext(), AlertDialog.THEME_DEVICE_DEFAULT_DARK)
                             .setTitle("Select Account Type")
-                            .setSingleChoiceItems(account_type, 0, null)
+                            .setSingleChoiceItems((ListAdapter) account_type, 0, null)
                             .setPositiveButton("OK", new DialogInterface.OnClickListener(){
                                 public void onClick(DialogInterface dialog, int whichButton) {
                                     dialog.dismiss();
@@ -142,29 +165,30 @@ public class BankAccountDetails  extends Fragment {
             }
         });
 
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.bank_account_details, container, false);
+        Bundle args = getArguments();
+        mlist = (ArrayList<User>) getArguments().getSerializable("keyForProfile");
         instance=this;
         return view;
 
     }
 
     public void recyclerForTwoOrMoreAccount(View view){
-
-        BankName_AccountNo = new ArrayList<>();
-        BankName_AccountNo.add("Punjab National Bank~1640253614785869");
-        BankName_AccountNo.add("Axis Bank~1640287453695869");
-        BankName_AccountNo.add("State Bank of India~1640201236545869");
-        BankName_AccountNo.add("HDFC Bank~8974553614785869");
-        BankName_AccountNo.add("Oriental Bank of Commerce~314697014785869");
-
         try {
             Account_selection_recycler.setLayoutManager(new LinearLayoutManager(getActivity()));
-            BankNameAccountNo_RecyclerViewAdapter radapter = new BankNameAccountNo_RecyclerViewAdapter(  getActivity(),BankName_AccountNo);
+            BankNameAccountNo_RecyclerViewAdapter radapter = new BankNameAccountNo_RecyclerViewAdapter(  getActivity(),Total_Bank_Account);
             Account_selection_recycler.setAdapter(radapter);
         }catch (Exception e){
             e.printStackTrace();
@@ -175,5 +199,16 @@ public class BankAccountDetails  extends Fragment {
     public static void setBankVisibiliy(String bnk_nme, String acct_no){
         selectBank.setVisibility(View.GONE);
         after_selectBank.setVisibility(View.VISIBLE);
+        for(int i =0;i<= Total_Bank_Account.size();i++){
+            String acct = Total_Bank_Account.get(i);
+            String[] account = acct.split("~");
+            if(acct_no.equals(account[1])){
+                bankname.setText(account[0]);
+                account_no.setText(account[1]);
+                branchname.setText(account[3]);
+                Accounttype.setText(account[2]);
+                ifsc.setText(account[4]);
+            }
+        }
     }
 }

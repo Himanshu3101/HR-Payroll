@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.yoeki.kalpnay.hrporatal.Profile.Model.user_info.User;
+import com.yoeki.kalpnay.hrporatal.Profile.Model.user_info.UserDependent;
 import com.yoeki.kalpnay.hrporatal.R;
 
 import java.util.ArrayList;
@@ -19,6 +21,8 @@ public class Dependent extends Fragment {
     DependentRecyclerViewAdapter dependentAdapter;
     private ArrayList<String> DependentList;
     RecyclerView dependentRecycler;
+    ArrayList<User> mlist;
+    private static Dependent instance;
 
     public static Dependent newInstance() {
         Dependent fragment = new Dependent();
@@ -27,12 +31,22 @@ public class Dependent extends Fragment {
 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
-        DependentList = new ArrayList<>();
-        DependentList.add("Rahul Sharma~Father~rahul1@ghmail.com~9874585214");
-        DependentList.add("Abhishek Yadav~Husband~abhishek1@ghmail.com~8521476541");
-        DependentList.add("Rashmi singh~Son~rashmi1@ghmail.com~7412589635");
 
+        DependentList = new ArrayList<>();
         dependentRecycler = getView().findViewById(R.id.dependentRecycler);
+
+        for (final User list : mlist) {
+            for(UserDependent userDependent : list.userDependents) {
+
+                String dependentListString = userDependent.getName()+"~"+userDependent.getRelation()+"~"+userDependent.getContactNo();
+
+                try {
+                    DependentList.add(dependentListString);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }
         dependentRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         dependentAdapter = new DependentRecyclerViewAdapter( getActivity() ,DependentList);
         dependentRecycler.setAdapter(dependentAdapter);
@@ -40,9 +54,11 @@ public class Dependent extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.dependent, container, false);
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view=inflater.inflate(R.layout.dependent, container, false);
+        Bundle args = getArguments();
+        mlist = (ArrayList<User>) getArguments().getSerializable("keyForProfile");
+        instance=this;
+        return view;
     }
 }

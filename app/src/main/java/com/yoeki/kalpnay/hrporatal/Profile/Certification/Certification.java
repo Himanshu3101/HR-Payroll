@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.yoeki.kalpnay.hrporatal.Profile.Model.user_info.User;
+import com.yoeki.kalpnay.hrporatal.Profile.Model.user_info.UserCertification;
 import com.yoeki.kalpnay.hrporatal.R;
 
 import java.util.ArrayList;
@@ -18,6 +20,8 @@ public class Certification extends Fragment {
     CertificationRecyclerViewAdapter certificateAdapter;
     private ArrayList<String> CertificationList;
     RecyclerView certificationRecycler;
+    ArrayList<User> mlist;
+    private static Certification instance;
 
     public static Certification newInstance() {
         Certification fragment = new Certification();
@@ -27,11 +31,22 @@ public class Certification extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
         CertificationList = new ArrayList<>();
-        CertificationList.add("Microsoft Certified~MCP~Microsoft~05-Sep-19");
-        CertificationList.add("Android Certified~SSL~Google~05-Aug-19");
-        CertificationList.add("Oracle Certified~OCA~Oracle~25-Nov-19");
-
         certificationRecycler = getView().findViewById(R.id.certificationRecycler);
+
+        for (final User list : mlist) {
+            for(UserCertification userCertification : list.userCertification) {
+
+                String CertificationListString = userCertification.getNameOfCertificate()+"~"+userCertification.getType()+"~"+userCertification.getProvider()
+                        +"~"+userCertification.getExpired();
+
+                try {
+                    CertificationList.add(CertificationListString);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }
+
         certificationRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         certificateAdapter = new CertificationRecyclerViewAdapter( getActivity() ,CertificationList);
         certificationRecycler.setAdapter(certificateAdapter);
@@ -39,9 +54,12 @@ public class Certification extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.certification, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        View view=inflater.inflate(R.layout.certification, container, false);
+        Bundle args = getArguments();
+        mlist = (ArrayList<User>) getArguments().getSerializable("keyForProfile");
+        instance=this;
+        return view;
     }
 }

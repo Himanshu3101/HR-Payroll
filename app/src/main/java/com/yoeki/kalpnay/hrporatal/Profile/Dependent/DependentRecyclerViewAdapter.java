@@ -60,11 +60,11 @@ public class DependentRecyclerViewAdapter extends RecyclerView.Adapter<Dependent
             holder.primary.setText(Break[2]);
         }
 
-        if(Break[3].equalsIgnoreCase("null") || Break[2].equalsIgnoreCase("") || Break[2].equalsIgnoreCase(" ")){
-            holder.cntctInformation.setText("N/A");
-        }else {
-            holder.cntctInformation.setText(Break[3]);
-        }
+//        if(Break[3].equalsIgnoreCase("null") || Break[3].equalsIgnoreCase("") || Break[3].equalsIgnoreCase(" ")){
+//            holder.cntctInformation.setText("N/A");
+//        }else {
+//            holder.cntctInformation.setText(Break[3]);
+//        }
 
     }
 

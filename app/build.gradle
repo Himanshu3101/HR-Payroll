@@ -38,7 +38,20 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.0.1'
     implementation 'com.github.angads25:toggle:1.0.0'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+
+
+
+
+
+//    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+    implementation 'com.applandeo:material-calendar-view:1.4.0'
+    implementation 'com.robertlevonyan.view:CustomFloatingActionButton:2.1.0'
 }
-
-
-//All com.android.support libraries must use the exact same version specification (mixing versions can lead to runtime crashes). Found versions 28.0.0-rc02, 28.0.0-rc01. Examples include `com.android.support:asynclayoutinflater:28.0.0-rc02` and `com.android.support:animated-vector-drawable:28.0.0-rc01`

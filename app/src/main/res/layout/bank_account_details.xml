@@ -112,6 +112,7 @@
                     android:layout_marginTop="10dp">
 
                     <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                        android:id="@+id/account_no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:textColorHint="@color/colorPrimaryDark"
@@ -305,6 +306,7 @@
                     android:layout_marginTop="10dp">
 
                     <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                        android:id="@+id/ifsc"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:textColorHint="@color/colorPrimaryDark"

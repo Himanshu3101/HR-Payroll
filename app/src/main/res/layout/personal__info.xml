@@ -150,6 +150,7 @@
                             android:textColor="@color/colorText"/>
 
                         <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                            android:id="@+id/personal_number"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -180,6 +181,7 @@
                             android:textColor="@color/colorText"/>
 
                         <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                            android:id="@+id/code"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -210,6 +212,7 @@
                             android:textColor="@color/colorText"/>
 
                         <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                            android:id="@+id/designation"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -270,6 +273,7 @@
                             android:textColor="@color/colorText"/>
 
                         <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                            android:id="@+id/title"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -300,6 +304,7 @@
                             android:textColor="@color/colorText"/>
 
                         <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                            android:id="@+id/name"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -360,6 +365,7 @@
                             android:textColor="@color/colorText"/>
 
                         <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                            android:id="@+id/gender"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -390,6 +396,7 @@
                             android:textColor="@color/colorText"/>
 
                         <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                            android:id="@+id/martial_stat"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -420,6 +427,7 @@
                             android:textColor="@color/colorText"/>
 
                         <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                            android:id="@+id/dob"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"
@@ -450,6 +458,7 @@
                             android:textColor="@color/colorText"/>
 
                         <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                            android:id="@+id/ssn"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="03dp"

@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.github.paolorotolo.appintro.AppIntro;
 import com.yoeki.kalpnay.hrporatal.IntroScreenFragment.AppIntroSampleSlider;
+import com.yoeki.kalpnay.hrporatal.Login.LoginActivity;
 
 public class Myintro extends AppIntro {
 

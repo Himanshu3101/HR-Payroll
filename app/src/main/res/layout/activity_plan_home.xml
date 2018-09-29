@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Notification.NotificationHomeActivity"
+    android:background="@color/textcolor">
+
+    <RelativeLayout
+        android:id="@+id/notifiy_header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+
+        <FrameLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/img_backplan"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"/>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/back"
+                android:layout_gravity="left|center"/>
+        </FrameLayout>
+
+        <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
+            android:id="@+id/notifi_header"
+            android:textSize="@dimen/textFrHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:textColor="#fff" />
+     </RelativeLayout>
+     <FrameLayout
+        android:id="@+id/frame_layoutplan"
+        android:layout_below="@+id/notifiy_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation_plan"
+        android:animateLayoutChanges="true">
+     </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation_plan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        app:itemTextColor="@color/textcolor"
+        app:itemIconTint="@color/textcolor"
+        app:menu="@menu/bottomnavigation_plan"/>
+
+   </RelativeLayout>

@@ -45,5 +45,5 @@
     <string name="material_calendar_negative_button">Cancel</string>
 
     <string name="detailstext">Is the nature of the event casual, formal, romantic, or professional? Different Event Venues project different moods casting the tone of the events nature. Most venues possess the ability to cast each of these tones to make the event successful. Many restaurants offer gathering rooms to project a formal, romantic or professional feel, while a portion of the main eating area settles guests into a more casual, laid-back retreat. The same is true for most venues. Yachts can be the perfect "wow factor" for intimate, casual bridal/baby showers as well as intriguing the professional crowds mixing business with pleasure in the sights and sounds integrated with elegance on this excursion</string>
-
+    <string name="title_activity_vendor_maps">Map</string>
 </resources>

@@ -7,6 +7,9 @@ import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -15,30 +18,48 @@ import android.view.View;
 import android.widget.Button;
 
 import com.yoeki.kalpnay.hrporatal.HomeMenu.HomeActivity;
+import com.yoeki.kalpnay.hrporatal.Login.Api;
 import com.yoeki.kalpnay.hrporatal.Profile.BankDetails.BankAccountDetails;
 import com.yoeki.kalpnay.hrporatal.Profile.Certification.Certification;
 import com.yoeki.kalpnay.hrporatal.Profile.Dependent.Dependent;
+import com.yoeki.kalpnay.hrporatal.Profile.Model.APIInterface;
+import com.yoeki.kalpnay.hrporatal.Profile.Model.user_info.BasicUserInfo;
+import com.yoeki.kalpnay.hrporatal.Profile.Model.user_info.User;
+import com.yoeki.kalpnay.hrporatal.Profile.Model.user_info.UserSend_Data;
 import com.yoeki.kalpnay.hrporatal.Profile.Qualification.Qualification;
 import com.yoeki.kalpnay.hrporatal.R;
 import com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Profile extends AppCompatActivity {
     ViewPager viewPager;
     private BottomNavigationView bottomNavigationView;
     TextclassTextFrHeader headerName;
     Button Pro_back;
+    private final static String API_KEY = "";
+    private static List<String> DataList;
+    List<BasicUserInfo> userInfoList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profie);
+
+        serverCode();
+
+        viewPager = (ViewPager) findViewById(R.id.frame_layout);
         bottomNavigationView = (BottomNavigationView)findViewById(R.id.navigation);
         headerName = (TextclassTextFrHeader) findViewById(R.id.profileHeader);
         Pro_back = (Button)findViewById(R.id.Pro_back);
         headerName.setText("Profile");
-        setViewPager();
         disableShiftMode(bottomNavigationView);
 
         bottomNavigationView.setOnNavigationItemSelectedListener
@@ -80,8 +101,6 @@ public class Profile extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
 
     @Override
@@ -92,14 +111,62 @@ public class Profile extends AppCompatActivity {
         finish();
     }
 
-    private void setViewPager() {
-        viewPager = findViewById(R.id.frame_layout);
+    @SuppressLint("RestrictedApi")
+    public static void disableShiftMode(BottomNavigationView view) {
+        BottomNavigationMenuView menuView = (BottomNavigationMenuView) view.getChildAt(0);
+        try {
+            Field shiftingMode = menuView.getClass().getDeclaredField("mShiftingMode");
+            shiftingMode.setAccessible(true);
+            shiftingMode.setBoolean(menuView, false);
+            shiftingMode.setAccessible(false);
+            for (int i = 0; i < menuView.getChildCount(); i++) {
+                BottomNavigationItemView item = (BottomNavigationItemView) menuView.getChildAt(i);
+                //noinspection RestrictedApi
+
+                item.setShiftingMode(false);
+                // set once again checked value, so view will be updated
+                //noinspection RestrictedApi
+                item.setChecked(item.getItemData().isChecked());
+            }
+        } catch (NoSuchFieldException e) {
+            Log.e("BNVHelper", "Unable to get shift mode field", e);
+        } catch (IllegalAccessException e) {
+            Log.e("BNVHelper", "Unable to change value of shift mode", e);
+        }
+    }
+
+    public void serverCode(){
+        APIInterface apiInterface = Api.getClient().create(APIInterface.class);
+        UserSend_Data user = new UserSend_Data("1");
+        Call<User> call2 = apiInterface.idUser(user);
+        call2.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                User user1 = response.body();
+                try {
+                    String status = user1.status;
+                    String mess = user1.message;
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+                setViewPager(user1);
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+    private void setViewPager(User user) {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.addFragment(new Personal_Info());
-        viewPagerAdapter.addFragment(new BankAccountDetails());
-        viewPagerAdapter.addFragment(new Qualification());
-        viewPagerAdapter.addFragment(new Certification());
-        viewPagerAdapter.addFragment(new Dependent());
+        viewPagerAdapter.addFragment(new Personal_Info(),user);
+        viewPagerAdapter.addFragment(new BankAccountDetails(), user);
+        viewPagerAdapter.addFragment(new Qualification(), user);
+        viewPagerAdapter.addFragment(new Certification(), user);
+        viewPagerAdapter.addFragment(new Dependent(), user);
         viewPager.setAdapter(viewPagerAdapter);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -130,28 +197,35 @@ public class Profile extends AppCompatActivity {
 
     }
 
-    @SuppressLint("RestrictedApi")
-    public static void disableShiftMode(BottomNavigationView view) {
-        BottomNavigationMenuView menuView = (BottomNavigationMenuView) view.getChildAt(0);
-        try {
-            Field shiftingMode = menuView.getClass().getDeclaredField("mShiftingMode");
-            shiftingMode.setAccessible(true);
-            shiftingMode.setBoolean(menuView, false);
-            shiftingMode.setAccessible(false);
-            for (int i = 0; i < menuView.getChildCount(); i++) {
-                BottomNavigationItemView item = (BottomNavigationItemView) menuView.getChildAt(i);
-                //noinspection RestrictedApi
+    class ViewPagerAdapter extends FragmentPagerAdapter {
 
-                item.setShiftingMode(false);
-                // set once again checked value, so view will be updated
-                //noinspection RestrictedApi
-                item.setChecked(item.getItemData().isChecked());
+        private ArrayList<Fragment> mFragmentList=new ArrayList<>();
+
+        public ViewPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return mFragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return 5;
+        }
+
+        public void addFragment(Fragment fragment, User user) {
+            try {
+                ArrayList<User> dataofProfile = new ArrayList<User>();
+                dataofProfile.add(user);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("keyForProfile", dataofProfile);
+                fragment.setArguments(bundle);
+                mFragmentList.add(fragment);
+            }catch (Exception e){
+                e.printStackTrace();
             }
-        } catch (NoSuchFieldException e) {
-            Log.e("BNVHelper", "Unable to get shift mode field", e);
-        } catch (IllegalAccessException e) {
-            Log.e("BNVHelper", "Unable to change value of shift mode", e);
         }
     }
-
 }

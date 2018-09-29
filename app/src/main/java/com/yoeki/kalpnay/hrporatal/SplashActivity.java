@@ -10,6 +10,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import com.skyfishjy.library.RippleBackground;
+import com.yoeki.kalpnay.hrporatal.Login.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
     public boolean isFirstStart;
