@@ -214,7 +214,7 @@
                 android:id="@+id/ly_claimtypetravelview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:orientation="vertical">
 
                    <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading

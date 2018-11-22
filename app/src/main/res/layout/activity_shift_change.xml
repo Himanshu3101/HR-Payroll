@@ -91,8 +91,8 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp" />
 
-            <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
-                android:id="@+id/edt_shiftchangecurrentshift"
+            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                android:id="@+id/tv_shiftchangecurrentshift"
                 android:textSize="@dimen/textNtHeader"
                 android:hint="Current Shift"
                 android:textColorHint="@color/colorgreydark"
@@ -168,19 +168,19 @@
 
 
             <!--<com.yoeki.kalpnay.hrporatal.setting.Textclass-->
-                <!--android:id="@+id/tv_shiftchangesubmit"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Submit"-->
-                <!--android:textColor="@color/textcolor"-->
-                <!--android:gravity="center"-->
-                <!--android:layout_marginTop="35dp"-->
-                <!--android:background="@drawable/textbackgroundsolid"-->
-                <!--android:padding="10dp"-->
-                <!--android:textSize="18dp"-->
-                <!--android:layout_marginLeft="15dp"-->
-                <!--android:layout_marginRight="15dp"-->
-                <!--android:layout_marginBottom="25dp" />-->
+            <!--android:id="@+id/tv_shiftchangesubmit"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Submit"-->
+            <!--android:textColor="@color/textcolor"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginTop="35dp"-->
+            <!--android:background="@drawable/textbackgroundsolid"-->
+            <!--android:padding="10dp"-->
+            <!--android:textSize="18dp"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:layout_marginBottom="25dp" />-->
 
         </LinearLayout>
     </ScrollView>
@@ -193,7 +193,7 @@
         android:layout_alignParentBottom="true">
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/tv_shiftchangesubmit"
+            android:id="@+id/btn_shiftchangesubmit"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:background="@color/colorPrimaryDark"

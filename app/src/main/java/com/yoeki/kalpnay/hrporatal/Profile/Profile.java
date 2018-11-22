@@ -1,6 +1,9 @@
 package com.yoeki.kalpnay.hrporatal.Profile;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,6 +14,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
@@ -46,6 +50,8 @@ public class Profile extends AppCompatActivity {
     private final static String API_KEY = "";
     private static List<String> DataList;
     List<BasicUserInfo> userInfoList;
+    ProgressDialog PD;
+    public static Context contextOfApplication;
 
 
     @Override
@@ -53,6 +59,10 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profie);
 
+        PD = new ProgressDialog(Profile.this);
+        PD.setMessage("Loading...");
+        PD.setCancelable(false);
+        PD.show();
         serverCode();
 
         viewPager = (ViewPager) findViewById(R.id.frame_layout);
@@ -61,7 +71,7 @@ public class Profile extends AppCompatActivity {
         Pro_back = (Button)findViewById(R.id.Pro_back);
         headerName.setText("Profile");
         disableShiftMode(bottomNavigationView);
-
+        contextOfApplication = getApplicationContext();
         bottomNavigationView.setOnNavigationItemSelectedListener
                 (new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -103,6 +113,11 @@ public class Profile extends AppCompatActivity {
         });
     }
 
+    public static Context getContextOfApplication()
+    {
+        return contextOfApplication;
+    }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -139,6 +154,7 @@ public class Profile extends AppCompatActivity {
         APIInterface apiInterface = Api.getClient().create(APIInterface.class);
         UserSend_Data user = new UserSend_Data("1");
         Call<User> call2 = apiInterface.idUser(user);
+
         call2.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
@@ -146,6 +162,7 @@ public class Profile extends AppCompatActivity {
                 try {
                     String status = user1.status;
                     String mess = user1.message;
+                    PD.dismiss();
                 }catch(Exception e){
                     e.printStackTrace();
                 }
@@ -154,7 +171,26 @@ public class Profile extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
+                PD.dismiss();
 
+                AlertDialog.Builder builder = new AlertDialog.Builder(Profile.this);
+                builder.setCancelable(false);
+                builder.setMessage("TimeOut! Do you want to Retry?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        serverCode();
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //if user select "No", just cancel this dialog and continue with app
+                        dialog.cancel();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
 
@@ -168,6 +204,7 @@ public class Profile extends AppCompatActivity {
         viewPagerAdapter.addFragment(new Certification(), user);
         viewPagerAdapter.addFragment(new Dependent(), user);
         viewPager.setAdapter(viewPagerAdapter);
+
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -217,6 +254,7 @@ public class Profile extends AppCompatActivity {
 
         public void addFragment(Fragment fragment, User user) {
             try {
+
                 ArrayList<User> dataofProfile = new ArrayList<User>();
                 dataofProfile.add(user);
                 Bundle bundle = new Bundle();

@@ -25,82 +25,13 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/colorPrimary"/>
-        <RadioGroup
+        <ListView
+            android:id="@+id/li_trainigcourselist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/radioGroup_trainingtype"
-            android:layout_margin="15dp"
-            android:gravity="left">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Course"
-                android:id="@+id/radioButton_course"
-                android:layout_gravity="left"
-                android:checked="false"
-                android:buttonTint="@color/colorblack"
-                android:textColor="@color/colorblack"
-                android:textSize="15dp" />
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Workshope"
-                android:layout_marginTop="10dp"
-                android:id="@+id/radioButton_workshope"
-                android:layout_gravity="left"
-                android:checked="false"
-                android:textSize="15dp"
-                android:buttonTint="@color/colorblack"
-                android:textColor="@color/colorblack"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Seminor"
-                android:layout_marginTop="10dp"
-                android:buttonTint="@color/colorblack"
-                android:id="@+id/radioButton_seminor"
-                android:layout_gravity="left"
-                android:checked="false"
-                android:textSize="15dp"
-                android:textColor="@color/colorblack"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Confirance"
-                android:layout_marginTop="10dp"
-                android:buttonTint="@color/colorblack"
-                android:id="@+id/radioButton_confirance"
-                android:layout_gravity="left"
-                android:checked="false"
-                android:textSize="15dp"
-                android:textColor="@color/colorblack"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Other"
-                android:layout_marginTop="10dp"
-                android:buttonTint="@color/colorblack"
-                android:id="@+id/radioButton_others"
-                android:layout_gravity="left"
-                android:checked="false"
-                android:textSize="15dp"
-                android:textColor="@color/colorblack"/>
-        </RadioGroup>
+            android:divider="@color/textcolor"
+            android:layout_margin="7dp"></ListView>
 
-        <com.yoeki.kalpnay.hrporatal.setting.Textclass
-            android:id="@+id/tv_trainingsubmit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="OK"
-            android:textColor="@color/textcolor"
-            android:gravity="center"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/textbackgroundsolid"
-            android:padding="10dp"
-            android:textSize="18dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="25dp" />
     </LinearLayout>
 
 </LinearLayout>

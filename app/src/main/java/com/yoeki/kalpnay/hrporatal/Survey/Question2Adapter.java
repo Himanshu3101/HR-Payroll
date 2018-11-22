@@ -1,7 +1,9 @@
-package com.yoeki.kalpnay.hrporatal.Servay;
+package com.yoeki.kalpnay.hrporatal.Survey;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,11 +20,10 @@ public class Question2Adapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     private ArrayList<QuestionModel> questionlist;
     private Activity activity;
-
+    Context context;
     public Question2Adapter(Activity activity, ArrayList<QuestionModel> questionlist) {
         this.activity = activity;
         this.questionlist = questionlist;
-
     }
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -43,10 +44,8 @@ public class Question2Adapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         itemViewHolder.card_serveyevent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent=new Intent(activity, EventActivity.class);
                 activity.startActivity(intent);
-
             }
         });
 
@@ -63,14 +62,24 @@ public class Question2Adapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     private class ItemViewHolder extends RecyclerView.ViewHolder {
         TextView tv_question2,tv_unreadquestion2count,tv_unreadquestion2;
         CardView card_serveyevent;
-
+        AppCompatButton answers;
         public ItemViewHolder(View itemView) {
             super(itemView);
             tv_question2 = itemView.findViewById(R.id.tv_question2);
             tv_unreadquestion2count = itemView.findViewById(R.id.tv_unreadquestion2count);
             tv_unreadquestion2 = itemView.findViewById(R.id.tv_unreadquestion2);
             card_serveyevent=itemView.findViewById(R.id.card_serveyevent);
+//            answers=itemView.findViewById(R.id.answers);
+
+//            answers.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(context, Question_surevey.class);
+//                    context.startActivity(intent);
+//                }
+//            });
         }
+
     }
 
 }

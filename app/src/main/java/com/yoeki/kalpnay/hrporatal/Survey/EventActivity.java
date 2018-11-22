@@ -1,4 +1,4 @@
-package com.yoeki.kalpnay.hrporatal.Servay;
+package com.yoeki.kalpnay.hrporatal.Survey;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;

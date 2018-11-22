@@ -2,7 +2,9 @@ package com.yoeki.kalpnay.hrporatal.Profile.Model.user_info;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class BasicUserInfo {
+import java.io.Serializable;
+
+public class BasicUserInfo implements Serializable {
 
 @SerializedName("PesonalNumber")
 @Expose

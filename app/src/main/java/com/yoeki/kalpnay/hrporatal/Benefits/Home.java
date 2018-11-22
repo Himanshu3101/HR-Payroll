@@ -1,11 +1,15 @@
 package com.yoeki.kalpnay.hrporatal.Benefits;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
+import com.yoeki.kalpnay.hrporatal.HomeMenu.HomeActivity;
 import com.yoeki.kalpnay.hrporatal.R;
 
 import java.util.ArrayList;
@@ -18,6 +22,7 @@ import java.util.List;
 public class Home extends AppCompatActivity {
     RecyclerView Benefits_List;
     List<String> benefit_lists;
+    AppCompatButton benefits_back;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,8 +30,25 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.benefit_home);
 
         Benefits_List = (RecyclerView)findViewById(R.id.Benefits_List);
+        benefits_back = (AppCompatButton) findViewById(R.id.benefits_back);
 
+        benefits_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
        recycler_benefit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     public void recycler_benefit(){

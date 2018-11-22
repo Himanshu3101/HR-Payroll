@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/textcolor"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -21,7 +22,7 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/Pro_back"
+                    android:id="@+id/survey_answerBack"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@color/transparent" />
@@ -68,6 +69,7 @@
     </android.support.v7.widget.Toolbar>
 
     <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+        android:id="@+id/question_coming"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
@@ -82,80 +84,119 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:orientation="vertical">
 
-        <android.support.v7.widget.LinearLayoutCompat
-            android:id="@+id/number_rating"
+        <com.hsalf.smilerating.SmileRating
+            android:id="@+id/question_Answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="5">
+            android:layout_centerVertical="true"
+            app:isIndicator="false" />
+    </LinearLayout>
 
-            <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="1"
-                android:textAlignment="center"
-                android:textColor="#3A3939"
-                android:textSize="30sp" />
 
-            <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="2"
-                android:textAlignment="center"
-                android:textColor="#3A3939"
-                android:textSize="30sp" />
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-46dp"
+        android:layout_alignParentBottom="true">
 
-            <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="3"
-                android:textAlignment="center"
-                android:textColor="#3A3939"
-                android:textSize="30sp" />
-
-            <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="4"
-                android:textAlignment="center"
-                android:textColor="#3A3939"
-                android:textSize="30sp" />
-
-            <com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="5"
-                android:textAlignment="center"
-                android:textColor="#3A3939"
-                android:textSize="30sp" />
-
-        </android.support.v7.widget.LinearLayoutCompat>
-
-        <SeekBar
-            android:id="@+id/seekBar"
-            style="@style/custom_seekbar"
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/answerSurvey_submit"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="15dp" />
+            android:layout_height="46dp"
+            android:background="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:text="Submit"
+            android:typeface="serif"
+            android:textSize="@dimen/textFrSubmitButton"
+            android:textColor="#fff"/>
+
+    </RelativeLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<android.support.v7.widget.LinearLayoutCompat-->
+            <!--android:id="@+id/number_rating"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="5">-->
+
+            <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="1"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="#3A3939"-->
+                <!--android:textSize="30sp" />-->
+
+            <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="2"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="#3A3939"-->
+                <!--android:textSize="30sp" />-->
+
+            <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="3"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="#3A3939"-->
+                <!--android:textSize="30sp" />-->
+
+            <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="4"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="#3A3939"-->
+                <!--android:textSize="30sp" />-->
+
+            <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassTextFrHeader-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="5"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="#3A3939"-->
+                <!--android:textSize="30sp" />-->
+
+        <!--</android.support.v7.widget.LinearLayoutCompat>-->
 
         <!--<SeekBar-->
             <!--android:id="@+id/seekBar"-->
+            <!--style="@style/custom_seekbar"-->
             <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="50dp"-->
-            <!--android:layout_below="@+id/number_rating"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:max="4"-->
-            <!--android:progress="0"-->
-            <!--android:progressDrawable="@drawable/cursor_progress"-->
-            <!--android:thumb="@drawable/cursor_control" />-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginTop="15dp" />-->
 
-    </LinearLayout>
+        <!--&lt;!&ndash;<SeekBar&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/seekBar"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_below="@+id/number_rating"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:max="4"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:progress="0"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:progressDrawable="@drawable/cursor_progress"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:thumb="@drawable/cursor_control" />&ndash;&gt;-->
+
+    <!--</LinearLayout>-->
+
+
+
 </RelativeLayout>

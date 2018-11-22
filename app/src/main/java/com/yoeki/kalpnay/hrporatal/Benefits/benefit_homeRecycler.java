@@ -56,6 +56,7 @@ public class benefit_homeRecycler extends RecyclerView.Adapter<benefit_homeRecyc
     public void onBindViewHolder(ViewHolder holder, int position) {
         String unit = mData.get(position);
         holder.benefit_name.setText(unit);
+
         Drawable drawable = context.getDrawable(mItems.get(position));
         Drawable rightDrawable1=context.getDrawable(R.mipmap.go);
         holder.benefit_name.setCompoundDrawablesWithIntrinsicBounds(drawable, null, rightDrawable1, null);

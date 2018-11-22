@@ -10,11 +10,11 @@ import android.view.View;
 import android.widget.CompoundButton;
 
 import com.yoeki.kalpnay.hrporatal.HomeMenu.HomeActivity;
-import com.yoeki.kalpnay.hrporatal.Question_surevey;
 import com.yoeki.kalpnay.hrporatal.R;
 import com.yoeki.kalpnay.hrporatal.Request.LeaveRequest;
 import com.yoeki.kalpnay.hrporatal.TimeAttendance.Approval_Request.ViewPager.RequestManagementTab;
 import com.yoeki.kalpnay.hrporatal.TimeAttendance.Holidays.Holiday_activity;
+import com.yoeki.kalpnay.hrporatal.TimeAttendance.Leave_Balance.Leave_Balance;
 import com.yoeki.kalpnay.hrporatal.TimeAttendance.Time.TimeEntry;
 
 /**
@@ -79,7 +79,7 @@ public class TimeAttendance_Menu extends AppCompatActivity {
         leave_balance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TimeAttendance_Menu.this,Question_surevey.class);
+                Intent intent = new Intent(TimeAttendance_Menu.this,Leave_Balance.class);
                 startActivity(intent);
                 finish();
             }

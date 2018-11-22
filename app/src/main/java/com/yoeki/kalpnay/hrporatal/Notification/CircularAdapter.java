@@ -11,17 +11,18 @@ import android.widget.TextView;
 
 import com.yoeki.kalpnay.hrporatal.R;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class CircularAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int TYPE_ITEM = 2;
 
-    private ArrayList<NotificationModel> stringArrayList;
+    private List<CircularModel.ListCircular> stringArrayList;
     private Activity activity;
 
-    public CircularAdapter(Activity activity, ArrayList<NotificationModel> strings) {
+    public CircularAdapter(Activity activity,List<CircularModel.ListCircular> strings) {
         this.activity = activity;
         this.stringArrayList = strings;
+
     }
 
     @Override
@@ -36,15 +37,19 @@ public class CircularAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         ItemViewHolder itemViewHolder = (ItemViewHolder) holder;
-        itemViewHolder.tv_circularname.setText(stringArrayList.get(position).getNotificationName());
-        itemViewHolder.tv_circularmsg.setText(stringArrayList.get(position).getNotificationMsg());
-        itemViewHolder.tv_circulardate.setText(stringArrayList.get(position).getNotificationDate());
+        itemViewHolder.tv_circularname.setText(stringArrayList.get(position).getName());
+        itemViewHolder.tv_circularmsg.setText(stringArrayList.get(position).getDescription());
+        itemViewHolder.tv_circulardate.setText(stringArrayList.get(position).getDate());
         itemViewHolder.card_notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent=new Intent(activity,EventDetails.class);
+                intent.putExtra("msg",stringArrayList.get(position).getDescription());
+                intent.putExtra("date",stringArrayList.get(position).getDate());
+                intent.putExtra("name",stringArrayList.get(position).getName());
                 activity.startActivity(intent);
+
             }
         });
     }

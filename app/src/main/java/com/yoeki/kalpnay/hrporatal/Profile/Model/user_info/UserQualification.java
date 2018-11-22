@@ -3,10 +3,12 @@ package com.yoeki.kalpnay.hrporatal.Profile.Model.user_info;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by IACE on 27-Sep-18.
  */
-public class UserQualification {
+public class UserQualification implements Serializable {
 
 @SerializedName("Qualification")
 @Expose

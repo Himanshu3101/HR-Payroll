@@ -7,11 +7,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
+import android.support.v7.widget.SwitchCompat;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
+import com.yoeki.kalpnay.hrporatal.Login.Api;
+import com.yoeki.kalpnay.hrporatal.Login.ApiInterface;
 import com.yoeki.kalpnay.hrporatal.R;
+import com.yoeki.kalpnay.hrporatal.TimeAttendance.Model.TimeAttendance_Info.TimeAttendance_Recieve;
+import com.yoeki.kalpnay.hrporatal.TimeAttendance.Model.TimeAttendance_Info.TimeEntryData;
 import com.yoeki.kalpnay.hrporatal.TimeAttendance.TimeAttendance_Menu;
 import com.yoeki.kalpnay.hrporatal.setting.Edittextclass;
 
@@ -20,14 +27,19 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class TimeEntry extends AppCompatActivity {
 
     private  static final String TAG = "CalendarActivity";
     AppCompatButton timeEnter_home,time_from,time_to,HolidayFrom_date,time_entrySubmit;
-    Edittextclass from_time_edittext,to_time_edittext,Stat_fromdate,wrked_time;
+    Edittextclass from_time_edittext,to_time_edittext,Stat_fromdate,wrked_time,time_desc;
     private int mHour, mMinute, whichtime=0, mYear, mMonth, mDay;
     String Com_fromTime, Com_toTime;
-
+    SwitchCompat switchCompatEntries;
+    ApiInterface apiInterface;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +54,8 @@ public class TimeEntry extends AppCompatActivity {
         to_time_edittext = (Edittextclass)findViewById(R.id.to_time_edittext);
         Stat_fromdate = (Edittextclass)findViewById(R.id.Stat_fromdate);
         wrked_time = (Edittextclass)findViewById(R.id.wrked_time);
+        time_desc = (Edittextclass)findViewById(R.id.time_desc);
+        switchCompatEntries=(SwitchCompat)findViewById(R.id.ShowEntries);
 
         HolidayFrom_date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +86,23 @@ public class TimeEntry extends AppCompatActivity {
                 tiemPicker();
                 whichtime =1;
             }
+        });
+
+        switchCompatEntries.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                String stat = String.valueOf(isChecked);
+                if(stat.equals("true")){
+                    Intent intent0=new Intent(getApplicationContext(),TimeEntry_Week.class);
+//                    Intent intent0=new Intent(getApplicationContext(),Requests.class);
+                    startActivity(intent0);
+                    finish();
+                }else{
+                    switchCompatEntries.setChecked(false);
+                }
+            }
+
         });
 
         time_entrySubmit.setOnClickListener(new View.OnClickListener() {
@@ -170,26 +201,41 @@ public class TimeEntry extends AppCompatActivity {
     }
 
     public void serverCode(){
-//        APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
-//        UserSend_Data user = new UserSend_Data("1");
-//        Call<User> call2 = apiInterface.idUser(user);
-//        call2.enqueue(new Callback<User>() {
-//            @Override
-//            public void onResponse(Call<User> call, Response<User> response) {
-//                User user1 = response.body();
-//                try {
-//                    String status = user1.status;
-//                    String mess = user1.message;
-//                }catch(Exception e){
-//                    e.printStackTrace();
-//                }
-//                setViewPager(user1);
-//            }
-//
-//            @Override
-//            public void onFailure(Call<User> call, Throwable t) {
-//
-//            }
-//        });
+        String date = Stat_fromdate.getText().toString();
+        String fromTime = from_time_edittext.getText().toString();
+        String toTime = to_time_edittext.getText().toString();
+        String description = time_desc.getText().toString();
+        String workingHour = wrked_time.getText().toString();
+        String id = "01";
+
+        apiInterface = Api.getClient().create(ApiInterface.class);
+
+        TimeEntryData time_userDetails = new TimeEntryData(date,fromTime,toTime,description,workingHour,id);
+        Call<TimeAttendance_Recieve> call2 = apiInterface.date_Time(time_userDetails);
+
+        call2.enqueue(new Callback<TimeAttendance_Recieve>() {
+            @Override
+            public void onResponse(Call<TimeAttendance_Recieve> call, Response<TimeAttendance_Recieve> response) {
+                TimeAttendance_Recieve timeAttendance_recieve = response.body();
+                try {
+                    String status = timeAttendance_recieve.status;
+                    String mess = timeAttendance_recieve.message;
+
+                    Stat_fromdate.setText("");
+                    from_time_edittext.setText("");
+                    to_time_edittext.setText("");
+                    time_desc.setText("");
+                    wrked_time.setText("");
+                    Toast.makeText(TimeEntry.this, mess, Toast.LENGTH_SHORT).show();
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<TimeAttendance_Recieve> call, Throwable t) {
+
+            }
+        });
     }
 }

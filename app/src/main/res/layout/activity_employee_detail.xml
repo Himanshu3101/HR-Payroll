@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorAccent">
+
+    <RelativeLayout
+        android:id="@+id/rl_reqhomehead"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/img_empdetailback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"/>
+
+        <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Employee Details"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:layout_margin="7dp"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/textcolor" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/textcolor">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/textcolor"
+                android:alpha=".9">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left|center"
+                android:background="@color/colorgrey">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Employee Basic Info"
+                    android:textSize="18dp"
+                    android:padding="3dp"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/colorblack"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:id="@+id/tv_empname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$177700"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorlightblack"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Designation"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:id="@+id/tv_empdesignation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$177700"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorlightblack"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date of Birth"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:id="@+id/tv_empdateofbirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$177700"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorlightblack"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:id="@+id/tv_empphonenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$177700"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorlightblack"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:id="@+id/tv_empgender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$177700"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorlightblack"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Martial Status"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:id="@+id/tv_empmartialstatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$177700"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorlightblack"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date of joining"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:id="@+id/tv_empdateofjoining"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$177700"
+                    android:textSize="15dp"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorlightblack"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_empqualification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="4dp"
+                android:orientation="horizontal"
+                android:gravity="left|center"
+                android:background="@color/colorgrey">
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Employee Qualification"
+                    android:textSize="17dp"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ryc_empqualification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:alpha=".9">
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/ly_empcirtification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="4dp"
+                android:orientation="horizontal"
+                android:gravity="left|center"
+                android:background="@color/colorgrey">
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Certification"
+                    android:textSize="17dp"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorblack"/>
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ryc_certification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:alpha=".9">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

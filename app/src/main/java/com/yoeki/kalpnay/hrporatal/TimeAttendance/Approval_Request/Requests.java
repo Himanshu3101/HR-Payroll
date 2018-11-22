@@ -83,12 +83,10 @@ public class Requests extends AppCompatActivity {
     }
 
     public void filterRequest(){
-
         AppCompatButton req_filterFrom_date,req_filterTo_date;
         Textclass saveFilter;
         Spinner srch_req_by_type;
         ArrayAdapter<String> reqt_lst_Name;
-
 
         final Dialog dialog = new Dialog(Requests.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);

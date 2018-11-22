@@ -1,12 +1,15 @@
-package com.yoeki.kalpnay.hrporatal.Servay;
+package com.yoeki.kalpnay.hrporatal.Survey;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.yoeki.kalpnay.hrporatal.Question_surevey;
 import com.yoeki.kalpnay.hrporatal.R;
 
 import java.util.ArrayList;
@@ -31,10 +34,19 @@ public class Question1adapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
-        ItemViewHolder itemViewHolder = (ItemViewHolder) holder;
-
+        final ItemViewHolder itemViewHolder = (ItemViewHolder) holder;
         itemViewHolder.tv_question1.setText(questionlist.get(position).getQuestion1());
         itemViewHolder.tv_unreadquestion1.setText(questionlist.get(position).getQuestionunread());
+
+        itemViewHolder.card_upperQuest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String quest = itemViewHolder.tv_question1.getText().toString();
+                Intent intent=new Intent(activity, Question_surevey.class);
+                intent.putExtra("question",quest);
+                activity.startActivity(intent);
+            }
+        });
 
     }
     @Override
@@ -48,11 +60,13 @@ public class Question1adapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
     private class ItemViewHolder extends RecyclerView.ViewHolder {
         TextView tv_question1,tv_unreadquestion1;
+        CardView card_upperQuest;
 
         public ItemViewHolder(View itemView) {
             super(itemView);
             tv_question1 = itemView.findViewById(R.id.tv_question1);
             tv_unreadquestion1 = itemView.findViewById(R.id.tv_unreadquestion1);
+            card_upperQuest = itemView.findViewById(R.id.card_upperQuest);
         }
     }
 

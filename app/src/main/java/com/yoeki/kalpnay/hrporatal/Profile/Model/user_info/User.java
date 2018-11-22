@@ -3,12 +3,13 @@ package com.yoeki.kalpnay.hrporatal.Profile.Model.user_info;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by IACE on 27-Sep-18.
  */
-public class User {
+public class User implements Serializable {
 
     @SerializedName("status")
     @Expose

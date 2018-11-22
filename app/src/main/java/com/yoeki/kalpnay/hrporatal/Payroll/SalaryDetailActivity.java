@@ -1,5 +1,6 @@
 package com.yoeki.kalpnay.hrporatal.Payroll;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 
+import com.yoeki.kalpnay.hrporatal.HomeMenu.HomeActivity;
 import com.yoeki.kalpnay.hrporatal.R;
 
 import java.util.ArrayList;
@@ -25,23 +27,41 @@ public class SalaryDetailActivity extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_salary_detail);
+        img_salarydetailback=findViewById(R.id.img_salarydetailback);
         initialize();
         setupViewPager(viewpager_salary);
         tabs_salary.setupWithViewPager(viewpager_salary);
+
+        img_salarydetailback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
     }
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.img_salarydetailback:
-                finish();
+
                 break;
         }
     }
     public void initialize(){
         tabs_salary=(TabLayout) findViewById(R.id.tabs_salary);
         viewpager_salary=findViewById(R.id.viewpager_salary);
-        img_salarydetailback=findViewById(R.id.img_salarydetailback);
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     private void setupViewPager(ViewPager viewPager){

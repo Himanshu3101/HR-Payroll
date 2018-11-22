@@ -1,4 +1,4 @@
-package com.yoeki.kalpnay.hrporatal.Servay;
+package com.yoeki.kalpnay.hrporatal.Survey;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -29,7 +29,6 @@ public class AnswerdFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_answered, container, false);
 
         ryc_surveyanswered=view.findViewById(R.id.ryc_surveyanswered);
-
         arraycircularlist=new ArrayList<>();
 
         AnsweredModel data=new AnsweredModel();

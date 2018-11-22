@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 public class PlanformActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView tv_wherelocation,tv_location,tv_locationgeneral;
+    TextView tv_wherelocation,tv_location,tv_locationgeneral,tv_employeename;
     LinearLayout ly_location,ly_locationgeneral;
     String str;
     FrameLayout frm_formback;

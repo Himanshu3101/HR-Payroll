@@ -50,11 +50,23 @@
                     android:layout_height="wrap_content"
                     android:text="designation"
                     android:paddingLeft="5dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="3dp"
                     android:layout_marginLeft="7dp"
                     android:paddingBottom="7dp"
                     android:textColor="@color/colorlightblack"
                     android:textSize="13dp"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:id="@+id/tv_planedate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="designation"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="7dp"
+                    android:paddingBottom="7dp"
+                    android:textColor="@color/colorlightblack"
+                    android:textSize="10dp"/>
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>

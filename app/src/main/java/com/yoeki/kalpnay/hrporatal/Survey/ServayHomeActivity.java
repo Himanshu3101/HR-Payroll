@@ -1,5 +1,6 @@
-package com.yoeki.kalpnay.hrporatal.Servay;
+package com.yoeki.kalpnay.hrporatal.Survey;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -9,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.yoeki.kalpnay.hrporatal.HomeMenu.HomeActivity;
 import com.yoeki.kalpnay.hrporatal.R;
 
 import java.util.ArrayList;
@@ -25,6 +27,7 @@ public class ServayHomeActivity extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.servay_home);
+
         initialize();
 
         questionlist=new ArrayList<>();
@@ -100,9 +103,21 @@ public class ServayHomeActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.img_backsurvay:
-                finish();
+                back();
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        back();
+    }
+
+    public void back(){
+        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     public void initialize(){

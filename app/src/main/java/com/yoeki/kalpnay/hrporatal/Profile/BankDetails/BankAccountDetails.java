@@ -37,6 +37,7 @@ public class BankAccountDetails  extends Fragment {
     RecyclerView Account_selection_recycler;
     static ScrollView after_selectBank;
     ArrayList<User> mlist;
+    String bankDetailsArray;
 
     public static BankAccountDetails newInstance() {
         BankAccountDetails fragment = new BankAccountDetails();
@@ -45,10 +46,10 @@ public class BankAccountDetails  extends Fragment {
 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
-        bankname=(Edittextclass) getView().findViewById(R.id.bankname);
+
         account_no=(Edittextclass) getView().findViewById(R.id.account_no);
         ifsc=(Edittextclass) getView().findViewById(R.id.ifsc);
-
+        bankname=(Edittextclass) getView().findViewById(R.id.bankname);
         branchname=(Edittextclass)getView().findViewById(R.id.branchname);
         Accounttype=(Edittextclass)getView().findViewById(R.id.Accounttype);
 
@@ -69,7 +70,7 @@ public class BankAccountDetails  extends Fragment {
         for (final User list : mlist) {
             for(UserBankDetail bankDetails : list.userBankDetail) {
 
-                String bankDetailsArray = bankDetails.getBankName()+"~"+bankDetails.getAccountNo()+"~"+bankDetails.getAccountType()
+                bankDetailsArray = bankDetails.getBankName()+"~"+bankDetails.getAccountNo()+"~"+bankDetails.getAccountType()
                         +"~"+bankDetails.getBranchName()+"~"+bankDetails.getIFSCCode()+"~"+bankDetails.getBranchAddress();
 
                 try {
@@ -90,12 +91,18 @@ public class BankAccountDetails  extends Fragment {
         }else if(Total_Bank_Account.size()==1){
             selectBank.setVisibility(View.GONE);
             after_selectBank.setVisibility(View.VISIBLE);
+            String[] splited =  bankDetailsArray.split("~");
+            bankname.setText(splited[0]);
+            account_no.setText(splited[1]);
+            branchname.setText(splited[3]);
+            Accounttype.setText(splited[2]);
+            ifsc.setText(splited[4]);
+
         }else{
             selectBank.setVisibility(View.VISIBLE);
             after_selectBank.setVisibility(View.GONE);
             recyclerForTwoOrMoreAccount(view);
         }
-
             bankselect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

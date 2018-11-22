@@ -40,26 +40,36 @@
 
     </android.support.v7.widget.Toolbar>
 
-   <!--<android.support.v7.widget.LinearLayoutCompat-->
-       <!--android:layout_width="match_parent"-->
-       <!--android:layout_height="match_parent"-->
-       <!--android:orientation="vertical"-->
-       <!--android:layout_weight=".1"-->
-       <!--&gt;-->
+    <View
+        android:layout_below="@+id/rl_reqhomehead"
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="visible"
+        android:background="#D3D3D3" />
 
-       <!--<com.applandeo.materialcalendarview.CalendarView-->
-           <!--android:id="@+id/calendarView"-->
-           <!--android:layout_width="match_parent"-->
-           <!--android:layout_height="wrap_content"-->
-           <!--app:type="one_day_picker"-->
-           <!--app:headerColor="#B8E1F3"-->
-           <!--app:headerLabelColor="@color/colorPrimaryDark"-->
-           <!--app:abbreviationsLabelsColor="@color/colorPrimaryDark"-->
-           <!--app:pagesColor="#F5F0EC"/>-->
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_below="@+id/view"
+        android:id="@+id/switcha"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark">
 
-   <!--</android.support.v7.widget.LinearLayoutCompat>-->
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/ShowEntries"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:checked="false"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:text="Show Entries"
+            android:theme="@style/SCBSwitch"/>
 
-
+    </android.support.v7.widget.LinearLayoutCompat>
 
    <ScrollView
        android:layout_width="match_parent"

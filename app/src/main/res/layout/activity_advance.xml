@@ -38,7 +38,6 @@
                 android:scaleType="fitXY"
                 android:background="@mipmap/back"
                 android:layout_gravity="left|center"/>
-
         </FrameLayout>
     </RelativeLayout>
 
@@ -56,7 +55,7 @@
                 android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Date"
+                android:text="Date Of Request"
                 android:textColor="@color/colorblack"
                 android:gravity="left"
                 android:layout_marginTop="15dp"
@@ -91,10 +90,10 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp" />
 
-            <com.yoeki.kalpnay.hrporatal.setting.Textclass
+            <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
                 android:id="@+id/tv_advancereqforadvance"
                 android:textSize="@dimen/textNtHeader"
-                android:hint="Date"
+                android:hint="Advance for"
                 android:textColorHint="@color/colorgreydark"
                 android:textColor="@color/colorText"
                 android:layout_width="match_parent"
@@ -108,6 +107,42 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
 
+
+            <LinearLayout
+                android:id="@+id/ly_advancetypeother"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                    android:textSize="@dimen/textFrHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stats The Specific Reason For This Request"
+                    android:textColor="@color/colorblack"
+                    android:gravity="left"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp" />
+
+                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                    android:id="@+id/edt_advancereqdescription"
+                    android:textSize="@dimen/textNtHeader"
+                    android:hint=""
+                    android:textColorHint="@color/colorgreydark"
+                    android:textColor="@color/colorText"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:gravity="left"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/edity_textbackground"/>
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/ly_advancefortravelview"
                 android:layout_width="match_parent"
@@ -198,73 +233,71 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp"
                     android:background="@drawable/edity_textbackground"/>
-
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/ly_advanceforhotelviewview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="visible">
 
                 <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
-                    android:textSize="@dimen/textFrHeader"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="From Date"
-                    android:textColor="@color/colorblack"
-                    android:gravity="left"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp" />
+                    android:layout_marginTop="15dp"
+                    android:gravity="left"
+                    android:text="Date When Payball Will Begin"
+                    android:textColor="@color/colorblack"
+                    android:textSize="@dimen/textFrHeader" />
 
                 <com.yoeki.kalpnay.hrporatal.setting.Textclass
                     android:id="@+id/tv_advancehotelfromdate"
-                    android:textSize="@dimen/textNtHeader"
-                    android:hint="From Date"
-                    android:textColorHint="@color/colorgreydark"
-                    android:textColor="@color/colorText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/edity_textbackground"
                     android:gravity="left"
-                    android:paddingTop="7dp"
+                    android:hint=""
                     android:paddingBottom="7dp"
                     android:paddingLeft="5dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:background="@drawable/edity_textbackground"/>
+                    android:paddingTop="7dp"
+                    android:textColor="@color/colorText"
+                    android:textColorHint="@color/colorgreydark"
+                    android:textSize="@dimen/textNtHeader" />
 
                 <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
-                    android:textSize="@dimen/textFrHeader"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="To Date"
-                    android:textColor="@color/colorblack"
-                    android:gravity="left"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp" />
+                    android:layout_marginTop="15dp"
+                    android:gravity="left"
+                    android:text="Date When Payball Will End"
+                    android:textColor="@color/colorblack"
+                    android:textSize="@dimen/textFrHeader" />
 
                 <com.yoeki.kalpnay.hrporatal.setting.Textclass
                     android:id="@+id/tv_advancehotelviewtodate"
-                    android:textSize="@dimen/textNtHeader"
-                    android:hint="To Date"
-                    android:textColorHint="@color/colorgreydark"
-                    android:textColor="@color/colorText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/edity_textbackground"
                     android:gravity="left"
-                    android:paddingTop="7dp"
+                    android:hint=""
                     android:paddingBottom="7dp"
                     android:paddingLeft="5dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:background="@drawable/edity_textbackground"/>
+                    android:paddingTop="7dp"
+                    android:textColor="@color/colorText"
+                    android:textColorHint="@color/colorgreydark"
+                    android:textSize="@dimen/textNtHeader" />
 
-                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                <!-- <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                     android:textSize="@dimen/textFrHeader"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -273,9 +306,9 @@
                     android:gravity="left"
                     android:layout_marginTop="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp" />
+                    android:layout_marginLeft="15dp" />-->
 
-                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                <!--<com.yoeki.kalpnay.hrporatal.setting.Edittextclass
                     android:id="@+id/tv_advancehotelviewlocation"
                     android:textSize="@dimen/textNtHeader"
                     android:hint="Location"
@@ -290,50 +323,11 @@
                     android:layout_marginTop="7dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp"
-                    android:background="@drawable/edity_textbackground"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ly_advancetypeother"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="visible"
-                android:orientation="vertical">
-
-                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
-                    android:textSize="@dimen/textFrHeader"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Description"
-                    android:textColor="@color/colorblack"
-                    android:gravity="left"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp" />
-
-                <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
-                    android:id="@+id/edt_advancereqdescription"
-                    android:textSize="@dimen/textNtHeader"
-                    android:hint="Description"
-                    android:textColorHint="@color/colorgreydark"
-                    android:textColor="@color/colorText"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:gravity="left"
-                    android:paddingTop="7dp"
-                    android:paddingBottom="7dp"
-                    android:paddingLeft="5dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:background="@drawable/edity_textbackground"/>
-
+                    android:background="@drawable/edity_textbackground"/>-->
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/ly_advanceamount"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="visible"
@@ -343,15 +337,14 @@
                     android:textSize="@dimen/textFrHeader"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Amount"
+                    android:text="Fill The Payball Amount"
                     android:textColor="@color/colorblack"
                     android:gravity="left"
                     android:layout_marginTop="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp" />
-
                 <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
-                    android:id="@+id/tv_advancehotelviewamount"
+                    android:id="@+id/edt_advancehotelviewamount"
                     android:textSize="@dimen/textNtHeader"
                     android:hint="Amount"
                     android:textColorHint="@color/colorgreydark"
@@ -371,19 +364,19 @@
             </LinearLayout>
 
             <!--<com.yoeki.kalpnay.hrporatal.setting.Textclass-->
-                <!--android:id="@+id/tv_advancereqsubmit"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Submit"-->
-                <!--android:textColor="@color/textcolor"-->
-                <!--android:gravity="center"-->
-                <!--android:layout_marginTop="25dp"-->
-                <!--android:background="@drawable/textbackgroundsolid"-->
-                <!--android:padding="10dp"-->
-                <!--android:textSize="18dp"-->
-                <!--android:layout_marginLeft="15dp"-->
-                <!--android:layout_marginRight="15dp"-->
-                <!--android:layout_marginBottom="25dp" />-->
+            <!--android:id="@+id/tv_advancereqsubmit"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Submit"-->
+            <!--android:textColor="@color/textcolor"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginTop="25dp"-->
+            <!--android:background="@drawable/textbackgroundsolid"-->
+            <!--android:padding="10dp"-->
+            <!--android:textSize="18dp"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:layout_marginBottom="25dp" />-->
 
         </LinearLayout>
 
@@ -397,7 +390,7 @@
         android:layout_alignParentBottom="true">
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/tv_advancereqsubmit"
+            android:id="@+id/btn_advancereqsubmit"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:background="@color/colorPrimaryDark"

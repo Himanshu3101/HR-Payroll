@@ -7,7 +7,6 @@
     android:background="@color/colorgrey"
     android:orientation="vertical"
     tools:context=".Request.LeaveRequest">
-
     <RelativeLayout
         android:id="@+id/rl_reqhomehead"
         android:layout_width="match_parent"
@@ -32,14 +31,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@color/transparent"/>
-
             <ImageView android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginTop="04dp"
                 android:scaleType="fitXY"
                 android:background="@mipmap/back"
                 android:layout_gravity="left|center"/>
-
         </FrameLayout>
     </RelativeLayout>
 
@@ -52,7 +49,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
             <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
                 android:textSize="@dimen/textFrHeader"
                 android:layout_width="match_parent"
@@ -192,21 +188,6 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/edity_textbackground"/>
-
-            <!--<com.yoeki.kalpnay.hrporatal.setting.Textclass-->
-                <!--android:id="@+id/tv_greveancesubmit"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Submit"-->
-                <!--android:textColor="@color/textcolor"-->
-                <!--android:gravity="center"-->
-                <!--android:layout_marginTop="35dp"-->
-                <!--android:background="@drawable/textbackgroundsolid"-->
-                <!--android:padding="10dp"-->
-                <!--android:textSize="18dp"-->
-                <!--android:layout_marginLeft="15dp"-->
-                <!--android:layout_marginRight="15dp"-->
-                <!--android:layout_marginBottom="25dp" />-->
         </LinearLayout>
     </ScrollView>
 
@@ -218,7 +199,7 @@
         android:layout_alignParentBottom="true">
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/tv_greveancesubmit"
+            android:id="@+id/btn_greveancesubmit"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:background="@color/colorPrimaryDark"

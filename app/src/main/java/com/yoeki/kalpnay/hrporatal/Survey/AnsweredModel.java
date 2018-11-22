@@ -1,4 +1,4 @@
-package com.yoeki.kalpnay.hrporatal.Servay;
+package com.yoeki.kalpnay.hrporatal.Survey;
 
 public class AnsweredModel {
 

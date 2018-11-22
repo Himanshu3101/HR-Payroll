@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="@color/textcolor"
+tools:context=".Survey.ServayHomeActivity">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_serveyevent"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@color/textcolor"
+            card_view:cardCornerRadius="2dp"
+            android:layout_marginBottom="7dp"
+            card_view:cardElevation="12dp">
+
+           <!-- <FrameLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/details_balanceLeave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"/>
+
+            </FrameLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                    <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                        android:id="@+id/count_leaveBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textColor="@color/textcolor"
+                        android:textSize="13dp"
+                        android:gravity="center"
+                        android:background="@drawable/circulartext"/>
+
+                    <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                        android:id="@+id/leave_head"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Event"
+                        android:textColor="@color/colorblack"
+                        android:textSize="16dp"
+                        android:paddingTop="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="5dp"
+                        android:gravity="left" />
+
+                </LinearLayout>
+
+<!--
+            <FrameLayout android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/leave_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"/>
+
+            </FrameLayout>
+-->
+
+        </android.support.v7.widget.CardView>
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.constraint.ConstraintLayout>

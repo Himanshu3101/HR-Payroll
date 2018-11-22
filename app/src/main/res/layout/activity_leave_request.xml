@@ -54,62 +54,33 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading-->
+            <!--android:textSize="@dimen/textFrHeader"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="From Date"-->
+            <!--android:textColor="@color/colorblack"-->
+            <!--android:gravity="left"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:layout_marginLeft="15dp" />-->
 
-        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
-            android:textSize="@dimen/textFrHeader"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="From Date"
-            android:textColor="@color/colorblack"
-            android:gravity="left"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp" />
-
-        <com.yoeki.kalpnay.hrporatal.setting.Textclass
-            android:textSize="@dimen/textNtHeader"
-            android:id="@+id/tv_leavereqfromdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="From Date"
-            android:textColorHint="@color/colorgreydark"
-            android:textColor="@color/colorText"
-            android:gravity="left"
-            android:paddingTop="7dp"
-            android:paddingBottom="7dp"
-            android:paddingLeft="5dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:background="@drawable/edity_textbackground"/>
-
-        <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
-            android:textSize="@dimen/textFrHeader"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="To Date"
-            android:textColor="@color/colorblack"
-            android:gravity="left"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp" />
-
-        <com.yoeki.kalpnay.hrporatal.setting.Textclass
-            android:textSize="@dimen/textNtHeader"
-            android:id="@+id/tv_leavereqtodate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="To Date"
-            android:textColorHint="@color/colorgreydark"
-            android:textColor="@color/colorText"
-            android:gravity="left"
-            android:paddingTop="7dp"
-            android:paddingBottom="7dp"
-            android:paddingLeft="5dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:background="@drawable/edity_textbackground"/>
+        <!--<com.yoeki.kalpnay.hrporatal.setting.Textclass-->
+            <!--android:textSize="@dimen/textNtHeader"-->
+            <!--android:id="@+id/tv_leavereqfromdate"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="From Date"-->
+            <!--android:textColorHint="@color/colorgreydark"-->
+            <!--android:textColor="@color/colorText"-->
+            <!--android:gravity="left"-->
+            <!--android:paddingTop="7dp"-->
+            <!--android:paddingBottom="7dp"-->
+            <!--android:paddingLeft="5dp"-->
+            <!--android:layout_marginTop="7dp"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:background="@drawable/edity_textbackground"/>-->
 
         <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
             android:textSize="@dimen/textFrHeader"
@@ -142,17 +113,195 @@
             android:layout_marginLeft="15dp"
             android:background="@drawable/edity_textbackground"/>
 
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/leave_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".1">
+
+                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                    android:textSize="@dimen/textFrHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sick Leave"
+                    android:textColor="@color/colorblack"
+                    android:gravity="left"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                    android:textSize="@dimen/textFrHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Balance"
+                    android:textColor="@color/colorblack"
+                    android:gravity="left"
+                    android:layout_marginTop="15dp"/>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".25"
+                android:layout_marginRight="15dp">
+
+                <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                    android:textSize="@dimen/textFrHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:text="5"
+                    android:textColor="@color/colorblack"
+                    android:paddingRight="05dp"
+                    android:layout_marginTop="15dp"/>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="15dp">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".1">
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:textSize="@dimen/textNtHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="DD/MM/YYYY"
+                    android:textColorHint="@color/colorgreydark"
+                    android:textColor="@color/colorText"
+                    android:gravity="left"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/edity_textbackground"/>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:textColor="@color/colorblack"
+                android:gravity="left"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:paddingTop="7dp"/>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".1">
+
+                <com.yoeki.kalpnay.hrporatal.setting.Textclass
+                    android:textSize="@dimen/textNtHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="DD/MM/YYYY"
+                    android:textColorHint="@color/colorgreydark"
+                    android:textColor="@color/colorText"
+                    android:gravity="left"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/edity_textbackground"/>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
+                android:textSize="@dimen/textFrHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="viewStart"
+                android:text="Leave Request Days"
+                android:textColor="@color/colorblack"
+                android:gravity = "center_vertical|left|start"
+                android:layout_weight=".1"/>
+
+            <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
+                android:textSize="@dimen/textNtHeader"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:textColorHint="@color/colorgreydark"
+                android:textColor="@color/colorText"
+                android:textAlignment="center"
+                android:background="@drawable/edity_textbackground_circle"/>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+
+        <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading-->
+            <!--android:textSize="@dimen/textFrHeader"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="To Date"-->
+            <!--android:textColor="@color/colorblack"-->
+            <!--android:gravity="left"-->
+            <!--android:layout_margin="15dp" />-->
+
+        <!--<com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading-->
+            <!--android:textSize="@dimen/textFrHeader"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="To Date"-->
+            <!--android:textColor="@color/colorblack"-->
+            <!--android:gravity="left"-->
+            <!--android:layout_margin="15dp" />-->
+
+        <!--<com.yoeki.kalpnay.hrporatal.setting.Textclass-->
+            <!--android:textSize="@dimen/textNtHeader"-->
+            <!--android:id="@+id/tv_leavereqtodate"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="To Date"-->
+            <!--android:textColorHint="@color/colorgreydark"-->
+            <!--android:textColor="@color/colorText"-->
+            <!--android:gravity="left"-->
+            <!--android:paddingTop="7dp"-->
+            <!--android:paddingBottom="7dp"-->
+            <!--android:paddingLeft="5dp"-->
+            <!--android:layout_margin="15dp"-->
+            <!--android:background="@drawable/edity_textbackground"/>-->
+
         <com.yoeki.kalpnay.hrporatal.setting.TextclassfrHeading
             android:textSize="@dimen/textFrHeader"
             android:id="@+id/tv_leavereqdescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description"
+            android:text="Reason"
             android:textColor="@color/colorblack"
             android:gravity="left"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp" />
+            android:layout_margin="15dp"/>
 
         <com.yoeki.kalpnay.hrporatal.setting.Edittextclass
             android:textSize="@dimen/textNtHeader"
@@ -166,9 +315,8 @@
             android:paddingTop="7dp"
             android:paddingBottom="7dp"
             android:paddingLeft="5dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginRight="15dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:editable="true"
             android:background="@drawable/edity_textbackground"/>
 
@@ -179,9 +327,7 @@
             android:text="Attachment"
             android:textColor="@color/colorblack"
             android:gravity="left"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
+            android:layout_margin="15dp"
             android:paddingBottom="6dp"
             android:paddingTop="6dp"
             android:paddingLeft="5dp" />
@@ -191,9 +337,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="7dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
             android:background="@drawable/edity_textbackground">
 
               <com.yoeki.kalpnay.hrporatal.setting.Textclass

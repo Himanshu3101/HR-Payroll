@@ -9,8 +9,10 @@ import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
-import com.skyfishjy.library.RippleBackground;
+
+import com.yoeki.kalpnay.hrporatal.HomeMenu.HomeActivity;
 import com.yoeki.kalpnay.hrporatal.Login.LoginActivity;
+import com.yoeki.kalpnay.hrporatal.setting.preferance;
 
 public class SplashActivity extends AppCompatActivity {
     public boolean isFirstStart;
@@ -19,31 +21,42 @@ public class SplashActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 3000;
 
     ImageView imageView;
-    RippleBackground rippleBackground;
+//    RippleBackground rippleBackground;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
         imageView=findViewById(R.id.img_splash);
-        rippleBackground=findViewById(R.id.content);
+//        rippleBackground=findViewById(R.id.content);
 
         runthrade();
 
-        rippleBackground.startRippleAnimation();
+//        rippleBackground.startRippleAnimation();
 
         if (!isFirstStart){
-
 
             new Handler().postDelayed(new Runnable() {
 
                 @Override
                 public void run() {
 
-                    Intent i = new Intent(SplashActivity.this, LoginActivity.class);
-                    startActivity(i);
+                    String  user_id=null;
+                    user_id = preferance.getInstance(getApplicationContext()).getUserId();
 
-                    finish();
+                    if (user_id==null){
+
+                        Intent i = new Intent(SplashActivity.this, LoginActivity.class);
+                        startActivity(i);
+                        finish();
+
+                    }else {
+
+                        Intent i = new Intent(SplashActivity.this, HomeActivity.class);
+                        startActivity(i);
+                        finish();
+                    }
+
                 }
             }, SPLASH_TIME_OUT);
 
@@ -64,7 +77,6 @@ public class SplashActivity extends AppCompatActivity {
 
                 //  Check either activity or app is open very first time or not and do action
                 if (isFirstStart) {
-
                     //  Launch application introduction screen
                     Intent i = new Intent(SplashActivity.this, Myintro.class);
                     startActivity(i);
