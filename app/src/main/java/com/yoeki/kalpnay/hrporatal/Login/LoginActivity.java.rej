@@ -1,0 +1,9 @@
+diff a/app/src/main/java/com/yoeki/kalpnay/hrporatal/Login/LoginActivity.java b/app/src/main/java/com/yoeki/kalpnay/hrporatal/Login/LoginActivity.java	(rejected hunks)
+@@ -40,6 +40,7 @@
+ 
+     }
+  Committed by Himanshu Srivastava
++ 
+     @Override
+     public boolean onTouchEvent(MotionEvent event) {
+         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
